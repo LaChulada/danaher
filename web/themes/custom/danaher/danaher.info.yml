@@ -1,0 +1,30 @@
+name: Danaher
+type: theme
+description: This is a sub theme
+core_version_requirement: ^8 || ^9 || ^10
+# Defines the base theme
+base theme: bartik
+
+# Defines libraries group in which we can add css/js.
+libraries:
+  - bartik/global-styling
+  - danaher/global-styling
+
+regions:
+  header: Header
+  event_landing_header: 'Event Landing Header'
+  pre_header_area: "Pre-Header Area"
+  primary_menu: 'Primary menu'
+  primary_menu_mobile: 'Primary mobile menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  sidebar: 'Sidebar'
+  content_below: 'Content Below'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'
+  event_landing_footer: 'Event Landing Footer'

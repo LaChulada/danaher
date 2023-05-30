@@ -1,0 +1,67 @@
+uuid: 0b2597a7-6213-4fe1-a4f6-f66974741c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tabs.field_section_heading
+    - field.field.paragraph.tabs.field_tab_sections
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - advanced_text_formatter
+    - inline_entity_form
+    - maxlength
+    - paragraphs
+id: paragraph.tabs.default
+targetEntityType: paragraph
+bundle: tabs
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter a unique title here if this module will be placed in a layout.'
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_section_heading:
+    type: inline_entity_form_simple
+    weight: -9
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings: {  }
+  field_tab_sections:
+    type: paragraphs
+    weight: -8
+    region: content
+    settings:
+      title: 'Horizontal Listicle Section'
+      title_plural: 'Horizontal Listicle Sections'
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: tab_section
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

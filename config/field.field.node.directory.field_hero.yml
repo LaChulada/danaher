@@ -1,0 +1,146 @@
+uuid: 0557bdce-d25a-4a87-b043-24d09e652b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+    - node.type.directory
+    - paragraphs.paragraphs_type.directory_hero
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: node.directory.field_hero
+field_name: field_hero
+entity_type: node
+bundle: directory
+label: Hero
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      directory_hero: directory_hero
+    negate: 0
+    target_bundles_drag_drop:
+      agenda:
+        weight: 38
+        enabled: false
+      article_hero:
+        weight: 39
+        enabled: false
+      basic_hero:
+        weight: 40
+        enabled: false
+      blog_hero:
+        weight: 41
+        enabled: false
+      body_content:
+        weight: 42
+        enabled: false
+      callout:
+        weight: 43
+        enabled: false
+      case_study_hero:
+        weight: 44
+        enabled: false
+      common_module_header:
+        weight: 45
+        enabled: false
+      cta_banner:
+        weight: 46
+        enabled: false
+      cta_logo_showcase:
+        weight: 47
+        enabled: false
+      directory_hero:
+        weight: 49
+        enabled: true
+      featured_event:
+        weight: 48
+        enabled: false
+      featured_single_quote:
+        weight: 49
+        enabled: false
+      flexible_framer:
+        weight: 50
+        enabled: false
+      flexible_framer_image_item:
+        weight: 51
+        enabled: false
+      flexible_framer_item:
+        weight: 52
+        enabled: false
+      flexible_framer_with_images:
+        weight: 53
+        enabled: false
+      from_library:
+        weight: 54
+        enabled: false
+      full_size_media:
+        weight: 55
+        enabled: false
+      high_level_page_hero:
+        weight: 56
+        enabled: false
+      homepage_hero_quilt_item:
+        weight: 57
+        enabled: false
+      homepage_immersive_hero:
+        weight: 58
+        enabled: false
+      meet_our_team:
+        weight: 59
+        enabled: false
+      pathing_cards:
+        weight: 60
+        enabled: false
+      speaker_information:
+        weight: 62
+        enabled: false
+      speakers_panel:
+        weight: 61
+        enabled: false
+      stacked_capability_column:
+        weight: 63
+        enabled: false
+      stacked_capability_column_card:
+        weight: 64
+        enabled: false
+      stacked_capability_column_item:
+        weight: 65
+        enabled: false
+      standalone_section_header:
+        weight: 66
+        enabled: false
+      stats:
+        weight: 67
+        enabled: false
+      stats_item:
+        weight: 68
+        enabled: false
+      table_of_contents:
+        weight: 69
+        enabled: false
+      table_of_contents_panel:
+        weight: 70
+        enabled: false
+      text_and_image:
+        weight: 71
+        enabled: false
+      three_up:
+        weight: 72
+        enabled: false
+      three_up_item:
+        weight: 73
+        enabled: false
+      wysiwig:
+        weight: 74
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,28 @@
+uuid: f426af91-ac7a-4ba2-b4c5-f1ca140775f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recirculation_module
+  module:
+    - blazy
+    - fieldblock
+  theme:
+    - danaher
+id: recirculation_module
+theme: danaher
+region: content_below
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Recirculation Module'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_recirculation_module
+  formatter_id: blazy_media
+  formatter_settings:
+    view_mode: default
+visibility: {  }

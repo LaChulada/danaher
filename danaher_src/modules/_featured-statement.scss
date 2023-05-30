@@ -1,0 +1,67 @@
+@import "../utility/utility";
+
+.featured-statement {
+
+    color: $color-white;
+
+    padding-top: 72px;
+    padding-bottom: 72px;
+    @media(max-width: $mobile-width) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+    @include standard-cta-link();
+    .cta-link {
+        a {
+            color: $color-white;
+            &:after {
+                content: url(/themes/custom/danaher/images/arrow-white.svg);
+            }
+            &:hover {
+                color: $color-white;
+            }
+            &:focus {
+                outline-color: currentColor;
+            }
+        }
+    }
+
+
+    &.background--white {
+        color: $color-dark-purple;
+        margin-bottom: 24px;
+
+
+        .quote, .source, .source-title {
+            color: $color-body;
+        }
+    }
+
+    .quote {
+        @include quote();
+        margin-bottom: 8px;
+    }
+
+    &.is-quote {
+        .quote {
+            &:before {
+                content: open-quote;
+                margin-left: -0.15em;
+            }
+            &:after {
+                content: close-quote;
+            }
+        }
+    }
+
+    .source {
+        @include heading3();
+        margin-bottom: 8px;
+        &-title {
+            @include paragraph();
+        }
+    }
+
+
+
+}

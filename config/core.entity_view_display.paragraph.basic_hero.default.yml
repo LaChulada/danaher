@@ -1,0 +1,33 @@
+uuid: df1fb13c-6c4f-411e-b928-b672bbee15ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_hero.field_headline
+    - paragraphs.paragraphs_type.basic_hero
+  module:
+    - fences
+id: paragraph.basic_hero.default
+targetEntityType: paragraph
+bundle: basic_hero
+mode: default
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h1
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,11 @@
+uuid: f8d06515-b1a0-4569-b696-487cd723e7e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.thought_leadership_type
+id: taxonomy_term.thought_leadership_type
+target_entity_type_id: taxonomy_term
+target_bundle: thought_leadership_type
+default_langcode: site_default
+language_alterable: false

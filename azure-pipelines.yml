@@ -1,0 +1,53 @@
+# PHP
+# Test and package your PHP project.
+# Add steps that run tests, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/php
+
+trigger:
+- dev
+
+pool:
+  name: 'AWS Dev EC2'
+
+variables:
+  phpVersion: 8.1.18
+
+steps:
+- checkout: self
+  clean: false
+  
+- script: |
+   php -version
+  displayName: 'Use PHP version $(phpVersion)'
+
+- script: C:/"Program Files"/Git/usr/bin/bash.exe -c "composer install" '-Verb', 'runAs'
+  displayName: 'composer install'
+
+- task: CopyFiles@2
+  displayName: 'Copy files from _work to website root'
+  inputs:
+    SourceFolder: '$(Agent.BuildDirectory)\s\'
+    Contents: |
+      vendor/**
+      web/**
+    TargetFolder: 'C:/inetpub/wwwroot/http_dev-danaher.danaher.org/'
+    
+- task: DeleteFiles@1
+  displayName: 'Delete web.config from web root'
+  inputs:
+    SourceFolder: 'C:/inetpub/wwwroot/http_dev-danaher.danaher.org/web/'
+    Contents: 'web.config'
+
+- task: CopyFiles@2
+  displayName: 'Copy web.config.dev to website root'
+  inputs:
+    SourceFolder: '$(Agent.BuildDirectory)\s\'
+    Contents: 'web.config.dev'
+    TargetFolder: 'C:/inetpub/wwwroot/http_dev-danaher.danaher.org/web'
+    
+- task: PowerShell@2
+  displayName: 'Rename web.cong.dev to web.config'
+  inputs:
+    targetType: 'inline'
+    script: |
+      Rename-Item -Path 'C:\inetpub\wwwroot\http_dev-danaher.danaher.org\web\web.config.dev' -NewName 'web.config'

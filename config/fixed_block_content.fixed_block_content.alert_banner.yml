@@ -1,0 +1,14 @@
+uuid: d072e675-7e5a-4d7d-8c52-8027bdac1e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert
+  content:
+    - 'block_content:alert:09490755-de49-47db-8644-fd438cffd5ad'
+id: alert_banner
+title: 'Alert Banner'
+block_content_bundle: alert
+default_content: '{"_links":{"self":{"href":"http:\/\/bonterratech:8891\/block\/3?_format=hal_json"},"type":{"href":"http:\/\/fixed_block_content.drupal.org\/rest\/type\/block_content\/alert"}},"langcode":[{"value":"en","lang":"en"}],"type":[{"target_id":"alert"}],"status":[{"value":true,"lang":"en"}],"info":[{"value":"Alert Banner","lang":"en"}],"reusable":[{"value":false}],"default_langcode":[{"value":true,"lang":"en"}],"revision_translation_affected":[{"value":true,"lang":"en"}],"metatag":[{"value":{"canonical_url":"http:\/\/bonterratech:8891\/block\/3","generator":"-","title":"| Bonterra Tech"}}],"field_alert_text":[{"value":"This is a true alert here."}],"field_link":[{"uri":"entity:node\/19","title":"Learn more","options":[]}]}'
+auto_export: 0
+protected: true

@@ -1,0 +1,8 @@
+uuid: d8d6ef3b-3d98-42dc-bd43-d82b879da4cd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Subcategory Hub Page Type'
+vid: subcategory_hub_page_type
+description: ''
+weight: 0

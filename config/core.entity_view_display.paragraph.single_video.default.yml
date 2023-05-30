@@ -1,0 +1,34 @@
+uuid: ebffd32a-d21a-4daf-94ab-a6c6703a9e8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_video.field_image
+    - paragraphs.paragraphs_type.single_video
+  module:
+    - fences
+id: paragraph.single_video.default
+targetEntityType: paragraph
+bundle: single_video
+mode: default
+content:
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

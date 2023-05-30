@@ -1,0 +1,10 @@
+uuid: 7c3438b5-cf3a-49d8-a2b2-89f5c4c3b1e4
+langcode: en
+status: true
+dependencies: {  }
+id: product_tier_level
+label: 'Product Tier Level'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

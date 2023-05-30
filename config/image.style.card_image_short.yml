@@ -1,0 +1,18 @@
+uuid: b58ed817-c81e-4400-a15e-01ac4b42a1c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: card_image_short
+label: 'Card Image Short (290x160)'
+effects:
+  762b78c5-8a24-49c3-8708-feb7c59323d2:
+    uuid: 762b78c5-8a24-49c3-8708-feb7c59323d2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 290
+      height: 160
+      crop_type: focal_point
+pipeline: sample_1

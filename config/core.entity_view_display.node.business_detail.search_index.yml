@@ -1,0 +1,146 @@
+uuid: 84851968-2167-4de8-b268-b3655521cdca
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.business_detail.field_business_name
+    - field.field.node.business_detail.field_business_segment
+    - field.field.node.business_detail.field_contact
+    - field.field.node.business_detail.field_description
+    - field.field.node.business_detail.field_hero
+    - field.field.node.business_detail.field_logo
+    - field.field.node.business_detail.field_logo_showcase
+    - field.field.node.business_detail.field_scientific_focus_area
+    - field.field.node.business_detail.field_widgets
+    - field.field.node.business_detail.layout_builder__layout
+    - node.type.business_detail
+  module:
+    - entity_reference_revisions
+    - fences
+    - layout_builder
+    - layout_builder_restrictions
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_onecol
+      denylisted_blocks: {  }
+      allowlisted_blocks:
+        'Better Social Sharing Buttons': {  }
+        'Block Group': {  }
+        'Chaos Tools': {  }
+        'Content fields': {  }
+        'Custom block types': {  }
+        'Custom blocks': {  }
+        Devel: {  }
+        'Field as Block': {  }
+        'Fixed custom': {  }
+        Forms: {  }
+        Geolocation: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        'Social Media Links Block': {  }
+        System: {  }
+        User: {  }
+        core: {  }
+      restricted_categories: {  }
+    entity_view_mode_restriction_by_region:
+      allowed_layouts:
+        - layout_onecol
+id: node.business_detail.search_index
+targetEntityType: node
+bundle: business_detail
+mode: search_index
+content:
+  field_business_name:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 4
+    region: content
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: hero_for_search
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_logo_showcase:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_scientific_focus_area:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_business_segment: true
+  field_contact: true
+  field_description: true
+  field_logo: true
+  field_widgets: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

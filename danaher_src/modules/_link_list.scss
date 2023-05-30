@@ -1,0 +1,53 @@
+@import "../utility/utility";
+
+.link-list {
+    margin-top: 72px;
+    margin-bottom: 72px;
+    @media (max-width: $mobile-width)  {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+    .section-title {
+        @include heading2();
+        margin-bottom: 16px;
+    }
+
+    .section-description {
+        @include paragraph();
+        p { margin: 0; }
+    }
+
+    .left-side {
+        @media (max-width: $mobile-width)  {
+            margin-bottom: 48px;
+        }
+    }
+
+    .right-side {
+        .link-list--item:first-of-type {
+            .section-headline {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &--item {
+
+        border-bottom: 1px solid #0000001e;
+
+
+        .section-headline {
+            @include heading3();
+            margin-bottom: 16px;
+            margin-top: 32px;
+            color: $color-body;
+        }
+
+        .section-description {
+            @include paragraph();
+            color: $color-body;
+            margin-bottom: 32px;
+            p { margin: 0; }
+        }
+    }
+}

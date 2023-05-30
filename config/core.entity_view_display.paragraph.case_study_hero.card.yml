@@ -1,0 +1,62 @@
+uuid: 908359bc-ee77-483d-80d0-cc236757e73c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.case_study_hero.field_image
+    - field.field.paragraph.case_study_hero.field_title
+    - image.style.card_image_short
+    - paragraphs.paragraphs_type.case_study_hero
+  module:
+    - fences
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.case_study_hero.card
+targetEntityType: paragraph
+bundle: case_study_hero
+mode: card
+content:
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_image_short
+      image_loading:
+        attribute: eager
+    third_party_settings:
+      fences:
+        fences_field_tag: figure
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h1
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

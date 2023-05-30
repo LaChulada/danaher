@@ -1,0 +1,39 @@
+uuid: 6b5ea0bc-90ae-489b-8126-00cb45951054
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.tagging_list
+    - taxonomy.vocabulary.news_topics
+  module:
+    - fences
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.news_topics.tagging_list
+targetEntityType: taxonomy_term
+bundle: news_topics
+mode: tagging_list
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: li
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,20 @@
+uuid: 5c26e0f1-8265-477c-9ef8-02f1efa6509b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_for_search
+    - paragraphs.paragraphs_type.leadership_hero
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.leadership_hero.hero_for_search
+targetEntityType: paragraph
+bundle: leadership_hero
+mode: hero_for_search
+content: {  }
+hidden:
+  search_api_excerpt: true

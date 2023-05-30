@@ -1,0 +1,6 @@
+uuid: cb7ee0e0-c416-4501-adb3-640ea244332c
+langcode: en
+status: true
+dependencies: {  }
+id: blog_hero_title_section
+label: 'Blog Hero Title Section'

@@ -1,0 +1,23 @@
+uuid: f2530b26-9a81-4f19-96a4-9e7d94daa5f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_form_theme
+    - paragraphs.paragraphs_type.form_include
+  module:
+    - options
+id: paragraph.form_include.field_form_theme
+field_name: field_form_theme
+entity_type: paragraph
+bundle: form_include
+label: 'Form Theme'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: white
+default_value_callback: ''
+settings: {  }
+field_type: list_string

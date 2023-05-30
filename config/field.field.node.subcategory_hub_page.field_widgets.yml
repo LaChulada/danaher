@@ -1,0 +1,311 @@
+uuid: afa6bf15-7a90-4d14-9cc1-1dee113f0ea3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_widgets
+    - node.type.subcategory_hub_page
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.business_carousel
+    - paragraphs.paragraphs_type.category_pathing
+    - paragraphs.paragraphs_type.cta_logo_showcase
+    - paragraphs.paragraphs_type.event_list
+    - paragraphs.paragraphs_type.featured_statement
+    - paragraphs.paragraphs_type.flexible_framer
+    - paragraphs.paragraphs_type.flexible_framer_with_icons
+    - paragraphs.paragraphs_type.flexible_framer_with_images
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.full_bleed_text_and_image
+    - paragraphs.paragraphs_type.key_steps
+    - paragraphs.paragraphs_type.link_list
+    - paragraphs.paragraphs_type.related_content
+    - paragraphs.paragraphs_type.stats
+    - paragraphs.paragraphs_type.text_and_image
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: node.subcategory_hub_page.field_widgets
+field_name: field_widgets
+entity_type: node
+bundle: subcategory_hub_page
+label: Modules
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion: accordion
+      business_carousel: business_carousel
+      category_pathing: category_pathing
+      cta_logo_showcase: cta_logo_showcase
+      event_list: event_list
+      featured_statement: featured_statement
+      flexible_framer: flexible_framer
+      flexible_framer_with_icons: flexible_framer_with_icons
+      flexible_framer_with_images: flexible_framer_with_images
+      from_library: from_library
+      full_bleed_text_and_image: full_bleed_text_and_image
+      link_list: link_list
+      key_steps: key_steps
+      related_content: related_content
+      stats: stats
+      text_and_image: text_and_image
+    negate: 0
+    target_bundles_drag_drop:
+      2_up_hero:
+        weight: 82
+        enabled: false
+      accordion:
+        weight: 83
+        enabled: true
+      accordion_section:
+        weight: 84
+        enabled: false
+      article_hero:
+        weight: 86
+        enabled: false
+      basic_hero:
+        weight: 87
+        enabled: false
+      blog_grid:
+        weight: 88
+        enabled: false
+      blog_hero:
+        weight: 89
+        enabled: false
+      business_carousel:
+        weight: 91
+        enabled: true
+      business_carousel_card:
+        weight: 92
+        enabled: false
+      callout:
+        weight: 90
+        enabled: false
+      case_study_grid:
+        weight: 91
+        enabled: false
+      case_study_hero:
+        weight: 92
+        enabled: false
+      category_hub_page_hero:
+        weight: 96
+        enabled: false
+      category_pathing:
+        weight: 93
+        enabled: true
+      contact:
+        weight: 98
+        enabled: false
+      cta_banner:
+        weight: 95
+        enabled: false
+      cta_banner_collection:
+        weight: 96
+        enabled: false
+      cta_logo_showcase:
+        weight: 97
+        enabled: true
+      directory_hero:
+        weight: 98
+        enabled: false
+      downloadable_item:
+        weight: 103
+        enabled: false
+      dynamic_quote_block:
+        weight: 99
+        enabled: false
+      event_accordion:
+        weight: 100
+        enabled: false
+      event_accordion_section:
+        weight: 101
+        enabled: false
+      event_hero:
+        weight: 107
+        enabled: false
+      event_list:
+        weight: 108
+        enabled: true
+      featured_case_studies:
+        weight: 102
+        enabled: false
+      featured_case_study_card:
+        weight: 103
+        enabled: false
+      featured_core_product:
+        weight: 104
+        enabled: false
+      featured_event:
+        weight: 105
+        enabled: false
+      featured_people:
+        weight: 113
+        enabled: false
+      featured_single_quote:
+        weight: 106
+        enabled: false
+      featured_single_quote_item:
+        weight: 107
+        enabled: false
+      featured_statement:
+        weight: 108
+        enabled: true
+      flexible_framer:
+        weight: 109
+        enabled: true
+      flexible_framer_icon_item:
+        weight: 110
+        enabled: false
+      flexible_framer_image_item:
+        weight: 111
+        enabled: false
+      flexible_framer_item:
+        weight: 112
+        enabled: false
+      flexible_framer_with_icons:
+        weight: 113
+        enabled: true
+      flexible_framer_with_images:
+        weight: 114
+        enabled: true
+      form_include:
+        weight: 116
+        enabled: false
+      from_library:
+        weight: 117
+        enabled: true
+      full_bleed_text_and_image:
+        weight: 125
+        enabled: true
+      full_size_media:
+        weight: 119
+        enabled: false
+      homepage_hero:
+        weight: 127
+        enabled: false
+      image_and_video:
+        weight: 122
+        enabled: false
+      image_and_video_article:
+        weight: 123
+        enabled: false
+      image_and_video_global:
+        weight: 124
+        enabled: false
+      image_and_video_storyteller:
+        weight: 125
+        enabled: false
+      in_page_navigation:
+        weight: 126
+        enabled: false
+      in_page_navigation_panel:
+        weight: 127
+        enabled: false
+      key_steps:
+        weight: 134
+        enabled: true
+      leadership:
+        weight: 128
+        enabled: false
+      leadership_hero:
+        weight: 129
+        enabled: false
+      learning_resource_grid:
+        weight: 130
+        enabled: false
+      link_list:
+        weight: 132
+        enabled: true
+      link_list_item:
+        weight: 133
+        enabled: false
+      linked_logo:
+        weight: 131
+        enabled: false
+      news_grid:
+        weight: 136
+        enabled: false
+      past_events_grid:
+        weight: 137
+        enabled: false
+      pdf_download:
+        weight: 143
+        enabled: false
+      pdf_download_file:
+        weight: 144
+        enabled: false
+      podcast:
+        weight: 138
+        enabled: false
+      poll:
+        weight: 146
+        enabled: false
+      press_release_hero:
+        weight: 147
+        enabled: false
+      product_tier_level:
+        weight: 140
+        enabled: false
+      related_content:
+        weight: 142
+        enabled: true
+      single_image:
+        weight: 143
+        enabled: false
+      single_video:
+        weight: 144
+        enabled: false
+      stats:
+        weight: 151
+        enabled: true
+      stats_item:
+        weight: 152
+        enabled: false
+      steps:
+        weight: 154
+        enabled: false
+      subcategory_detail_page_hero:
+        weight: 153
+        enabled: false
+      tab_section:
+        weight: 157
+        enabled: false
+      table_of_contents:
+        weight: 154
+        enabled: false
+      table_of_contents_panel:
+        weight: 155
+        enabled: false
+      tabs:
+        weight: 156
+        enabled: false
+      text_and_image:
+        weight: 158
+        enabled: true
+      three_up:
+        weight: 159
+        enabled: false
+      three_up_item:
+        weight: 160
+        enabled: false
+      timeline:
+        weight: 163
+        enabled: false
+      timeline_item:
+        weight: 164
+        enabled: false
+      upcoming_events_grid:
+        weight: 161
+        enabled: false
+      wysiwig:
+        weight: 162
+        enabled: false
+field_type: entity_reference_revisions

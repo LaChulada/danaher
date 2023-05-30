@@ -1,0 +1,19 @@
+uuid: 9a8f6a55-b818-43e4-a720-348d6d8d240b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_animated_headline_1
+    - paragraphs.paragraphs_type.homepage_hero
+id: paragraph.homepage_hero.field_animated_headline_1
+field_name: field_animated_headline_1
+entity_type: paragraph
+bundle: homepage_hero
+label: 'Animated Headline 1'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

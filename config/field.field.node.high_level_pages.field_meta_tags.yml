@@ -1,0 +1,21 @@
+uuid: 72c4240f-cb73-4321-bc25-bdbc6811bd3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.high_level_pages
+  module:
+    - metatag
+id: node.high_level_pages.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: high_level_pages
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

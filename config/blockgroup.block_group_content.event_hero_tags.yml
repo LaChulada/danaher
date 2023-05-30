@@ -1,0 +1,6 @@
+uuid: 9270fe60-10dd-418d-8be4-8a047f303f2e
+langcode: en
+status: true
+dependencies: {  }
+id: event_hero_tags
+label: 'Event Hero Tags'

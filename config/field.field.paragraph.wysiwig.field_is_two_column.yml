@@ -1,0 +1,23 @@
+uuid: 20af856b-be12-4e97-adab-3bc9b94aa380
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_two_column
+    - paragraphs.paragraphs_type.wysiwig
+id: paragraph.wysiwig.field_is_two_column
+field_name: field_is_two_column
+entity_type: paragraph
+bundle: wysiwig
+label: 'is Two Column?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,6 @@
+uuid: 8de67ee2-b85b-4b17-85f6-006c20aab1e0
+langcode: en
+status: true
+dependencies: {  }
+id: article_text_hero_area
+label: 'Article Text Hero Area'

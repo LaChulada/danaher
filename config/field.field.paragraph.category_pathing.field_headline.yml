@@ -1,0 +1,19 @@
+uuid: 307ae0bf-44dd-4d98-8296-87f7ad9a1b9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.category_pathing
+id: paragraph.category_pathing.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: category_pathing
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

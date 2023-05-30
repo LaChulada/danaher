@@ -1,0 +1,29 @@
+uuid: 40624dee-f073-4f76-a5a8-11cb9c98a26e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subcategory_page_type
+    - node.type.subcategory_hub_page
+    - taxonomy.vocabulary.subcategory_hub_page_type
+id: node.subcategory_hub_page.field_subcategory_page_type
+field_name: field_subcategory_page_type
+entity_type: node
+bundle: subcategory_hub_page
+label: 'Subcategory Page Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subcategory_hub_page_type: subcategory_hub_page_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

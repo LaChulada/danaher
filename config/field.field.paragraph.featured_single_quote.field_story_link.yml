@@ -1,0 +1,23 @@
+uuid: f00cea63-642d-4d46-bef5-0a9f2e8f6357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_story_link
+    - paragraphs.paragraphs_type.featured_single_quote
+  module:
+    - link
+id: paragraph.featured_single_quote.field_story_link
+field_name: field_story_link
+entity_type: paragraph
+bundle: featured_single_quote
+label: 'Story Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

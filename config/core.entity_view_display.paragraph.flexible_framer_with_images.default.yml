@@ -1,0 +1,102 @@
+uuid: 405ce06f-5e7f-42a2-8219-0dda91551791
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_framer_with_images.field_columns
+    - field.field.paragraph.flexible_framer_with_images.field_cta
+    - field.field.paragraph.flexible_framer_with_images.field_description
+    - field.field.paragraph.flexible_framer_with_images.field_headline
+    - field.field.paragraph.flexible_framer_with_images.field_items
+    - paragraphs.paragraphs_type.flexible_framer_with_images
+  module:
+    - entity_reference_revisions
+    - fences
+    - link
+    - text
+id: paragraph.flexible_framer_with_images.default
+targetEntityType: paragraph
+bundle: flexible_framer_with_images
+mode: default
+content:
+  field_columns:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: cta-link
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 3
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: section-description
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 5
+    region: content
+hidden:
+  search_api_excerpt: true

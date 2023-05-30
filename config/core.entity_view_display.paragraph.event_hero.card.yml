@@ -1,0 +1,39 @@
+uuid: 801825c3-80be-48d5-be6d-660b60973cb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card
+    - field.field.paragraph.event_hero.field_media
+    - image.style.card_image_short
+    - paragraphs.paragraphs_type.event_hero
+  module:
+    - fences
+    - media
+id: paragraph.event_hero.card
+targetEntityType: paragraph
+bundle: event_hero
+mode: card
+content:
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_image_short
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,10 @@
+uuid: 460f76a6-b356-497e-9056-08a98bea1908
+langcode: en
+status: true
+dependencies: {  }
+id: leadership_hero
+label: 'Leadership Hero'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

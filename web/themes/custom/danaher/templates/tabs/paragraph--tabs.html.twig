@@ -1,0 +1,95 @@
+{% extends "modules/contrib/paragraphs/templates/paragraph.html.twig" %}
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set attributes = attributes.addClass('tabs-content') %}
+
+{% block paragraph %}
+    {{ attach_library('danaher/tabs') }}
+
+<div class="dark-tab-module module container">
+    <div class="dark-tab-container">
+    {{ content.field_title }}
+    <div{{ attributes.addClass(classes) }} id="tabs" tabindex="-1">
+    {{ title_prefix }}
+    {% if label %}
+        <h3{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ title_suffix }}
+        <div class="tab tab--horizontal">
+            <div class="tab-overflow">
+                <ul class="nav nav-tabs" role="tablist">
+                    {% for item in paragraph.field_tab_sections %}
+                        {%  if loop.index == 1 %}
+                            <li class="nav-tabs-item" role="tab">
+                                <a href="#tab{{ item.entity.id() }}" class="active"  data-toggle="tab" aria-controls="tab{{ item.entity.id() }}" aria-current="true">{{ item.entity.field_title.value }}</a>
+                            </li>
+                        {%  else  %}
+                            <li class="nav-tabs-item" role="tab">
+                                <a href="#tab{{  item.entity.id() }}"  data-toggle="tab" aria-controls="tab{{ item.entity.id() }}" aria-current="false">{{ item.entity.field_title.value }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="tab-content">
+                {% for item in paragraph.field_tab_sections %}
+                    {%  if loop.index == 1 %}
+                        <div class="tab-pane active" id="tab{{ item.entity.id() }}" role="tabpanel" aria-labelledby="tab{{ item.entity.id() }}">
+                            {{ bamboo_render_entity('paragraph', item.entity.id(), 'tab_section') }}
+                        </div>
+                    {%  else  %}
+                        <div class="tab-pane" id="tab{{ item.entity.id() }}" role="tabpanel" aria-labelledby="tab{{ item.entity.id() }}">
+                            {{ bamboo_render_entity('paragraph', item.entity.id(), 'tab_section') }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <nav class="tab-navigation" role="navigation">
+                <button type="button" data-role="none" class="prev" aria-label="Previous" style="">Previous</button>
+                <div class="pagination">
+                    <div class="current">1</div> / <div>{{ paragraph.field_tab_sections|length|trim }}</div>  
+                </div>
+                <button type="button" data-role="none" class="next" aria-label="Next" style="">Next</button>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock paragraph %}

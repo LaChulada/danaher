@@ -1,0 +1,15 @@
+uuid: a034a495-0706-4b5c-b092-d179f8f36412
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: blog_grid
+label: 'Blog Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

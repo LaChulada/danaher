@@ -1,0 +1,18 @@
+uuid: 734c3f2a-1388-40f2-a623-9562807ccef8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: dynamic_quote_block_profile_image_50x50_
+label: 'Dynamic Quote Block Profile Image (50x50)'
+effects:
+  70a2bf9c-f5fa-4b76-876d-0ce8b8d8cb14:
+    uuid: 70a2bf9c-f5fa-4b76-876d-0ce8b8d8cb14
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      crop_type: focal_point
+pipeline: sample_1

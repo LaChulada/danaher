@@ -1,0 +1,194 @@
+@import "../utility/utility";
+
+
+.featured-single-quote {
+
+    display: grid;
+    grid-template-columns: 48% 1fr;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: 1023px) {
+        // width: calc(100% - 30px);
+        width: 100%;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-gap: 0;
+    }
+
+    &--headlines {
+
+        width: 80%;
+        margin-inline: auto;
+
+        .section-headline {
+            font-family: $font-heading;
+            font-style: normal;
+            font-weight: 900;
+            @include font-size(24px, 28px);
+            line-height: 1.07;
+            text-align: center;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+
+            
+            color: $color-primary;
+            margin: 24px 0;
+        }
+
+        .section-subhead {
+            /* Paragraph/XL + L/Paragraph-Large */
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.3;
+            text-align: center;
+
+            
+            color: $color-primary;
+            margin: 24px 0;
+        }
+    }
+
+    .quote {
+        $font-family: $font-body;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.25;
+        color: $color-primary;
+        position: relative;
+        &::before {
+            content: url(/themes/custom/danaher/images/quote.svg);
+            position: absolute;
+            margin-left: -66px;
+            @media (max-width: $mobile-width) {
+                position: static;
+                margin-left: 0;
+                margin-bottom: 24px;
+                display: block;
+            }
+        }
+
+        @media (max-width: $mobile-width) {
+            font-size: 20px;
+        }
+    }
+
+    .source {
+        font-family: $font-body;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .title {
+        font-family: $font-body;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .story-link {
+        a {
+            @include link_button_style();
+            margin-top: 32px;
+        }
+
+    }
+
+    h3 {
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 900;
+        @include font-size(24px, 32px);
+        line-height: 1.0625;
+        letter-spacing: -0.005em;
+        text-transform: uppercase;
+        color: $color-primary;
+        padding-bottom: 30px;
+    }
+
+    .text-content {
+        max-width: 700px;
+        box-sizing: border-box;
+        margin-left: -100px;
+
+        @media(min-width: 1460px) and (max-width: 1520px) {
+            margin-left: calc(1460px - 100vw);
+        }
+        @media(min-width: 1260px) and (max-width: 1460px) {
+            margin-left: calc(1260px - 100vw + 50px);
+        }
+        @media (min-width: 1024px) and (max-width: 1259px) {
+            margin-left: -50px;
+        }
+        @media (max-width: 1023px) {
+            margin-left: 0;
+            padding: 50px 100px 50px 100px;
+            // grid-row-start: 2;
+            // grid-row-end: -1;
+            // position: relative;
+        }
+        
+        @media (max-width: 767px) {
+            padding: 24px 16px;
+            grid-row-start: 2;
+            grid-row-end: -1;
+            position: relative;
+        }
+
+        z-index: 2;
+
+        position: absolute;
+        padding: 50px 100px 50px 166px;
+        background: $color-blue;
+        color: $color-black;
+
+        * {
+            color: $color-primary;
+        }
+    }
+
+    table {
+        margin: 0;
+        padding: 0;
+        font-family: $font-body;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+
+        tr, td {
+            border: none;
+            background: $color-blue;
+            color: $color-black;
+
+        }
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        z-index: 1;
+        line-height: 1;
+        font-size: 0;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+        @include media-breakpoint-down(md) {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            line-height: 0;
+            padding: 48px 30px 0;
+        }
+    }
+}

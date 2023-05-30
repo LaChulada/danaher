@@ -1,0 +1,31 @@
+uuid: 39d33fcf-81e2-4d4a-aa66-6446906b6991
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_event_type
+  module:
+    - block_class
+    - fieldblock
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: event-type
+id: danaher_event_type
+theme: danaher
+region: event_hero_info_block
+weight: -20
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Event Type'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_event_type
+  formatter_id: entity_reference_label
+  formatter_settings:
+    link: false
+visibility: {  }

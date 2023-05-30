@@ -1,0 +1,10 @@
+uuid: 0fc7150a-f6e2-467a-9a97-8bbd557afefb
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.featured_square_thumbnail
+label: 'Featured Square Thumbnail'
+targetEntityType: paragraph
+cache: true

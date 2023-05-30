@@ -1,0 +1,29 @@
+uuid: 37b6a997-d7e6-4a83-9a8c-56bf8b0fec37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_business_segment
+    - node.type.business_detail
+    - taxonomy.vocabulary.business_segment
+id: node.business_detail.field_business_segment
+field_name: field_business_segment
+entity_type: node
+bundle: business_detail
+label: 'Business Segment'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      business_segment: business_segment
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

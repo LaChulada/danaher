@@ -1,0 +1,8 @@
+uuid: 21790698-2fdd-42c9-984b-96cb01cbf4a2
+langcode: en
+status: true
+dependencies: {  }
+name: Products
+vid: products
+description: 'A list of products'
+weight: 0

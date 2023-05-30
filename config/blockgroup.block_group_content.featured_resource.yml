@@ -1,0 +1,6 @@
+uuid: 8d04d14b-6948-438b-9344-c252f801553b
+langcode: en
+status: true
+dependencies: {  }
+id: featured_resource
+label: 'Featured Resource'

@@ -1,0 +1,10 @@
+uuid: a1123fe9-d8f7-4ee1-8020-e8e75cd05e50
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.event_detail
+label: 'Event Detail'
+targetEntityType: node
+cache: true

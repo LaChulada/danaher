@@ -1,0 +1,42 @@
+uuid: 18ee1bd8-510e-4813-a2ed-315fb121ecc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: video_browser
+label: 'Video Browser'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  97590ffb-4892-494c-9763-c7fcf266912f:
+    id: view
+    uuid: 97590ffb-4892-494c-9763-c7fcf266912f
+    label: Library
+    weight: 1
+    settings:
+      submit_text: 'Select Media'
+      auto_select: false
+      view: media_entity_browser
+      view_display: media_browser_all
+  653d24b2-751d-4e87-9b40-f8df85e1a0ca:
+    id: entity_form
+    uuid: 653d24b2-751d-4e87-9b40-f8df85e1a0ca
+    label: entity_form
+    weight: 2
+    settings:
+      submit_text: Save
+      entity_type: media
+      bundle: remote_video
+      form_mode: default

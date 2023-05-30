@@ -1,0 +1,12 @@
+uuid: 38a75cf3-f9b9-4f88-bc0d-a565feb2c056
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image
+id: site_logo
+title: 'Site Logo'
+block_content_bundle: image
+default_content: null
+auto_export: 0
+protected: false

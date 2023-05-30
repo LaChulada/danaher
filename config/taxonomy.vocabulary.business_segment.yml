@@ -1,0 +1,8 @@
+uuid: dd2fb561-2acd-4de0-a20c-cc0721904e21
+langcode: en
+status: true
+dependencies: {  }
+name: 'Business Segment'
+vid: business_segment
+description: ''
+weight: 0

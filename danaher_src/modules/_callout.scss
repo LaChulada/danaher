@@ -1,0 +1,33 @@
+@import "../utility/utility";
+
+
+
+.callout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: $module-spacing;
+    padding-bottom: $module-spacing;
+
+
+
+    .section-body {
+        @include heading2;
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    @include standard-cta-link();
+    .cta-link {
+        padding-left: 12px;
+    }
+
+}
+
+.form-checkboxes.form-boolean-group, 
+.form-radios.form-boolean-group {
+    column-count: 2;
+}

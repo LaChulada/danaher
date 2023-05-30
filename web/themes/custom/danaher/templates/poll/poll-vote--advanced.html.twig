@@ -1,0 +1,24 @@
+{#
+/**
+ */
+#}
+{{ form.messages }}
+<div class="poll">
+  <div class="vote-form">
+    {% if show_question %}
+      <h3 class="poll-question col-xxl-6">{{ question }}</h3>
+    {% endif %}
+
+     {% set columns = form.choice['#options']|length %}
+     {% if columns > 3 %}
+        {% set columns = 3 %}
+     {% endif %}
+
+    <div data-project-columns={{ columns }}>
+      {{ form.choice }}
+    </div>
+    {{ form.write_in }}
+    {{ form.actions }}
+  </div>
+{{ form|without('actions', 'choice', 'messages', 'question', 'write_in') }}
+</div>

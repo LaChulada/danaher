@@ -1,0 +1,15 @@
+uuid: 719cdb7f-51d1-468a-ab85-bebc4a3d41ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: featured_statement
+label: 'Featured Statement'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

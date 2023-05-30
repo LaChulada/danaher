@@ -1,0 +1,23 @@
+uuid: 90abad7f-98be-40d3-a219-e8329f8afc0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pathing_links
+    - paragraphs.paragraphs_type.category_pathing
+  module:
+    - link
+id: paragraph.category_pathing.field_pathing_links
+field_name: field_pathing_links
+entity_type: paragraph
+bundle: category_pathing
+label: 'Pathing Links'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 1
+field_type: link

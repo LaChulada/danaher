@@ -1,0 +1,28 @@
+uuid: 3e0c2534-78f6-4f4e-a0d1-a3df56de0d4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo_showcase
+  module:
+    - blazy
+    - fieldblock
+  theme:
+    - danaher
+id: logo_field
+theme: danaher
+region: content_below
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Logo showcase'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_logo_showcase
+  formatter_id: blazy_media
+  formatter_settings:
+    view_mode: default
+visibility: {  }

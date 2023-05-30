@@ -1,0 +1,23 @@
+uuid: b062dd80-6412-4e48-95a6-94526f838b03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_on_left
+    - paragraphs.paragraphs_type.text_and_image
+id: paragraph.text_and_image.field_image_on_left
+field_name: field_image_on_left
+entity_type: paragraph
+bundle: text_and_image
+label: 'Image appears on left'
+description: 'By default, the image will appear on the right. Checking this option flips it to the left.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

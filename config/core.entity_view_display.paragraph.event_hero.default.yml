@@ -1,0 +1,38 @@
+uuid: db2daf6d-533b-4ba1-a80b-5b83d7fb8241
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_hero.field_media
+    - image.style.bio_portrait_hero
+    - paragraphs.paragraphs_type.event_hero
+  module:
+    - fences
+    - media
+id: paragraph.event_hero.default
+targetEntityType: paragraph
+bundle: event_hero
+mode: default
+content:
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: bio_portrait_hero
+      image_loading:
+        attribute: eager
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: figure
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

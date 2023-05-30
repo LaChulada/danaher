@@ -1,0 +1,16 @@
+uuid: 7f64ff68-d67d-46d8-aa99-1fc66b564138
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.teaser
+    - field.field.paragraph.event_hero.field_media
+    - paragraphs.paragraphs_type.event_hero
+id: paragraph.event_hero.teaser
+targetEntityType: paragraph
+bundle: event_hero
+mode: teaser
+content: {  }
+hidden:
+  field_media: true
+  search_api_excerpt: true

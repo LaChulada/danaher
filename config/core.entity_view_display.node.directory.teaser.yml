@@ -1,0 +1,43 @@
+uuid: 6ba38794-398f-4537-8aaf-e7de260380f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.directory.field_directory_type
+    - field.field.node.directory.field_hero
+    - field.field.node.directory.field_meta_tags
+    - field.field.node.directory.field_recirculation_module
+    - field.field.node.directory.field_widgets
+    - field.field.node.directory.layout_builder__layout
+    - node.type.directory
+  module:
+    - entity_reference_revisions
+    - user
+id: node.directory.teaser
+targetEntityType: node
+bundle: directory
+mode: teaser
+content:
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_directory_type: true
+  field_meta_tags: true
+  field_recirculation_module: true
+  field_widgets: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

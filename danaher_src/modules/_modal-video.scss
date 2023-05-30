@@ -1,0 +1,46 @@
+@import "../utility/utility";
+
+
+// scoped variables
+$video-modal-background-color: transparent;
+$video-modal-header-color: $color-white;
+$video-modal-dismiss-color: $color-white;
+
+// video
+// --------------------------------------------------
+.modal {
+   // inherits from base modal
+
+   &--video {
+      .modal {
+         // video modal dialog
+         &-dialog {
+            background: transparent;
+         }
+
+         // video modal header
+         &-header {
+            .modal-title {
+               color: $video-modal-header-color;
+            }
+         }
+
+         // video modal dismiss button
+         &-dismiss-button {
+            color: $video-modal-dismiss-color !important;
+         }
+
+         // video modal content
+         &-content {
+            padding: 0;
+            background-color: $video-modal-background-color;
+         }
+
+         // video modal footer
+         &-footer {
+            border: none;
+            margin: 20px 0 0;
+         }
+      }
+   }
+}

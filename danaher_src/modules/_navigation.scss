@@ -1,0 +1,170 @@
+// import utilities
+@import "../utility/utility";
+
+// import dependencies
+@import "navigation-menu";
+@import "navigation-overlay";
+@import "navigation-dropdown";
+
+// scoped variables
+$navItemColor: $color-primary;
+$navItemColorOpen: $color-dark-green;
+$navItemSearchColor: $color-body;
+$navItemOverlayColor: $color-body;
+$navItemSpacing: 15px;
+
+// navigation
+// --------------------------------------------------
+.navigation {
+
+   > ul {
+      @include list-style(reset);
+      margin-left: -$navItemSpacing;
+      margin-right: -$navItemSpacing;
+      > li {
+         display: inline-block;
+         margin: 0 $navItemSpacing;
+         position: relative;
+         line-height: 1;
+         vertical-align: middle;
+      }
+   }
+
+   // navigation item
+   &-item {
+
+      // navigation links
+      > a,
+      > button {
+         color: $navItemColor;
+         font-weight: $font-weight-semi;
+         @include font-size(16px, 18px);
+         text-decoration: none;
+
+         &:hover {
+            color: $color-yellow;
+         }
+
+         // style for navigation link w/ menu
+         &.has-menu {
+
+         }
+
+         // style for navigation link w/ overlay
+         &.has-overlay {
+            &.icon-menu {
+               display: inline-flex;
+               flex-direction: row-reverse;
+               .icon-text {
+                  margin-right: 15px;
+                  @include font-size(14px);
+               }
+
+            }
+         }
+
+         // style for navigation link w/ dropdown
+         &.has-dropdown {
+            color: $navItemColor;
+            font-weight: $font-weight-regular;
+            @include font-size(14px, 16px);
+
+            // &:after {
+            //    @include icon-font("caret-down");
+            //    margin-left: 10px;
+            //    @include font-size(8px);
+            // }
+
+            &:hover {
+               color: $color-yellow;
+            }
+         }
+
+         &.icon-search,
+         &.icon-menu {
+            @include font-size(26px);
+         }
+
+
+         // style for navigation link menu open
+         &.menu-open {
+            color: $navItemColorOpen;
+
+            &.has-menu {
+               color: $navItemColor;
+
+               // &:after {
+               //    content: "";
+               //    position: absolute;
+               //    display: block;
+               //    bottom: -10px;
+               //    height: 4px;
+               //    width: 100%;
+               //    background-color: $color-white;
+               // }
+            }
+
+            &.has-dropdown {
+               color: $navItemColor;
+
+               &:before {
+                  content: "";
+                  position: absolute;
+                  z-index: $z-index-var * 11;
+                  display: block;
+                  bottom: -10px;
+                  height: 4px;
+                  width: 100%;
+                  background-color: $color-white;
+               }
+               &:after {
+                  // @include icon-font("caret-up");
+               }
+            }
+
+            &.icon-menu {
+               color: $color-white;
+               &:after {
+                  display: none;
+               }
+            }
+         }
+      }
+
+   }
+
+   // navigation utility
+   &-utility {
+
+      > ul {
+         @include list-style(reset);
+         margin-left: -5px;
+         margin-right: -5px;
+         > li {
+            display: inline-block;
+            margin: 0 5px;
+         }
+      }
+
+      // navigation utility item
+      &-item {
+         a, button {
+            @include font-size(12px);
+            text-decoration: none;
+            text-transform: uppercase;
+         }
+      }
+   }
+
+   &.subsite {
+      ul.menu > li > ul.menu {
+         display: none;
+      }
+   }
+
+}
+
+/* in case thje config isn't updated */
+#block-mobilehamburger {
+   display: none;
+}

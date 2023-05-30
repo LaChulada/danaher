@@ -1,0 +1,12 @@
+uuid: 0dca4074-12ad-4e64-a20f-8065e768a84a
+langcode: en
+status: true
+dependencies: {  }
+label: 3x2
+id: 3x2
+description: ''
+aspect_ratio: '3:2'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

@@ -1,0 +1,32 @@
+uuid: 27ebe9a1-b006-407e-87d9-e25cfa0789e8
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_event_link
+  module:
+    - blazy
+    - fieldblock
+  theme:
+    - danaher
+id: event_link
+theme: danaher
+region: event_hero_info_block
+weight: -22
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Event Link'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_event_link
+  formatter_id: blazy_oembed
+  formatter_settings:
+    trim_length: '80'
+    url_only: 0
+    url_plain: 0
+    rel: 0
+    target: 0
+visibility: {  }

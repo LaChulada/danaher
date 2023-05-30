@@ -1,0 +1,52 @@
+uuid: 0f4844bd-8440-4a78-9d1a-9cace8d86c28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_up.field_columns
+    - field.field.paragraph.three_up.field_three_up_item
+    - paragraphs.paragraphs_type.three_up
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.three_up.default
+targetEntityType: paragraph
+bundle: three_up
+mode: default
+content:
+  field_columns:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+  field_three_up_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

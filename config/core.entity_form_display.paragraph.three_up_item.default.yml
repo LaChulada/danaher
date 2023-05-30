@@ -1,0 +1,35 @@
+uuid: 0d8099f8-1501-4268-9fa0-1c9665d2b17e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_up_item.field_description
+    - field.field.paragraph.three_up_item.field_headline
+    - paragraphs.paragraphs_type.three_up_item
+  module:
+    - text
+id: paragraph.three_up_item.default
+targetEntityType: paragraph
+bundle: three_up_item
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

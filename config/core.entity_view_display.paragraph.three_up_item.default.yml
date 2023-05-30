@@ -1,0 +1,42 @@
+uuid: ee3a8708-b8a4-438c-91fb-c7e661062e4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.three_up_item.field_description
+    - field.field.paragraph.three_up_item.field_headline
+    - paragraphs.paragraphs_type.three_up_item
+  module:
+    - fences
+    - text
+id: paragraph.three_up_item.default
+targetEntityType: paragraph
+bundle: three_up_item
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: section-headline
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

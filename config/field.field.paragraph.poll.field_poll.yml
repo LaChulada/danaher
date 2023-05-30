@@ -1,0 +1,26 @@
+uuid: 4655dcf3-a4a4-43cb-aada-fe718d238db2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_poll
+    - paragraphs.paragraphs_type.poll
+id: paragraph.poll.field_poll
+field_name: field_poll
+entity_type: paragraph
+bundle: poll
+label: Poll
+description: 'Create a Poll under Content > Poll, then choose it here.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:poll'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: question
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 487ae084-fd9e-44b2-a4b8-2ff076583c5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.directory_hero
+  module:
+    - text
+id: paragraph.directory_hero.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: directory_hero
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

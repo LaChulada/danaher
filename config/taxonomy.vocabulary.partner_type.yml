@@ -1,0 +1,8 @@
+uuid: ea1eb053-1401-4121-9fe8-e8e2e517f9cb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Partner Type'
+vid: partner_type
+description: ''
+weight: 0

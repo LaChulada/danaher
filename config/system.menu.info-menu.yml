@@ -1,0 +1,8 @@
+uuid: 6b5db447-7998-4478-93e7-b600ffadda93
+langcode: en
+status: true
+dependencies: {  }
+id: info-menu
+label: 'Info Menu'
+description: ''
+locked: false

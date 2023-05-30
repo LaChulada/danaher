@@ -1,0 +1,28 @@
+uuid: b56f3bec-ec1c-4eaf-a793-dd6d55aedb2d
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_hero
+  module:
+    - entity_reference_revisions
+    - fieldblock
+  theme:
+    - danaher
+id: danaher_contentfield_5
+theme: danaher
+region: hero
+weight: -32
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Hero field'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_hero
+  formatter_id: entity_reference_revisions_entity_view
+  formatter_settings:
+    view_mode: default
+visibility: {  }

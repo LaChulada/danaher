@@ -1,0 +1,56 @@
+uuid: b827cbb7-34e1-414f-8952-4e94ab4deaae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wysiwig.field_body
+    - field.field.paragraph.wysiwig.field_is_two_column
+    - field.field.paragraph.wysiwig.field_title
+    - paragraphs.paragraphs_type.wysiwig
+  module:
+    - text
+id: paragraph.wysiwig.default
+targetEntityType: paragraph
+bundle: wysiwig
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter a unique title here if this module will be placed in a layout.'
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_body:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_is_two_column:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

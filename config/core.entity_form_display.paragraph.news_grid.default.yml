@@ -1,0 +1,31 @@
+uuid: 85fbeb8f-c2b6-4e55-ae6c-3ee203bd5213
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_grid.field_title
+    - paragraphs.paragraphs_type.news_grid
+id: paragraph.news_grid.default
+targetEntityType: paragraph
+bundle: news_grid
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: -9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

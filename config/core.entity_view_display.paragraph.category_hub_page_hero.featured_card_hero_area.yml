@@ -1,0 +1,57 @@
+uuid: e9082484-3c30-4319-8810-7de657fd15a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.featured_card_hero_area
+    - field.field.paragraph.category_hub_page_hero.field_headline
+    - field.field.paragraph.category_hub_page_hero.field_media
+    - image.style.card_image_short
+    - paragraphs.paragraphs_type.category_hub_page_hero
+  module:
+    - fences
+    - media
+id: paragraph.category_hub_page_hero.featured_card_hero_area
+targetEntityType: paragraph
+bundle: category_hub_page_hero
+mode: featured_card_hero_area
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: section-header
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_image_short
+      image_loading:
+        attribute: eager
+    third_party_settings:
+      fences:
+        fences_field_tag: figure
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

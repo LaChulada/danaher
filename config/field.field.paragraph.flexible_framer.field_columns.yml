@@ -1,0 +1,25 @@
+uuid: 0d69938f-7d19-4a3d-8806-1c1d482480b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns
+    - paragraphs.paragraphs_type.flexible_framer
+id: paragraph.flexible_framer.field_columns
+field_name: field_columns
+entity_type: paragraph
+bundle: flexible_framer
+label: Columns
+description: 'How many columns will we show on desktop?'
+required: true
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings:
+  min: 1
+  max: 4
+  prefix: ''
+  suffix: ''
+field_type: integer

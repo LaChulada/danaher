@@ -1,0 +1,30 @@
+uuid: 2181bac9-6a1b-45da-9484-b70e7f00805e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_quote_background_color
+field_name: field_quote_background_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: green
+      label: Green
+    -
+      value: red
+      label: Red
+    -
+      value: yellow
+      label: Yellow
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

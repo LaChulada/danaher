@@ -1,0 +1,24 @@
+uuid: 12a38b95-71dc-411b-af79-cfc881dfb5b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: full_size_media
+label: 'Full-size Media (1240x500)'
+effects:
+  86be03d9-822e-4f86-b169-119162befe81:
+    uuid: 86be03d9-822e-4f86-b169-119162befe81
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 1240
+      height: 500
+      crop_type: focal_point
+  e904a613-468c-48b9-8de0-4002fceac3fe:
+    uuid: e904a613-468c-48b9-8de0-4002fceac3fe
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

@@ -1,0 +1,23 @@
+uuid: 533eb1eb-f56e-46bd-bc80-fe5480207be6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_framer_link
+    - paragraphs.paragraphs_type.flexible_framer_icon_item
+  module:
+    - link
+id: paragraph.flexible_framer_icon_item.field_framer_link
+field_name: field_framer_link
+entity_type: paragraph
+bundle: flexible_framer_icon_item
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

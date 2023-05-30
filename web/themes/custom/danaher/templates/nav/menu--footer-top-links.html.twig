@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+
+{{ attach_library('danaher/accordion') }}
+
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('menu') }} data-level={{ menu_level }}>
+    {% else %}
+      <ul class="menu"  data-level={{ menu_level }}>
+    {% endif %}
+    {% for item in items %}
+      {%
+        set classes = [
+          'menu-item',
+          item.is_expanded ? 'menu-item--expanded',
+          item.is_collapsed ? 'menu-item--collapsed',
+          item.in_active_trail ? 'menu-item--active-trail',
+        ]
+      %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {% if item.below %}  
+        	<div class="accordion collapse--alternate collapse--alternate-icon" role="region" aria-label="{{ 'Accordion'|t }}">
+		        <div class="panel-group" role="tablist" aria-multiselectable="true">
+                    <div class="card-body paragraph paragraph--type--accordion-section paragraph--view-mode--default">
+                        <div class="collapse-item">
+                            {# {{ dump(item.attributes) }} #}
+
+                            {% set stayExpanded = 'no-collapse' in item.url.options.attributes.class %}
+
+                            {% if stayExpanded == true %}
+                              <button class="collapse-trigger mobile" role="tab" data-toggle="collapse" data-target="#collapse-item-footer-{{ item.title|clean_id }}" aria-expanded="true" date-stayopen="true" aria-controls="collapse-item-footer-{{ item.title|clean_id }}">{{  item.title }}</button>
+                             {% else %}
+                              <button class="collapse-trigger mobile" role="tab" data-toggle="collapse" data-target="#collapse-item-footer-{{ item.title|clean_id }}" aria-expanded="true" aria-controls="collapse-item-footer-{{ item.title|clean_id }}">{{  item.title }}</button>
+                            {% endif %}
+                            <a href="javascript:void(0);" class="collapse-trigger desktop" role="tab" aria-expanded="true">{{  item.title }}</a>
+
+        {% else %}
+            {{ link(item.title, item.url) }}
+        {% endif %}
+
+        {% if item.below %}
+          {# {{ menus.menu_links(item.below, attributes, menu_level + 1) }} #}
+
+					<div id="collapse-item-footer-{{ item.title|clean_id }}" class="collapse-target collapsed collapse show" role="tabpanel" aria-expanded="true" style="">
+						<div class="clearfix text-formatted field field--name-field-body field--type-text-long field--label-hidden field__items">
+                                {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+						</div>
+					</div>
+
+				</div>
+			</div>
+        </div>
+	</div>
+
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

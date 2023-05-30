@@ -1,0 +1,71 @@
+uuid: c6554f8d-99ba-4f3f-b884-5b2a28ca2fd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_accordion.field_accordion_sections
+    - field.field.paragraph.event_accordion.field_subhead
+    - field.field.paragraph.event_accordion.field_title
+    - paragraphs.paragraphs_type.event_accordion
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.event_accordion.default
+targetEntityType: paragraph
+bundle: event_accordion
+mode: default
+content:
+  field_accordion_sections:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_subhead:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: subhead-text
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

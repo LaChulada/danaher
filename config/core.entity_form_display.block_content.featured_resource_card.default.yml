@@ -1,0 +1,43 @@
+uuid: 19c86075-ae99-46d5-b2b2-7859fe7f5a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_resource_card
+    - field.field.block_content.featured_resource_card.field_featured_resource
+    - field.field.block_content.featured_resource_card.field_headline
+id: block_content.featured_resource_card.default
+targetEntityType: block_content
+bundle: featured_resource_card
+mode: default
+content:
+  field_featured_resource:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

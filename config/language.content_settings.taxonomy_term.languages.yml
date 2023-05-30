@@ -1,0 +1,11 @@
+uuid: 074fd349-5f49-493b-b8cc-3f7b91c442d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.languages
+id: taxonomy_term.languages
+target_entity_type_id: taxonomy_term
+target_bundle: languages
+default_langcode: site_default
+language_alterable: false

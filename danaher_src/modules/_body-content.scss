@@ -1,0 +1,33 @@
+@import "../utility/utility";
+
+
+.body-content {
+    @include paragraph;
+    color: $color-body;
+    padding-right: calc(var(--bs-gutter-x)*.5);
+    padding-left: calc(var(--bs-gutter-x)*.5);
+
+    p {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 32px;
+
+        & + h2, & + h3 {
+            margin-bottom: 48px;
+        }
+    }
+
+    .case-study--carousel & {
+        padding-bottom: 12px;
+    }
+
+    .recent-news-widget & {
+        &[class^="col-"], &[class*=" col-"] {
+            width: auto !important;
+        }
+
+        &[class^="offset-"], &[class*=" offset-"] {
+            margin-left: 0 !important;
+        }
+    }
+}

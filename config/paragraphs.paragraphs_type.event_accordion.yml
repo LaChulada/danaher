@@ -1,0 +1,15 @@
+uuid: 5fdfec6f-411d-4b48-a20c-7b43de162648
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: event_accordion
+label: 'Event Accordion'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

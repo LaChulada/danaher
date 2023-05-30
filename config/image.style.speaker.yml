@@ -1,0 +1,18 @@
+uuid: 313ccf1d-bbf1-4bcf-a07a-c346188e53eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: speaker
+label: 'Speaker (190x190)'
+effects:
+  ab663e02-f5c7-4d25-9957-37adb0e08fe7:
+    uuid: ab663e02-f5c7-4d25-9957-37adb0e08fe7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 190
+      height: 190
+      crop_type: focal_point
+pipeline: sample_1

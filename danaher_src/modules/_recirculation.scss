@@ -1,0 +1,160 @@
+@import "../utility/utility";
+
+.recirculation {
+    &.module {
+        margin-top: 80px;
+        margin-bottom: $module-spacing;
+        &-smaller {
+            margin-top: 40px;
+            margin-bottom: math.div($module-spacing, 2);
+        }
+        @media(max-width: $mobile-width) {
+            margin-top: 40px;
+            margin-bottom: math.div($module-spacing, 2);
+        }
+    }
+    .event, .blog, .news, .learning-resource, .organization, .capability, .high-level-pages, .careers, .product {
+        .node__content {
+            width: 100%;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+    .section-title {
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 900;
+        // font-size: 28px;
+        @include font-size(24px, 28px);
+        line-height: 1.07;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $color-primary;
+        margin-bottom: 24px;
+    }
+
+    .related-content-quote-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        @include media-breakpoint-down(md) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 17px;
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
+        }
+    }
+    .more-link {
+        display: grid;
+        justify-content: center;
+        margin: 20px;
+        a {
+            @include link_button_style();
+            text-align: center;
+            display: block;
+            background: $color-dark-pink;
+        }
+    }
+
+    .content-type {
+        font-family: $font-body;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-primary;
+    }
+
+    /* These rules allow the slides to be the same height */
+
+    .slick-track
+    {
+        display: flex !important;
+    }
+    
+    .slick-slide
+    {
+        height: inherit !important;
+        & > div {
+            height: 100%;
+            &.slide {
+                height: 100%;
+            }
+        }
+
+        .slide {
+            display: flex;
+            height: 100%;
+        }
+    }
+
+    nav.slick__arrow {
+        text-align: center;
+        // position: relative;
+        // display: grid;
+        // grid-template-columns: 1fr 2fr 1fr;
+
+        width: 70px;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .slick-prev, .slick-next {
+            width: 28px;
+            height: 30px;
+            position: static;
+            justify-self: flex-start;
+            cursor: pointer;
+            width: 29px;
+            height: 28px;
+
+            appearance: none;
+            background: white;
+            text-indent: -9999px;
+            border: none;
+            transition: all $transition-time;
+            &:active, &:hover, &:focus {
+                transform: scale($scale-factor);
+            }
+
+        }
+
+        .slick-prev {
+            content: "";
+            background: url(/themes/custom/danaher/images/previous-carousel-arrow.svg) no-repeat;
+        }
+
+        .slick-next {
+            content: "";
+            background: url(/themes/custom/danaher/images/next-carousel-arrow.svg) no-repeat;
+        }
+
+        .pagination {
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            color: $color-primary;
+        }
+
+        .slick-prev, 
+        .prev {
+            justify-self: flex-start;
+        }
+
+        .slick-next, .next {
+            justify-self: flex-end;
+        }
+
+
+    }
+
+}

@@ -1,0 +1,53 @@
+@import "../utility/utility";
+
+
+.breadcrumb {
+
+    @include breadcrumb();
+    // font-family: $font-body;
+    // font-style: normal;
+    // font-weight: 400;
+    // @include font-size(16px);
+    // line-height: 1.25;
+    color: $color-body;
+    margin: 24px auto;
+    padding-bottom: 0;
+
+    &.container {
+        padding-left: 0; 
+
+        @media (max-width: $mobile-width) {
+            padding-left: 16px;
+        }
+    }
+    ol, ul {
+        padding-left: 0; //line up the breadcrumb to the logo
+    }
+    
+    li {
+        color: $color-gray;
+        font-weight: 400;
+        &:before {
+            content: "/";
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        a {
+            color: $color-purple;
+            text-decoration: none;
+            border-bottom: none;
+            transition: all $transition-time;
+            font-weight: 700;
+            &:hover {
+                color: $color-dark-purple;
+            }
+            &:active {
+                color: $color-blue;
+            }
+            &:focus {
+                border: 1px dashed $color-purple;
+                color: inherit;
+            }
+        }
+    }
+}

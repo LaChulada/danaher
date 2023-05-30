@@ -1,0 +1,10 @@
+uuid: ef6daaf9-9838-4bb6-9625-6b7fa0dafee6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.card_without_image
+label: 'Card without Image'
+targetEntityType: node
+cache: true

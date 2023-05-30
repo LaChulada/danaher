@@ -1,0 +1,135 @@
+@import "../utility/utility";
+
+
+.body-content {
+
+        .lineabove {
+            border-top: 0.5px solid $color-black;
+            padding-top: 32px;
+
+            .section-title {
+                @include heading3;
+            }
+        }
+
+        padding-top: 80px;
+        padding-bottom: 24px;
+        @media (max-width: $mobile-width) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+
+        .section-title {
+            @include heading3;
+            padding-bottom: 16px;
+
+            text-align: left;            
+            color: $color-body;
+        }
+
+        .section-body {
+            @include paragraph;
+
+            h2, h3 {
+                @include heading2;
+            }
+
+            // a {
+            //     @extend .text-primary;
+            // }
+            
+
+        }
+
+
+        [data-columns][data-columns="2"] {
+            @media (max-width: $mobile-width) {
+                grid-gap: 0;
+            }
+        }
+}
+
+.intro-display {
+    $font-family: $font-body;
+    font-style: normal;
+    font-weight: 300;
+    @include font-size(20px, 24px);
+    line-height: 1.25;
+    color: $color-primary;
+
+    .section-body {
+        $font-family: $font-body;
+        font-style: normal;
+        font-weight: 300;
+        @include font-size(20px, 24px);
+        line-height: 1.25;
+        color: $color-primary;
+    }
+}
+
+
+
+
+
+.error-page {
+
+    .body-content {
+        padding-bottom: 32px;
+    }
+
+
+    .error-links {
+        display: block;
+        text-align: center;
+    
+        a {
+            @include link_button_style();
+            &:first-child {
+                padding: 12px 16px;
+                background: $color-blue;
+                font-family: 'Noto Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                color: $color-primary;
+                margin-right: 32px;
+                @extend .right;
+            }
+    
+            &:last-of-type {
+                @include link_button_stroked_style();
+            }
+        }
+    }
+
+    .body-content{
+        h2 {
+            $font-family: $font-body;
+            font-style: normal;
+            font-weight: 300;
+            @include font-size(32px, 48px);
+            line-height: 1.166667;
+            /* or 117% */
+            text-align: center;
+    
+            color: $color-primary;
+            text-transform: none;
+            margin-bottom: 32px;
+        }
+
+        p {
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-primary;
+            text-align: center;
+            margin-bottom: 32px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

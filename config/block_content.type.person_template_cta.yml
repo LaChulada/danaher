@@ -1,0 +1,8 @@
+uuid: 7245abe9-5745-4346-8bf8-83bdd73d1ec1
+langcode: en
+status: true
+dependencies: {  }
+id: person_template_cta
+label: 'Person Template CTA'
+revision: 0
+description: 'The CTA Banner for the Person page'

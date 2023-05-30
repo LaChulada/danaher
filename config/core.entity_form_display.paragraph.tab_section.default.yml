@@ -1,0 +1,66 @@
+uuid: d585e08d-a528-4a63-b43d-6a771c8ce926
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_section.field_footnote
+    - field.field.paragraph.tab_section.field_tab_widgets
+    - field.field.paragraph.tab_section.field_title
+    - paragraphs.paragraphs_type.tab_section
+  module:
+    - paragraphs
+id: paragraph.tab_section.default
+targetEntityType: paragraph
+bundle: tab_section
+mode: default
+content:
+  field_footnote:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: 'Footnote Callout'
+      title_plural: 'Footnote Callouts'
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: footnote_callout
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings: {  }
+  field_tab_widgets:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Module
+      title_plural: Modules
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: full_size_media
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

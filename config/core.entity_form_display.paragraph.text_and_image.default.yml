@@ -1,0 +1,113 @@
+uuid: 738674fe-4a99-454b-8fea-67e54a1daf49
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_entity_browser_modal
+    - field.field.paragraph.text_and_image.field_call_to_action
+    - field.field.paragraph.text_and_image.field_description
+    - field.field.paragraph.text_and_image.field_display_bigger_image
+    - field.field.paragraph.text_and_image.field_headline
+    - field.field.paragraph.text_and_image.field_image_on_left
+    - field.field.paragraph.text_and_image.field_media
+    - field.field.paragraph.text_and_image.field_subhead
+    - paragraphs.paragraphs_type.text_and_image
+  module:
+    - advanced_text_formatter
+    - entity_browser
+    - link
+    - maxlength
+    - text
+    - textarea_limit
+id: paragraph.text_and_image.default
+targetEntityType: paragraph
+bundle: text_and_image
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter a unique title here if this module will be placed in a layout.'
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_call_to_action:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      textarea_limit:
+        textarea_limit_char_limit: ''
+        textarea_limit_use_global_limit: 0
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_display_bigger_image:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image_on_left:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_media:
+    type: entity_browser_entity_reference
+    weight: 7
+    region: content
+    settings:
+      entity_browser: media_entity_browser_modal
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: default
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_subhead:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

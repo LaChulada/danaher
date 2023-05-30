@@ -1,0 +1,19 @@
+uuid: 0c75c23b-0670-4104-af99-deb01f8168b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.pdf_download
+id: paragraph.pdf_download.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: pdf_download
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

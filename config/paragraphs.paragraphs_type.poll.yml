@@ -1,0 +1,15 @@
+uuid: 8b9ee846-59c3-4ff1-af3b-7046c3ba304d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: poll
+label: Poll
+icon_uuid: null
+icon_default: null
+description: 'Community Poll'
+behavior_plugins: {  }

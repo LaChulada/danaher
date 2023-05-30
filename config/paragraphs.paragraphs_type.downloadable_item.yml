@@ -1,0 +1,10 @@
+uuid: c2f2d671-d9c1-49f2-a772-41416159dd42
+langcode: en
+status: true
+dependencies: {  }
+id: downloadable_item
+label: 'Downloadable Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

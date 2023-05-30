@@ -1,0 +1,22 @@
+enabled_entity_types:
+  block_content: block_content
+  media: media
+  node: node
+  embedded_paragraphs: embedded_paragraphs
+  paragraphs_library_item: paragraphs_library_item
+  taxonomy_term: taxonomy_term
+  user: user
+  paragraph: paragraph
+  comment: '0'
+  contact_message: '0'
+  crop: '0'
+  entity_embed_fake_entity: '0'
+  file: '0'
+  menu_link_content: '0'
+  path_alias: '0'
+  redirect: '0'
+  search_api_task: '0'
+  shortcut: '0'
+  smart_date_override: '0'
+  smart_date_rule: '0'
+  webform_submission: '0'

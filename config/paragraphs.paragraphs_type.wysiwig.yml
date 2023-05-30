@@ -1,0 +1,15 @@
+uuid: 3321e188-a1c6-49d7-95e4-e78091a887ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: wysiwig
+label: WYSIWIG
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

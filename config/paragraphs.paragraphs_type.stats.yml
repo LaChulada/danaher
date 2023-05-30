@@ -1,0 +1,18 @@
+uuid: 865770be-9bd1-441b-973c-297ca45c2c98
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: stats
+label: Stats
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

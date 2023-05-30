@@ -1,0 +1,54 @@
+uuid: c5179411-4a74-4695-a70a-f90e37623c07
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_content_types_restricted
+field_name: field_content_types_restricted
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: blog_or_news
+      label: Blog
+    -
+      value: capability
+      label: Capability
+    -
+      value: careers
+      label: Careers
+    -
+      value: high_level_pages
+      label: 'Category Hub Pages'
+    -
+      value: case_study
+      label: 'Case Study'
+    -
+      value: event
+      label: Event
+    -
+      value: learning_resource
+      label: 'Learning Resource'
+    -
+      value: news
+      label: News
+    -
+      value: audience
+      label: Organization
+    -
+      value: product
+      label: Products
+    -
+      value: page
+      label: 'Utility Page'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

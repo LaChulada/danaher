@@ -1,0 +1,15 @@
+uuid: 95d0488c-48a7-423a-8d8b-ef323e3cb63b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: featured_people
+label: 'Featured People'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

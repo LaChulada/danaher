@@ -1,0 +1,29 @@
+uuid: 8a72c0c1-f46d-4276-9e73-989125062886
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scientific_focus_area
+    - node.type.business_detail
+    - taxonomy.vocabulary.scientific_focus_area
+id: node.business_detail.field_scientific_focus_area
+field_name: field_scientific_focus_area
+entity_type: node
+bundle: business_detail
+label: 'Scientific Focus Area'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      scientific_focus_area: scientific_focus_area
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

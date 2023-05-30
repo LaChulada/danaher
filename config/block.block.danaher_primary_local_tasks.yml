@@ -1,0 +1,22 @@
+uuid: 44a4c317-52df-4bd2-b6da-2b29aebc078a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - danaher
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: danaher_primary_local_tasks
+theme: danaher
+region: highlighted
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

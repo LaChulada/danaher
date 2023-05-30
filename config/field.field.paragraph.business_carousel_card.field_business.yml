@@ -1,0 +1,29 @@
+uuid: 8e5fa1d9-e6cf-42d3-9fbc-eb124eb1ca27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_business
+    - node.type.business_detail
+    - paragraphs.paragraphs_type.business_carousel_card
+id: paragraph.business_carousel_card.field_business
+field_name: field_business
+entity_type: paragraph
+bundle: business_carousel_card
+label: Business
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      business_detail: business_detail
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

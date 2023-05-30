@@ -1,0 +1,155 @@
+uuid: ca6bd083-c166-4a65-b95f-637d0f49d579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_sections
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_section
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: paragraph.accordion.field_accordion_sections
+field_name: field_accordion_sections
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion Sections'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_section: accordion_section
+    negate: 0
+    target_bundles_drag_drop:
+      2_up_hero:
+        weight: 42
+        enabled: false
+      accordion:
+        weight: 43
+        enabled: false
+      accordion_section:
+        weight: 44
+        enabled: true
+      agenda:
+        weight: 45
+        enabled: false
+      article_hero:
+        weight: 46
+        enabled: false
+      basic_hero:
+        weight: 47
+        enabled: false
+      blog_hero:
+        weight: 48
+        enabled: false
+      body_content:
+        weight: 49
+        enabled: false
+      callout:
+        weight: 50
+        enabled: false
+      case_study_hero:
+        weight: 51
+        enabled: false
+      common_module_header:
+        weight: 52
+        enabled: false
+      cta_banner:
+        weight: 53
+        enabled: false
+      cta_logo_showcase:
+        weight: 54
+        enabled: false
+      directory_hero:
+        weight: 55
+        enabled: false
+      featured_event:
+        weight: 56
+        enabled: false
+      featured_single_quote:
+        weight: 57
+        enabled: false
+      flexible_framer:
+        weight: 58
+        enabled: false
+      flexible_framer_image_item:
+        weight: 59
+        enabled: false
+      flexible_framer_item:
+        weight: 60
+        enabled: false
+      flexible_framer_with_images:
+        weight: 61
+        enabled: false
+      from_library:
+        weight: 62
+        enabled: false
+      full_size_media:
+        weight: 63
+        enabled: false
+      high_level_page_hero:
+        weight: 64
+        enabled: false
+      homepage_hero_quilt_item:
+        weight: 65
+        enabled: false
+      homepage_immersive_hero:
+        weight: 66
+        enabled: false
+      meet_our_team:
+        weight: 67
+        enabled: false
+      pathing_cards:
+        weight: 68
+        enabled: false
+      speaker_information:
+        weight: 70
+        enabled: false
+      speakers_panel:
+        weight: 69
+        enabled: false
+      stacked_capability_column:
+        weight: 71
+        enabled: false
+      stacked_capability_column_card:
+        weight: 72
+        enabled: false
+      stacked_capability_column_item:
+        weight: 73
+        enabled: false
+      standalone_section_header:
+        weight: 74
+        enabled: false
+      stats:
+        weight: 75
+        enabled: false
+      stats_item:
+        weight: 76
+        enabled: false
+      table_of_contents:
+        weight: 77
+        enabled: false
+      table_of_contents_panel:
+        weight: 78
+        enabled: false
+      text_and_image:
+        weight: 79
+        enabled: false
+      three_up:
+        weight: 80
+        enabled: false
+      three_up_item:
+        weight: 81
+        enabled: false
+      wysiwig:
+        weight: 82
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,37 @@
+uuid: 70435963-ec94-441f-a1d2-78b3dd865bc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcast.field_audio2
+    - paragraphs.paragraphs_type.podcast
+  module:
+    - fences
+    - video_embed_field
+id: paragraph.podcast.default
+targetEntityType: paragraph
+bundle: podcast
+mode: default
+content:
+  field_audio2:
+    type: video_embed_field_video
+    label: hidden
+    settings:
+      autoplay: false
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,239 @@
+@use "sass:math";
+
+// import utilities
+@import "../utility/utility";
+
+// scoped variables
+$navigation-overlay-background: $color-white;
+$navigation-overlay-color: $color-white;
+$navigation-overlay-content-padding: 60px;
+
+// navigation
+// --------------------------------------------------
+.navigation-overlay {
+   background-color: $navigation-overlay-background;
+   color: $navigation-overlay-color;
+   display: block;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   z-index: $z-index-max;
+
+   @include media-breakpoint-down(sm) {
+      height: calc(var(--vh, 1vh) * 100);
+   }
+
+   // when open
+   &.is-visible {
+      display: block;
+      visibility: visible;
+   }
+
+   // when closed
+   &.is-hidden {
+      display: none;
+      visibility: hidden;
+   }
+
+   // animate navigation in
+   &.is-animating-in {
+      @include animate-css(slideInRight, $duration: .75s);
+      display: block;
+      visibility: visible;
+   }
+
+   // animate navigation out
+   &.is-animating-out {
+      @include animate-css(slideOutRight, $duration: .75s);
+   }
+
+   // navigation overlay scrollable
+   &-scrollable {
+      height: 100%;
+      overflow-y: auto;
+      display: flex;
+   }
+
+   // navigation overlay content
+   &-content {
+      @include make-container();
+      padding-top: $navigation-overlay-content-padding;
+      padding-bottom: $navigation-overlay-content-padding;
+      align-self: center;
+
+      @include media-breakpoint-down(md) {
+         padding-top: math.div($navigation-overlay-content-padding, 2);
+         padding-bottom: math.div($navigation-overlay-content-padding, 2);
+         align-self: normal;
+      }
+
+      h2 {
+         color: $navigation-overlay-color;
+      }
+
+      ul {
+         @include list-style(reset);
+         li {
+            margin: 15px 0;
+            color: $navigation-overlay-color;
+            line-height: 1.2;
+            a {
+               color: $navigation-overlay-color;
+               text-decoration: none;
+               &:hover {
+                  color: $color-yellow;
+               }
+            }
+         }
+         &.main-nav {
+            li {
+               @include font-size(18px, 24px);
+               font-weight: $font-weight-semi;
+               display: list-item;
+            }
+         }
+         &.sub-nav {
+            margin-top: 50px;
+            li {
+               @include font-size(16px, 20px);
+               font-weight: $font-weight-regular;
+               display: list-item;
+               margin-top: 15px;
+               margin-bottom: 15px;
+            }
+         }
+      }
+   }
+
+   // navigation overlay close
+   &-close {
+      @include button(reset);
+      position: absolute;
+      z-index: 1;
+      top: 30px;
+      right: 30px;
+      color: $navigation-overlay-color;
+
+      // &:after {
+      //    @include icon-font("icon-close-thin");
+      //    @include font-size(35px);
+      // }
+   }
+}
+
+//#nav-menu-overlay
+#nav-menu-overlay, #block-micrositenavmenuoverlay-2 {
+   .navigation-overlay-grid {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      height: 100%;
+      overflow-y: auto;
+      @include media-breakpoint-down(md) {
+         grid-template-columns: 1fr;
+         align-content: flex-start;
+      }
+      .navigation-overlay-media {
+         @include make-container();
+         padding-top: $navigation-overlay-content-padding;
+         padding-bottom: $navigation-overlay-content-padding;
+         position: relative;
+         display: flex;
+         @include media-breakpoint-down(md) {
+            padding-top: math.div($navigation-overlay-content-padding, 2);
+            padding-bottom: math.div($navigation-overlay-content-padding, 2);
+         }
+         .positioned-content {
+            color: $navigation-overlay-color;
+            align-self: center;
+            text-align: right;
+            width: 100%;
+            @include media-breakpoint-down(md) {
+               text-align: left;
+               align-self: normal;
+            }
+            .logo {
+               max-width: 300px;
+               margin-left: auto;
+               @include media-breakpoint-down(md) {
+                  max-width: 140px;
+                  margin-left: 0;
+               }
+            }
+            a {
+               color: $navigation-overlay-color;
+               &.back-to-main {
+                  @include font-size(20px, 28px);
+                  font-weight: $font-weight-semi;
+                  text-decoration: none;
+                  position: relative;
+                  margin-top: 100px;
+                  display: inline-block;
+                  // &:after {
+                  //    @include icon-font("arrow-faq");
+                  //    position: absolute;
+                  //    transform: rotate(180deg);
+                  //    left: -10px;
+                  //    top: -50px;
+                  //    @include font-size(50px, 100px);
+                  //    opacity: .4;
+                  //    transition: left .2s linear;
+                  //}
+                  &:hover {
+                     &:after { left: -20px; }
+                  }
+                  @include media-breakpoint-down(md) {
+                     margin-top: 30px;
+                     padding-left: 30px;
+                     // &:after {
+                     //    @include icon-font("arrow-right-thin");
+                     //    @include font-size(20px);
+                     //    top: 5px;
+                     //    left: 0;
+                     //    opacity: 1;
+                     //    transition: none;
+                     // }
+                     &:hover {
+                        color: $color-yellow;
+                        &:after {
+                           left: 0;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         .media-item--fill {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include media-breakpoint-down(md) {
+               display: none;
+            }
+         }
+      }
+      .navigation-overlay-scrollable {
+         @include media-breakpoint-down(md) {
+            overflow-y: visible;
+         }
+      }
+   }
+}
+
+//#nav-program-menu-overlay
+#nav-program-menu-overlay {
+   .logo {
+      margin-bottom: 50px;
+      padding-right: 60px;
+      font-family: $font-heading;
+      font-weight: $font-weight-bold;
+      line-height: 1;
+      color: $color-yellow;
+   }
+}

@@ -1,0 +1,24 @@
+uuid: 5c7cc527-684f-4f01-b949-aa34a3b8eb62
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: featured_square_thumbnail
+label: 'Featured Square Thumbnail (425x350)'
+effects:
+  49ea3cac-ef52-4f88-8f72-6967c117d537:
+    uuid: 49ea3cac-ef52-4f88-8f72-6967c117d537
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 425
+      height: 350
+      crop_type: focal_point
+  26c85be9-1d26-41f8-aeaa-431143f30895:
+    uuid: 26c85be9-1d26-41f8-aeaa-431143f30895
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

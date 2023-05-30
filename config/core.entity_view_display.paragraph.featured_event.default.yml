@@ -1,0 +1,52 @@
+uuid: f0b61ad1-062f-42fb-a029-3f28000b04c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_event.field_event
+    - field.field.paragraph.featured_event.field_headline
+    - paragraphs.paragraphs_type.featured_event
+  module:
+    - fences
+id: paragraph.featured_event.default
+targetEntityType: paragraph
+bundle: featured_event
+mode: default
+content:
+  field_event:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: featured_event
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,12 @@
+uuid: b4e361a0-348a-47e6-a58d-72363ae58b7a
+langcode: en
+status: true
+dependencies: {  }
+label: 5x4
+id: 5x4
+description: ''
+aspect_ratio: '5:4'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 608
+hard_limit_height: 760

@@ -1,0 +1,24 @@
+uuid: 94d6a11b-d7dd-433e-8289-c9bc72c7354f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.kitchen_sink.field_widgets
+    - node.type.kitchen_sink
+  module:
+    - user
+id: node.kitchen_sink.teaser
+targetEntityType: node
+bundle: kitchen_sink
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_widgets: true
+  langcode: true
+  search_api_excerpt: true

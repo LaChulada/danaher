@@ -1,0 +1,19 @@
+uuid: d565e4bb-6253-43e1-8054-e923c53ab6e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eyebrow_text
+    - paragraphs.paragraphs_type.accordion
+id: paragraph.accordion.field_eyebrow_text
+field_name: field_eyebrow_text
+entity_type: paragraph
+bundle: accordion
+label: 'Eyebrow Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

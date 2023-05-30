@@ -1,0 +1,99 @@
+uuid: 5156ed0d-6efd-4f3e-aa6c-5b7f16b6d48c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.article_detail.field_hero
+    - field.field.node.article_detail.field_news_article_type
+    - field.field.node.article_detail.field_news_topic
+    - field.field.node.article_detail.field_publication_date
+    - field.field.node.article_detail.field_recirculation_module
+    - field.field.node.article_detail.field_text_callout
+    - field.field.node.article_detail.field_widgets
+    - field.field.node.article_detail.field_wysiwig
+    - field.field.node.article_detail.layout_builder__layout
+    - node.type.article_detail
+  module:
+    - entity_reference_revisions
+    - fences
+    - layout_builder
+    - layout_builder_restrictions
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_onecol
+      denylisted_blocks: {  }
+      allowlisted_blocks:
+        'Better Social Sharing Buttons': {  }
+        'Block Group': {  }
+        'Chaos Tools': {  }
+        'Content fields': {  }
+        'Custom block types': {  }
+        'Custom blocks': {  }
+        Devel: {  }
+        'Field as Block': {  }
+        'Fixed custom': {  }
+        Forms: {  }
+        Geolocation: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        'Lists (Views)': {  }
+        Menus: {  }
+        'Social Media Links Block': {  }
+        System: {  }
+        User: {  }
+        core: {  }
+      restricted_categories: {  }
+    entity_view_mode_restriction_by_region:
+      allowed_layouts:
+        - layout_onecol
+id: node.article_detail.search_result
+targetEntityType: node
+bundle: article_detail
+mode: search_result
+content:
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: hero_for_search
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_news_article_type: true
+  field_news_topic: true
+  field_publication_date: true
+  field_recirculation_module: true
+  field_text_callout: true
+  field_widgets: true
+  field_wysiwig: true
+  langcode: true
+  layout_builder__layout: true

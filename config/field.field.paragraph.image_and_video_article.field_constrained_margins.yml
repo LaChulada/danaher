@@ -1,0 +1,23 @@
+uuid: 2e0b439f-ad85-4422-947d-c479a9ef6d64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_constrained_margins
+    - paragraphs.paragraphs_type.image_and_video_article
+id: paragraph.image_and_video_article.field_constrained_margins
+field_name: field_constrained_margins
+entity_type: paragraph
+bundle: image_and_video_article
+label: 'Constrained Margins?'
+description: 'If the content author is choosing a single image, ticking this box will constrain it to a smaller width instead of full-width. '
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

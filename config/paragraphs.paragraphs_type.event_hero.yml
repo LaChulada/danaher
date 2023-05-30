@@ -1,0 +1,18 @@
+uuid: d0c1c0ea-3249-45bc-9e48-23e07c8b0e57
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: event_hero
+label: 'Event hero'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

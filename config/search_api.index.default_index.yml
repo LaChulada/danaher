@@ -1,0 +1,334 @@
+uuid: 1465608b-d96a-4d7f-8882-f5051c7395ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_topic
+    - field.storage.node.field_event_type
+    - field.storage.node.field_news_article_type
+    - field.storage.node.field_news_topic
+    - field.storage.node.field_scientific_focus
+    - field.storage.node.field_scientific_focus_area
+    - field.storage.node.field_subcategory_page_type
+    - search_api.server.default_server
+    - core.entity_view_mode.node.search_index
+  module:
+    - node
+    - user
+    - search_api
+    - search_api_attachments
+    - search_api_exclude
+    - search_api_exclude_entity
+_core:
+  default_config_hash: 3aiqici40Ky7H7_FK6JBlEawsJtrD7MGX3dQh3xgqoc
+id: default_index
+name: 'Default content index'
+description: 'Default content index created by the Database Search Defaults module'
+read_only: false
+field_settings:
+  author:
+    label: 'Author name'
+    datasource_id: 'entity:node'
+    property_path: 'uid:entity:name'
+    type: string
+    dependencies:
+      module:
+        - node
+        - user
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_event_topic:
+    label: 'Event Topic'
+    datasource_id: 'entity:node'
+    property_path: field_event_topic
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_topic
+  field_event_topic_1:
+    label: 'Event Topic'
+    datasource_id: 'entity:node'
+    property_path: field_event_topic
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_topic
+  field_event_type:
+    label: 'Event Type'
+    datasource_id: 'entity:node'
+    property_path: field_event_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_type
+  field_news_article_type:
+    label: 'Article Type'
+    datasource_id: 'entity:node'
+    property_path: field_news_article_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_article_type
+  field_news_topic:
+    label: Topic
+    datasource_id: 'entity:node'
+    property_path: field_news_topic
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_topic
+  field_scientific_focus:
+    label: 'Scientific Focus'
+    datasource_id: 'entity:node'
+    property_path: field_scientific_focus
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_scientific_focus
+  field_scientific_focus_area:
+    label: 'Scientific Focus Area'
+    datasource_id: 'entity:node'
+    property_path: field_scientific_focus_area
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_scientific_focus_area
+  field_subcategory_page_type:
+    label: 'Subcategory Page Type'
+    datasource_id: 'entity:node'
+    property_path: field_subcategory_page_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_subcategory_page_type
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  rendered_item:
+    label: 'Rendered item'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:node':
+          article: search_index
+          page: search_index
+  status:
+    label: 'Publishing status'
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  sticky:
+    label: 'Sticky at top of lists'
+    datasource_id: 'entity:node'
+    property_path: sticky
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 8
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  uid:
+    label: 'Author ID'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - directory
+        - error
+        - homepage
+        - kitchen_sink
+        - leadership_directory
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url:
+    weights:
+      preprocess_index: -30
+  aggregated_field:
+    weights:
+      add_properties: 20
+  content_access:
+    weights:
+      preprocess_index: -6
+      preprocess_query: -4
+  entity_status:
+    weights:
+      preprocess_index: -10
+  entity_type: {  }
+  file_attachments:
+    excluded_extensions: 'aif art avi bmp gif ico mov oga ogv png psd ra ram rgb flv'
+    number_indexed: 0
+    number_first_bytes: '1 MB'
+    max_filesize: '0'
+    excluded_private: 1
+    excluded_mimes: 'audio/x-aiff image/x-jg video/x-msvideo image/x-ms-bmp image/gif image/vnd.microsoft.icon video/quicktime audio/ogg video/ogg image/png image/x-photoshop audio/x-realaudio audio/x-pn-realaudio image/x-rgb video/x-flv'
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: false
+    excerpt_length: 256
+    exclude_fields: {  }
+    highlight: always
+    highlight_partial: true
+  html_filter:
+    weights:
+      preprocess_index: -3
+      preprocess_query: -6
+    all_fields: false
+    fields:
+      - rendered_item
+      - title
+      - type
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      string: 2
+  ignorecase:
+    weights:
+      preprocess_index: -5
+      preprocess_query: -8
+    all_fields: true
+    fields:
+      - author
+      - rendered_item
+      - title
+      - type
+  language_with_fallback: {  }
+  node_exclude: {  }
+  rendered_item:
+    weights:
+      add_properties: 0
+      pre_index_save: -10
+  search_api_exclude_entity_processor:
+    fields:
+      node: {  }
+  stopwords:
+    weights:
+      preprocess_index: -5
+      preprocess_query: -10
+    all_fields: false
+    fields:
+      - rendered_item
+      - title
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+  tokenizer:
+    weights:
+      preprocess_index: -2
+      preprocess_query: -5
+    all_fields: false
+    fields:
+      - rendered_item
+      - title
+    spaces: ''
+    ignored: ._-
+    overlap_cjk: 1
+    minimum_word_size: '3'
+  transliteration:
+    weights:
+      preprocess_index: -4
+      preprocess_query: -7
+    all_fields: false
+    fields:
+      - rendered_item
+      - title
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: default_server

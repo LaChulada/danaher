@@ -1,0 +1,88 @@
+uuid: 079a71bb-74bc-48e7-a1d0-c90b0d7ff709
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.event.field_business_names
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_end_time
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_link
+    - field.field.node.event.field_event_list
+    - field.field.node.event.field_event_time_zone
+    - field.field.node.event.field_event_topic
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_hero
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_scientific_focus
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_start_time
+    - field.field.node.event.field_text_callout
+    - field.field.node.event.field_widgets
+    - field.field.node.event.field_wysiwig
+    - field.field.node.event.layout_builder__layout
+    - node.type.event
+  module:
+    - entity_reference_revisions
+    - fences
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.search_result
+targetEntityType: node
+bundle: event
+mode: search_result
+content:
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: hero_for_search
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_audience: true
+  field_business_names: true
+  field_capability: true
+  field_end_date: true
+  field_end_time: true
+  field_event_address: true
+  field_event_link: true
+  field_event_list: true
+  field_event_time_zone: true
+  field_event_topic: true
+  field_event_type: true
+  field_meta_tags: true
+  field_scientific_focus: true
+  field_start_date: true
+  field_start_time: true
+  field_text_callout: true
+  field_widgets: true
+  field_wysiwig: true
+  langcode: true
+  layout_builder__layout: true

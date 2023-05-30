@@ -1,0 +1,6 @@
+uuid: 4ba06736-d16f-49e9-96ff-95834889cd53
+langcode: en
+status: true
+dependencies: {  }
+id: event_hero_info_block
+label: 'Event Hero Info Block'

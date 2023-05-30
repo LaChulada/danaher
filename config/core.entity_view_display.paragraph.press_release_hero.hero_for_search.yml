@@ -1,0 +1,25 @@
+uuid: 127d5b58-858d-4d99-9987-e20886bc9e52
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_for_search
+    - field.field.paragraph.press_release_hero.field_headline
+    - field.field.paragraph.press_release_hero.field_media
+    - paragraphs.paragraphs_type.press_release_hero
+id: paragraph.press_release_hero.hero_for_search
+targetEntityType: paragraph
+bundle: press_release_hero
+mode: hero_for_search
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_media: true
+  search_api_excerpt: true

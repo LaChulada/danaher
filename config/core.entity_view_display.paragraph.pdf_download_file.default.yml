@@ -1,0 +1,51 @@
+uuid: 0112c651-932c-4ef4-b412-3bb31dbb83f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pdf_download_file.field_file
+    - field.field.paragraph.pdf_download_file.field_language
+    - paragraphs.paragraphs_type.pdf_download_file
+  module:
+    - fences
+    - file
+id: paragraph.pdf_download_file.default
+targetEntityType: paragraph
+bundle: pdf_download_file
+mode: default
+content:
+  field_file:
+    type: file_url_plain
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_language:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

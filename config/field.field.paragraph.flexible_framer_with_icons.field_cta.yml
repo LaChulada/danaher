@@ -1,0 +1,23 @@
+uuid: 80564eb6-eaa8-4049-89b6-0e4147b65128
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.flexible_framer_with_icons
+  module:
+    - link
+id: paragraph.flexible_framer_with_icons.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: flexible_framer_with_icons
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

@@ -1,0 +1,36 @@
+uuid: bc3833aa-8bbc-40d3-9ae5-a7c5cf513d5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.featured_card_hero_area
+    - field.field.paragraph.press_release_hero.field_headline
+    - field.field.paragraph.press_release_hero.field_media
+    - paragraphs.paragraphs_type.press_release_hero
+  module:
+    - fences
+id: paragraph.press_release_hero.featured_card_hero_area
+targetEntityType: paragraph
+bundle: press_release_hero
+mode: featured_card_hero_area
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h1
+        fences_field_classes: section-heading
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_media: true
+  search_api_excerpt: true

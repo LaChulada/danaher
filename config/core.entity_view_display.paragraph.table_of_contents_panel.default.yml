@@ -1,0 +1,39 @@
+uuid: 2127d9ad-57a3-4b22-ae47-26fbfd8f9ef8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.table_of_contents_panel.field_panels
+    - field.field.paragraph.table_of_contents_panel.field_subhead
+    - field.field.paragraph.table_of_contents_panel.field_title
+    - paragraphs.paragraphs_type.table_of_contents_panel
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.table_of_contents_panel.default
+targetEntityType: paragraph
+bundle: table_of_contents_panel
+mode: default
+content:
+  field_panels:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_subhead: true
+  field_title: true
+  search_api_excerpt: true

@@ -1,0 +1,21 @@
+uuid: 3c019460-a253-4e0e-835e-22341ba3dba5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.past_events_grid
+id: paragraph.past_events_grid.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: past_events_grid
+label: Title
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Past Events'
+default_value_callback: ''
+settings: {  }
+field_type: string

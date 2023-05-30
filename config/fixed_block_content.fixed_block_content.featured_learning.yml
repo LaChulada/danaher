@@ -1,0 +1,12 @@
+uuid: 2ffda1fd-ca35-4c1c-891f-46b7c748ea24
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_resource_card
+id: featured_learning
+title: 'Featured Learning'
+block_content_bundle: featured_resource_card
+default_content: null
+auto_export: 0
+protected: false

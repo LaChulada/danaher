@@ -1,0 +1,16 @@
+uuid: 2879e060-e5a7-45e1-ae51-97f8d23d1f91
+langcode: en
+status: true
+dependencies: {  }
+name: large_thumbnail
+label: 'Large Thumbnail (400x400)'
+effects:
+  1e05984b-a98a-438d-ac32-102481d5d281:
+    uuid: 1e05984b-a98a-438d-ac32-102481d5d281
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      upscale: false
+pipeline: ''

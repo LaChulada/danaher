@@ -1,0 +1,696 @@
+@use "sass:math";
+@import "../utility/utility";
+
+.featured-section-title {
+    font-family: $font-heading;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-primary;
+    margin-bottom: 48px;
+    margin-top: 80px;
+    a {
+        color: inherit;
+    }
+}
+
+.featured-case-studies {
+    &.module {
+        margin-bottom: $module-spacing * 2;
+    }
+    & > .section-title {
+        text-align: center;
+        font-size: 28px;
+        line-height: 30px;
+        color: $color-primary;
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 1.07;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: minmax(34.19%, auto) 1fr;
+    //grid-template-columns: auto 1fr;
+    grid-gap: 16px;  
+
+    @media (max-width: $mobile-width) {
+        display: block;
+    }
+
+    .hero.no-image {
+        display: none;
+    }
+
+    figure {
+        width: 100%;
+        height: 100%;
+        line-height: 1;
+        font-size: 0;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .rightside {
+        padding: math.div($module-spacing, 2);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .intro-paragraph {
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-black;
+        }
+
+        .btn {
+            width: fit-content;
+        }
+
+        .tagging {
+            padding: 0;
+        }
+
+        .eyebrow {
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: $color-primary;
+        }
+
+        .title {
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: 0.5px;
+            color: $color-primary;
+        }
+    }
+}
+
+.case-study {
+    &--carousel {
+        background: $color-yellow;
+        margin-bottom: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: inherit;
+        margin-top: 48px;
+        & > .node__content {
+            height: 100%;
+        }
+        &.featured-case-study {
+            background: $color-blue;
+            margin-inline: auto;
+            padding: 0;
+            .hero--case-study .case-study-right-side {
+                background: $color-blue;
+            }
+        }
+    }
+
+    &--description {
+        font-family: $font-body;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.375;
+        color: $color-primary;
+        margin: 10px 36px 24px;
+    }
+}
+
+.case-study-grid {
+    & > .section-title {
+        text-align: center;
+        padding:  $module-spacing 0;
+        color: $color-primary;
+
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 1.0714;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.case-studies-grid {
+
+    &.case-studies {
+
+        &.news {
+            .form--inline {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0 25px;
+            }
+        }
+        & > .section-title {
+            padding:  $module-spacing 0;
+            color: $color-primary;
+        }
+        
+        .carousel-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 32px 0;
+            padding-bottom: $module-spacing;
+            height: 100%;
+    
+            @media(max-width: $mobile-width) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    
+        .form--inline .form-actions {
+            clear: none;
+        }
+    
+        .form--inline {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0 100px;
+            gap: 0;
+            margin-bottom: 32px;
+    
+        
+    
+            @media (max-width: $mobile-width) {
+                flex-direction: column;
+                padding: 0;
+                align-items: flex-start;
+            }
+    
+            select {
+                max-width: 200px;
+            }
+        }
+    
+        .bef-exposed-form .form--inline > .form-item {
+            padding: 24px 24px 12px;
+            @media (max-width: $mobile-width) {
+                padding-left: 0;
+            }
+        }
+    }
+
+
+}
+
+.featured-cta-link {
+    padding: 20px 10px;
+    a {
+        @include link_button_style();
+        background: $color-blue;
+        @extend .right;
+    }
+
+    @media(max-width: $mobile-width) {
+        text-align: center;
+    }
+
+}
+
+
+nav.slick__arrow {
+    padding-top: 20px;
+}
+
+// .case-studies .form-item label {
+//     @extend .sr-only;
+// }
+
+.case-studies-grid  .form-item label {
+    @extend .sr-only;
+}
+
+.impacted {
+    display: inline;
+    font-family: $font-body;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-primary;
+}
+.tagging {
+    padding: 0 30px 24px;
+    line-height: 16px;
+    font-size: 12px;
+    .tagging-list {
+        list-style-type: none;
+        display: inline;
+        font-family: $font-body;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: $color-primary;
+        padding: 0;
+    
+        .case-study--carousel & {
+            padding-left: 0;
+        }
+    
+        li {
+            display: inline;
+            &:after {
+                content: ",";
+            }
+            &:last-of-type {
+                &:after {
+                    content: "";
+                }
+            }
+        }
+    }
+}
+
+
+.slick--view--case-studies {
+    .slick__arrow {
+        float: right;
+        position: relative;
+        margin-top: 20px;
+        padding-top: 0;
+        padding-right: 10px;
+        @media (max-width: $mobile-width) {
+            float: none;
+            text-align: center;
+        }
+    }
+
+    button.slick-prev.slick-arrow {
+        background-image: url("/themes/custom/danaher/images/previous-carousel-arrow.svg");
+        background-size: cover;
+        width: 29px;
+        height: 28px;
+        appearance: none;
+        -webkit-appearance: none;
+        text-indent: -9999px;
+        background-color: transparent;
+        border: none;
+        left: -50px;
+        cursor: pointer;
+        transition: all $transition-time;
+        &:active, &:hover, &:focus {
+            transform: scale($scale-factor);
+        }
+    }
+    
+    button.slick-next.slick-arrow {
+        background-image: url("/themes/custom/danaher/images/next-carousel-arrow.svg");
+        background-size: cover;
+        width: 29px;
+        height: 28px;
+        appearance: none;
+        -webkit-appearance: none;
+        text-indent: -9999px;
+        background-color: transparent;
+        border: none;
+        right: -15px;
+        cursor: pointer;
+        transition: all $transition-time;
+        &:active, &:hover, &:focus {
+            transform: scale($scale-factor);
+        }
+    }
+}
+
+
+.carousel-wrapper {
+    .slick-slide {
+        margin-right: 30px;
+    }
+}
+
+.case-studies  {
+    &-carousel-form {
+        // display: grid;
+        // justify-content: center;
+        font-size: 20px;
+        line-height: 1.116;
+    }
+    .form--inline .form-actions {
+        clear: both;
+    }
+    
+    // #edit-submit-case-studies {
+    //     @include link_button_style();
+    //     @extend .right;
+    // }
+
+
+    #edit-submit-case-studies {
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-item { 
+        * {
+            display: inline-block;
+            font-size: inherit;
+        }
+        .choices[data-type*=select-one] .choices__inner {
+            background-color: transparent;
+            border: none;
+        }
+        .form-item {
+            float: none;
+            text-align: center;
+        }
+
+        .description, select {
+            color: $color-primary;
+            $font-family: $font-body;
+            font-style: normal;
+            font-weight: 300;
+
+            border-color: $color-primary;
+            border-width: 1px;
+            border-top: none;
+            border-left: none;
+            border: none;
+            border-radius: 0;
+            border-right: 0;
+            border: none;
+            @media(max-width: 400px) {
+                max-width: 80%;
+            }
+        }
+        select {
+            color: $color-dark-blue;
+            border-color: $color-dark-blue;
+        }
+    }
+
+    .section-title {
+        font-family: $font-heading;
+        font-style: normal;
+        font-weight: 900;
+        @include font-size(24px, 28px);
+        line-height: 1.071;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $color-primary;
+    }
+}
+
+.case-studies-carousel-form {
+
+    $font-family: $font-body;
+    font-style: normal;
+    font-weight: 400;
+    // font-size: 48px;
+    // line-height: 56px;
+    color: $color-primary;
+
+
+    form {
+        width: 50%;
+        margin-inline: auto;
+        text-align: center;
+        margin-top: 24px;
+
+        @media(max-width: $mobile-width) {
+            width: auto;
+            padding-inline: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    .bef-exposed-form .form--inline > .form-item {
+        float: none;
+    }
+
+    .slick-track
+    {
+        display: flex !important;
+    }
+    
+    .slick-slide
+    {
+        height: inherit !important;
+        display: flex !important; 
+        & > div { height: 100%; }
+    }
+
+    .slide {
+        height: inherit;
+
+        a.btn {
+            @include link_button_style();
+            background: $color-blue;
+            margin-left: 32px;
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.case-study-carousel-item-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0;
+    height: 100%;
+
+    @media (max-width: $mobile-width) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .hero--case-study.teaser {
+        display: block;
+        height: 100%;
+        @media (max-width: $mobile-width) {
+            figure {
+                max-height: 240px;
+            }
+        }
+    }
+
+    .case-study-right-side {
+        display: none;
+    }
+
+    .text-content {
+        padding: 25px 27px 24px 22px;
+        .section-title {
+            $font-family: $font-body;
+            font-style: normal;
+            font-weight: 300;
+            @include font-size(20px, 24px);
+            line-height: 1.25;
+            color: $color-primary;
+            text-transform: none;
+            text-align: left;
+        }
+
+        .stats {
+            & [data-columns] {
+                margin-top: 0;
+
+                &[data-columns="3"] {
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: auto;
+                    grid-gap: $column-gap;
+                }             
+            }
+
+
+            
+            .section-title {
+                font-family: $font-heading;
+                font-style: normal;
+                font-weight: 800;
+                @include font-size(24px, 28px);
+                line-height: 1.067;
+                text-align: left;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                color: $color-primary;
+            }
+
+            .section-description {
+                text-transform: uppercase;
+                font-family: "Recent Grotesk";
+                font-style: normal;
+                font-weight: 800;
+                color: $color-primary;
+                text-align: left;
+                margin-bottom: 0;
+                padding: 0;
+            }
+        }
+
+        .case-study--description {
+            margin-left: 0;
+        }
+
+        a.btn {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+
+        .tagging {
+            padding-left: 0;
+        }
+    }
+}
+
+
+
+///--- choices
+#views-exposed-form-case-studies-featured-case-studies {
+    @include font-size(32px, 48px);
+    line-height: 1.16667;
+
+    .choices__inner {
+        background-color: transparent;
+        border: none;
+        color: $color-dark-blue;
+        border-radius: 0;
+        padding-right: 25px;
+        padding-left: 0;
+    }
+    
+    .choices[data-type*=select-one]::after {
+        // border-color: $color-dark-blue transparent transparent;
+        content: "";
+        width: 10px;
+        height: 20px;
+        margin-top: 0;
+        right: 0;
+        top: calc(50% - 10px);
+        background: url(/themes/custom/danaher/images/select-chevron.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+    }
+    
+    .choices[data-type*=select-one].is-open::after {
+        transform: rotate(180deg);
+    }
+
+    .choices[data-type*=select-one] {
+        vertical-align: middle;
+        width: auto;
+        //this makes it wrap strangely when the dropdown is open
+        // width: auto;
+    }
+
+    .choices[data-type*=select-one] .choices__input {
+        font-size: 16px;
+    }
+
+    .is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded] {
+        border-color: $color-dark-blue;
+    }
+
+    .choices__list--dropdown, .choices__list[aria-expanded] {
+        background-color: $color-white;
+        border: 1px solid $color-dark-blue;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 250px;
+        //top: 0;
+        @media(max-width: 768px) {
+            left: -25%;
+        }
+        @media(max-width: 400px) {
+            left: -15%;
+        }
+    }
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+        background-color: $color-white;
+        text-decoration: underline;
+    }
+
+    .choices {
+        position: relative;
+        &:focus, &:hover {
+            &:before {
+                content: "";
+                width: 100%;
+                position: absolute;
+                bottom: 15px;
+                border-bottom: 2px solid $color-dark-blue;
+            }
+        }
+    }
+
+    .choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
+        color: $color-dark-blue;
+        width: 100%;
+
+        /* Works on Firefox */
+        & {
+            scrollbar-width: thin;
+            scrollbar-color: $color-primary  $color-blue;
+        }
+        
+        /* Works on Chrome, Edge, and Safari */
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background:  $color-blue;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            // background-color: blue;
+            border-radius: 20px;
+            border: 3px solid $color-purple;
+        }
+    }
+
+
+}
+
+//turn off placeholder
+.choices .choices__list .choices__list .choices__item--disabled { text-indent: -9999px; height: 0; width: 0; padding: 0; }
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+    display: block;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted::after, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
+    content: "";
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+    font-size: 14px;
+}
+
+@media (min-width: 640px) {
+    .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+        padding-right: 10px;
+    }
+}

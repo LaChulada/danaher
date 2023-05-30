@@ -1,0 +1,15 @@
+uuid: 3f28595e-6916-4ca3-ae64-1d2fc442eba8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: featured_case_study_card
+label: 'Featured Case Study Card'
+icon_uuid: null
+icon_default: null
+description: 'This is a single Featured Case Study Card'
+behavior_plugins: {  }

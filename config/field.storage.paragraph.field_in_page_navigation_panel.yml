@@ -1,0 +1,20 @@
+uuid: 6d4344a7-4700-4fb3-b9db-33b8422c5ba3
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_in_page_navigation_panel
+field_name: field_in_page_navigation_panel
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 6
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

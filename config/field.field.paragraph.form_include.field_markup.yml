@@ -1,0 +1,21 @@
+uuid: b3def4af-8347-4c03-8e31-b9c19ef051b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_markup
+    - paragraphs.paragraphs_type.form_include
+  module:
+    - text
+id: paragraph.form_include.field_markup
+field_name: field_markup
+entity_type: paragraph
+bundle: form_include
+label: Markup
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,56 @@
+uuid: 0cfabb80-769d-4292-97a9-7f44f2d771d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.category_hub_page_hero.field_headline
+    - field.field.paragraph.category_hub_page_hero.field_media
+    - image.style.full_size_header_1440x600_
+    - paragraphs.paragraphs_type.category_hub_page_hero
+  module:
+    - fences
+    - media
+id: paragraph.category_hub_page_hero.default
+targetEntityType: paragraph
+bundle: category_hub_page_hero
+mode: default
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: section-header
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: full_size_header_1440x600_
+      image_loading:
+        attribute: eager
+    third_party_settings:
+      fences:
+        fences_field_tag: figure
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

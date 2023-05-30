@@ -1,0 +1,10 @@
+uuid: 1af97c8f-11e3-4d5e-92f7-19d86d30c020
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.author_content_in_header
+label: 'Author Content In Header'
+targetEntityType: node
+cache: true

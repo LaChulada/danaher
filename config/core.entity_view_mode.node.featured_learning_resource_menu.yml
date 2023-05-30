@@ -1,0 +1,10 @@
+uuid: 9c9361d4-ddae-4de0-bc8c-9ca8fef41841
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_learning_resource_menu
+label: 'Featured Learning Resource - Menu'
+targetEntityType: node
+cache: true

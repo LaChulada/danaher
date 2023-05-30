@@ -1,0 +1,48 @@
+uuid: fd51c329-71c8-48f4-860d-baea679725b6
+langcode: en
+status: false
+dependencies:
+  module:
+    - advanced_text_formatter
+    - fieldblock
+  theme:
+    - danaher
+id: danaher_contentfield_8
+theme: danaher
+region: directory_hero
+weight: -19
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Title
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: title
+  formatter_id: advanced_text
+  formatter_settings:
+    trim_length: '600'
+    ellipsis: 0
+    word_boundary: 0
+    use_summary: 0
+    token_replace: 0
+    filter: input
+    format: plain_text
+    allowed_html:
+      - a
+      - b
+      - br
+      - dd
+      - dl
+      - dt
+      - em
+      - i
+      - li
+      - ol
+      - p
+      - strong
+      - u
+      - ul
+    autop: 0
+visibility: {  }

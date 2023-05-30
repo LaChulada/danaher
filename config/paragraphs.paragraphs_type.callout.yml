@@ -1,0 +1,18 @@
+uuid: 8c5c68b3-defb-4935-ab07-0d3fca7b2373
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: callout
+label: 'Text callout'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,15 @@
+uuid: fe21b5bc-7716-4f47-bad0-7505266a348d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: podcast
+label: Podcast
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

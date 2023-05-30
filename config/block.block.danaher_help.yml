@@ -1,0 +1,22 @@
+uuid: 2a21fe34-5c1d-4256-af73-32836fa63cd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - danaher
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: danaher_help
+theme: danaher
+region: content_above
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

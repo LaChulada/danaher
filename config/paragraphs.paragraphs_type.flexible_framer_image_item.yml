@@ -1,0 +1,10 @@
+uuid: ff3811f8-2a76-42fe-8b64-5d8dac28da79
+langcode: en
+status: true
+dependencies: {  }
+id: flexible_framer_image_item
+label: 'Flexible Framer Image Item'
+icon_uuid: null
+icon_default: null
+description: 'The same as a Flexible Framer Item, but the image is required.'
+behavior_plugins: {  }

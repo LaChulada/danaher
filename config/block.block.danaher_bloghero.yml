@@ -1,0 +1,31 @@
+uuid: 89027032-da5d-40b6-9003-e4e674e17d7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.blog_hero
+  module:
+    - blockgroup
+    - node
+  theme:
+    - danaher
+id: danaher_bloghero
+theme: danaher
+region: hero
+weight: -40
+provider: null
+plugin: 'block_group:blog_hero'
+settings:
+  id: 'block_group:blog_hero'
+  label: 'Blog Hero'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      blog_or_news: blog_or_news
+      news: news

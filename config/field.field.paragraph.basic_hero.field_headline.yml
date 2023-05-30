@@ -1,0 +1,19 @@
+uuid: 8bcfdc61-8a66-4d27-a821-66646a2a99dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.basic_hero
+id: paragraph.basic_hero.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: basic_hero
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

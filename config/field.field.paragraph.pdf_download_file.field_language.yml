@@ -1,0 +1,29 @@
+uuid: 14b66f33-9ec9-4922-8c8e-ac22409aeafa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_language
+    - paragraphs.paragraphs_type.pdf_download_file
+    - taxonomy.vocabulary.languages
+id: paragraph.pdf_download_file.field_language
+field_name: field_language
+entity_type: paragraph
+bundle: pdf_download_file
+label: Language
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      languages: languages
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

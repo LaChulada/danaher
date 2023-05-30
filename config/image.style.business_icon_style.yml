@@ -1,0 +1,16 @@
+uuid: ac4e6a45-4ec8-4a01-80be-86ef23a63ca1
+langcode: en
+status: true
+dependencies: {  }
+name: business_icon_style
+label: 'Business Icon Style'
+effects:
+  d77b167c-d56c-4afe-83eb-5b443191c0d1:
+    uuid: d77b167c-d56c-4afe-83eb-5b443191c0d1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 144
+      height: 96
+      anchor: center-center
+pipeline: ''

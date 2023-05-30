@@ -1,0 +1,24 @@
+uuid: b97d9f4a-f8df-43c7-a980-f7e63d1283bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: full_size_image
+label: 'Full-size image (1440x820)'
+effects:
+  39790d42-3b3d-422b-9e74-f86e74623736:
+    uuid: 39790d42-3b3d-422b-9e74-f86e74623736
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 1440
+      height: 820
+      crop_type: focal_point
+  a9277d37-3636-4f70-81f6-4cd962fd4762:
+    uuid: a9277d37-3636-4f70-81f6-4cd962fd4762
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

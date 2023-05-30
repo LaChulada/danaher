@@ -1,0 +1,23 @@
+uuid: 1e4ecd53-1b03-4004-81dc-a0bd5f69ba7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_fluid_
+    - paragraphs.paragraphs_type.featured_core_product
+id: paragraph.featured_core_product.field_is_fluid_
+field_name: field_is_fluid_
+entity_type: paragraph
+bundle: featured_core_product
+label: 'Is Fluid?'
+description: 'Is this module going to be full-bleed?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

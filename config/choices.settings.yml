@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: nu4-1Cvbwg8xCbjGiCmv9qkkbI-puuZrShr1xYmCOhY
+use_cdn: false
+css_selector: '.pdf-dl select'
+include: 2
+configuration_options: "{\r\n\"placeholder\": false,\r\n \"placeholderValue\": null,\r\n\"searchEnabled\": false\r\n}"
+enable_globally: true

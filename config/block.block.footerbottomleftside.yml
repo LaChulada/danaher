@@ -1,0 +1,31 @@
+uuid: 636e9f62-fe35-4cc8-811d-fc02068d5c56
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-bottom-left-side
+  module:
+    - menu_block
+  theme:
+    - danaher
+id: footerbottomleftside
+theme: danaher
+region: footer_bottom
+weight: -19
+provider: null
+plugin: 'menu_block:footer-bottom-left-side'
+settings:
+  id: 'menu_block:footer-bottom-left-side'
+  label: 'Footer Bottom Left side'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer-bottom-left-side:'
+  suggestion: footer_bottom_left_side
+visibility: {  }

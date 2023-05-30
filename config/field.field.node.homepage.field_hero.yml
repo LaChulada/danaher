@@ -1,0 +1,311 @@
+uuid: d3f812e3-0541-4a2f-89d9-bee2b89b7efe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+    - node.type.homepage
+    - paragraphs.paragraphs_type.homepage_hero
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: node.homepage.field_hero
+field_name: field_hero
+entity_type: node
+bundle: homepage
+label: Hero
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      homepage_hero: homepage_hero
+    negate: 0
+    target_bundles_drag_drop:
+      2_up_hero:
+        weight: 49
+        enabled: false
+      accordion:
+        weight: 50
+        enabled: false
+      accordion_section:
+        weight: 51
+        enabled: false
+      agenda:
+        weight: 26
+        enabled: false
+      article_hero:
+        weight: 27
+        enabled: false
+      basic_hero:
+        weight: 28
+        enabled: false
+      blog_grid:
+        weight: 97
+        enabled: false
+      blog_hero:
+        weight: 55
+        enabled: false
+      business_carousel:
+        weight: 99
+        enabled: false
+      business_carousel_card:
+        weight: 100
+        enabled: false
+      callout:
+        weight: 57
+        enabled: false
+      case_study_grid:
+        weight: 102
+        enabled: false
+      case_study_hero:
+        weight: 58
+        enabled: false
+      category_hub_page_hero:
+        weight: 104
+        enabled: false
+      category_pathing:
+        weight: 59
+        enabled: false
+      contact:
+        weight: 106
+        enabled: false
+      cta_banner:
+        weight: 30
+        enabled: false
+      cta_banner_collection:
+        weight: 108
+        enabled: false
+      cta_logo_showcase:
+        weight: 31
+        enabled: false
+      directory_hero:
+        weight: 64
+        enabled: false
+      downloadable_item:
+        weight: 114
+        enabled: false
+      dynamic_quote_block:
+        weight: 65
+        enabled: false
+      event_accordion:
+        weight: 112
+        enabled: false
+      event_accordion_section:
+        weight: 113
+        enabled: false
+      event_hero:
+        weight: 118
+        enabled: false
+      event_list:
+        weight: 114
+        enabled: false
+      featured_case_studies:
+        weight: 66
+        enabled: false
+      featured_case_study_card:
+        weight: 116
+        enabled: false
+      featured_core_product:
+        weight: 117
+        enabled: false
+      featured_event:
+        weight: 32
+        enabled: false
+      featured_people:
+        weight: 119
+        enabled: false
+      featured_single_quote:
+        weight: 33
+        enabled: false
+      featured_single_quote_item:
+        weight: 69
+        enabled: false
+      featured_statement:
+        weight: 122
+        enabled: false
+      flexible_framer:
+        weight: 34
+        enabled: false
+      flexible_framer_icon_item:
+        weight: 124
+        enabled: false
+      flexible_framer_image_item:
+        weight: 35
+        enabled: false
+      flexible_framer_item:
+        weight: 36
+        enabled: false
+      flexible_framer_with_icons:
+        weight: 127
+        enabled: false
+      flexible_framer_with_images:
+        weight: 37
+        enabled: false
+      footnote_callout:
+        weight: 129
+        enabled: false
+      form_include:
+        weight: 74
+        enabled: false
+      from_library:
+        weight: 38
+        enabled: false
+      frontdoor_cta_banner:
+        weight: 132
+        enabled: false
+      full_bleed_text_and_image:
+        weight: 133
+        enabled: false
+      full_size_media:
+        weight: 76
+        enabled: false
+      high_level_page_hero:
+        weight: 77
+        enabled: false
+      homepage_hero:
+        weight: 141
+        enabled: true
+      image_and_video:
+        weight: 137
+        enabled: false
+      image_and_video_article:
+        weight: 138
+        enabled: false
+      image_and_video_global:
+        weight: 139
+        enabled: false
+      image_and_video_storyteller:
+        weight: 140
+        enabled: false
+      in_page_navigation:
+        weight: 141
+        enabled: false
+      in_page_navigation_panel:
+        weight: 142
+        enabled: false
+      key_steps:
+        weight: 143
+        enabled: false
+      leadership:
+        weight: 144
+        enabled: false
+      leadership_hero:
+        weight: 145
+        enabled: false
+      learning_resource_grid:
+        weight: 146
+        enabled: false
+      link_list:
+        weight: 148
+        enabled: false
+      link_list_item:
+        weight: 149
+        enabled: false
+      linked_logo:
+        weight: 147
+        enabled: false
+      login_column:
+        weight: 150
+        enabled: false
+      login_module:
+        weight: 151
+        enabled: false
+      news_grid:
+        weight: 152
+        enabled: false
+      past_events_grid:
+        weight: 153
+        enabled: false
+      pdf_download:
+        weight: 154
+        enabled: false
+      pdf_download_file:
+        weight: 160
+        enabled: false
+      podcast:
+        weight: 155
+        enabled: false
+      poll:
+        weight: 162
+        enabled: false
+      press_release_hero:
+        weight: 156
+        enabled: false
+      product_tier_level:
+        weight: 157
+        enabled: false
+      related_content:
+        weight: 159
+        enabled: false
+      single_image:
+        weight: 160
+        enabled: false
+      single_video:
+        weight: 161
+        enabled: false
+      stacked_capability_column:
+        weight: 45
+        enabled: false
+      stacked_capability_column_card:
+        weight: 46
+        enabled: false
+      stacked_capability_column_item:
+        weight: 47
+        enabled: false
+      standalone_section_header:
+        weight: 88
+        enabled: false
+      stats:
+        weight: 89
+        enabled: false
+      stats_item:
+        weight: 90
+        enabled: false
+      steps:
+        weight: 168
+        enabled: false
+      subcategory_detail_page_hero:
+        weight: 169
+        enabled: false
+      tab_section:
+        weight: 173
+        enabled: false
+      table_of_contents:
+        weight: 91
+        enabled: false
+      table_of_contents_panel:
+        weight: 92
+        enabled: false
+      tabs:
+        weight: 172
+        enabled: false
+      text_and_image:
+        weight: 48
+        enabled: false
+      three_up:
+        weight: 49
+        enabled: false
+      three_up_item:
+        weight: 50
+        enabled: false
+      timeline:
+        weight: 177
+        enabled: false
+      timeline_item:
+        weight: 178
+        enabled: false
+      upcoming_events_grid:
+        weight: 179
+        enabled: false
+      wysiwig:
+        weight: 96
+        enabled: false
+field_type: entity_reference_revisions

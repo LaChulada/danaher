@@ -1,0 +1,23 @@
+uuid: 040c59d7-a1b4-4d99-ba2e-767d279dbd65
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.site_logo
+  module:
+    - fixed_block_content
+  theme:
+    - danaher
+id: danaher_sitelogo
+theme: danaher
+region: footer_logo
+weight: 0
+provider: null
+plugin: 'fixed_block_content:site_logo'
+settings:
+  id: 'fixed_block_content:site_logo'
+  label: 'Site Logo'
+  label_display: '0'
+  provider: fixed_block_content
+  view_mode: ''
+visibility: {  }

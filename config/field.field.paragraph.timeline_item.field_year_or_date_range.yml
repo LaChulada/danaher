@@ -1,0 +1,19 @@
+uuid: 04978361-f95f-4451-86c2-6047cb892545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_year_or_date_range
+    - paragraphs.paragraphs_type.timeline_item
+id: paragraph.timeline_item.field_year_or_date_range
+field_name: field_year_or_date_range
+entity_type: paragraph
+bundle: timeline_item
+label: 'Year or Date Range'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

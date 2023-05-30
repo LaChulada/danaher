@@ -1,0 +1,10 @@
+uuid: 550be0b0-fdcd-4e18-8548-676b9d00a04d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.product_tier_heading_only
+label: 'Product Tier Heading Only'
+targetEntityType: paragraph
+cache: true

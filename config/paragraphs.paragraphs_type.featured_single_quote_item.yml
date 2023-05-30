@@ -1,0 +1,15 @@
+uuid: d0bb8861-2248-4941-8ef4-a7c119f5be6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
+id: featured_single_quote_item
+label: 'Dynamic Single Quote Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

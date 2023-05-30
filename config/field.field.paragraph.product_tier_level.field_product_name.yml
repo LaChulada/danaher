@@ -1,0 +1,19 @@
+uuid: c04f85c2-d8da-45e1-9b00-67f5b30a47ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_product_name
+    - paragraphs.paragraphs_type.product_tier_level
+id: paragraph.product_tier_level.field_product_name
+field_name: field_product_name
+entity_type: paragraph
+bundle: product_tier_level
+label: 'Product Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

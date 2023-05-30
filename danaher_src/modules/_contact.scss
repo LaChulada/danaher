@@ -1,0 +1,41 @@
+@import "../utility/utility";
+
+.contact {
+    @include paragraph();
+    border-top: 0.5px solid rgba($color-black, .3);
+    padding-top: 32px;
+
+    &.module {
+        margin-top: 72px;
+        margin-bottom: 72px;
+    }
+
+    .section-title {
+        @include heading2();
+        text-transform: none;
+    }
+
+    .section-description {
+        @include paragraph();
+    }
+
+    a {
+        @include embedded-link();
+        font-weight: 700;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .element {
+        margin-bottom: 32px;
+    }
+
+    @media (max-width: $mobile-width) {
+        [data-columns][data-columns="3"] {
+            grid-gap: 0;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+uuid: 5247ec8b-0f8e-4445-a75a-b643def8d805
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: pdf_download
+label: 'PDF Download'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

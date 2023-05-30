@@ -1,0 +1,8 @@
+uuid: 6a15cae2-48da-4af3-9735-2c802878f2b8
+langcode: en
+status: true
+dependencies: {  }
+name: Languages
+vid: languages
+description: 'Languages available to download PDFs'
+weight: 0

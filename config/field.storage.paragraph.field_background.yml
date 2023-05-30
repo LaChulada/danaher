@@ -1,0 +1,42 @@
+uuid: a9ef1c33-44b7-4a99-8acc-da6fb2efc761
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_background
+field_name: field_background
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: background--dark-purple
+      label: 'Dark purple'
+    -
+      value: background--dark-blue
+      label: 'Dark blue'
+    -
+      value: background--dark-green
+      label: 'Dark green'
+    -
+      value: background--dark-pink
+      label: 'Dark pink'
+    -
+      value: background--dark-orange
+      label: 'Dark orange'
+    -
+      value: background--dark-yellow
+      label: 'Dark yellow'
+    -
+      value: background--white
+      label: White
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

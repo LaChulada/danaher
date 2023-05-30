@@ -1,0 +1,18 @@
+uuid: bb86537a-c02d-4382-a028-6642899f2866
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: flexible_framer_item
+label: 'Flexible Framer Item'
+icon_uuid: null
+icon_default: null
+description: 'This doesn''t have an image available.'
+behavior_plugins: {  }

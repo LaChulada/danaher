@@ -1,0 +1,18 @@
+uuid: da1fcd22-206c-4557-85d3-8d2f9945d2b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: image_and_video
+label: 'Image and Video'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

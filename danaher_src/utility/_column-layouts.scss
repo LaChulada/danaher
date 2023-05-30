@@ -1,0 +1,120 @@
+// Scoped Variables
+$column-gap: 32px;
+
+[data-columns] {
+   display: grid;
+   &[data-columns="6"] {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-gap: $column-gap;
+
+      @include media-breakpoint-up(sm) {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+
+      @include media-breakpoint-up(md) {
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+
+      @include media-breakpoint-up(lg) {
+         grid-template-columns: repeat(6, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+   }
+
+   &[data-columns="5"] {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-gap: $column-gap;
+
+      @include media-breakpoint-up(sm) {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+
+      @include media-breakpoint-up(md) {
+         grid-template-columns: repeat(4, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+
+      @include media-breakpoint-up(lg) {
+         grid-template-columns: repeat(5, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+   }
+
+   &[data-columns="4"] {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-gap: $column-gap;
+
+      @include media-breakpoint-up(sm) {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+
+      @include media-breakpoint-up(md) {
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+
+      @include media-breakpoint-up(lg) {
+         grid-template-columns: repeat(4, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+   }
+
+   &[data-columns="3"] {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-gap: $column-gap;
+
+      @include media-breakpoint-up(lg) {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+
+      @include media-breakpoint-up(xl) {
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+   }
+
+   &[data-columns="2"] {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-gap: $column-gap;
+
+      @include media-breakpoint-up(md) {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+      }
+   }
+
+   &[data-columns="auto"] {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      grid-gap: $column-gap;
+
+      @include media-breakpoint-up(md) {
+         grid-template-columns: repeat(auto-fit, minmax(auto, 280px));
+         grid-template-rows: auto;
+         grid-gap: $column-gap;
+         justify-content: center;
+      }
+   }
+}

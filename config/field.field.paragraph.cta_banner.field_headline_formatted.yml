@@ -1,0 +1,21 @@
+uuid: a3fcfcd7-f2c0-4398-ba16-6b751606a504
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline_formatted
+    - paragraphs.paragraphs_type.cta_banner
+  module:
+    - text
+id: paragraph.cta_banner.field_headline_formatted
+field_name: field_headline_formatted
+entity_type: paragraph
+bundle: cta_banner
+label: Headline
+description: 'Use the <b>bold</b> tag to highlight a word'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

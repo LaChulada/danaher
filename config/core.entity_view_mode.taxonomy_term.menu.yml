@@ -1,0 +1,10 @@
+uuid: ad474e96-2f88-408e-aaa9-0f6cb5703bc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.menu
+label: 'Menu Area'
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,206 @@
+uuid: d2819724-52a3-479a-86d3-ffb6154319c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_sections
+    - paragraphs.paragraphs_type.tab_section
+    - paragraphs.paragraphs_type.tabs
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: paragraph.tabs.field_tab_sections
+field_name: field_tab_sections
+entity_type: paragraph
+bundle: tabs
+label: 'Horizontal Listicle Sections'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tab_section: tab_section
+    negate: 0
+    target_bundles_drag_drop:
+      2_up_hero:
+        weight: 59
+        enabled: false
+      accordion:
+        weight: 60
+        enabled: false
+      accordion_section:
+        weight: 61
+        enabled: false
+      agenda:
+        weight: 62
+        enabled: false
+      article_hero:
+        weight: 63
+        enabled: false
+      basic_hero:
+        weight: 64
+        enabled: false
+      blog_hero:
+        weight: 65
+        enabled: false
+      body_content:
+        weight: 66
+        enabled: false
+      callout:
+        weight: 67
+        enabled: false
+      case_study_hero:
+        weight: 68
+        enabled: false
+      category_pathing:
+        weight: 69
+        enabled: false
+      category_pathing_item:
+        weight: 70
+        enabled: false
+      cta_banner:
+        weight: 71
+        enabled: false
+      cta_banner_collection:
+        weight: 72
+        enabled: false
+      cta_logo_showcase:
+        weight: 73
+        enabled: false
+      directory_hero:
+        weight: 74
+        enabled: false
+      dynamic_quote_block:
+        weight: 75
+        enabled: false
+      event_accordion:
+        weight: 76
+        enabled: false
+      event_accordion_section:
+        weight: 77
+        enabled: false
+      featured_case_studies:
+        weight: 78
+        enabled: false
+      featured_event:
+        weight: 79
+        enabled: false
+      featured_single_quote:
+        weight: 80
+        enabled: false
+      featured_single_quote_item:
+        weight: 81
+        enabled: false
+      flexible_framer:
+        weight: 82
+        enabled: false
+      flexible_framer_image_item:
+        weight: 83
+        enabled: false
+      flexible_framer_item:
+        weight: 84
+        enabled: false
+      flexible_framer_with_images:
+        weight: 85
+        enabled: false
+      footnote_callout:
+        weight: 86
+        enabled: false
+      form_include:
+        weight: 87
+        enabled: false
+      from_library:
+        weight: 88
+        enabled: false
+      frontdoor_cta_banner:
+        weight: 89
+        enabled: false
+      full_size_media:
+        weight: 90
+        enabled: false
+      high_level_page_hero:
+        weight: 91
+        enabled: false
+      homepage_hero_quilt_item:
+        weight: 92
+        enabled: false
+      homepage_immersive_hero:
+        weight: 93
+        enabled: false
+      leadership:
+        weight: 94
+        enabled: false
+      meet_our_team:
+        weight: 95
+        enabled: false
+      multi_column_wysiwig:
+        weight: 96
+        enabled: false
+      product_tier_comparison_:
+        weight: 97
+        enabled: false
+      product_tier_level:
+        weight: 98
+        enabled: false
+      related_articles:
+        weight: 99
+        enabled: false
+      related_content:
+        weight: 100
+        enabled: false
+      speaker_information:
+        weight: 101
+        enabled: false
+      speakers_panel:
+        weight: 102
+        enabled: false
+      stacked_capability_column:
+        weight: 103
+        enabled: false
+      stacked_capability_column_card:
+        weight: 104
+        enabled: false
+      stacked_capability_column_item:
+        weight: 105
+        enabled: false
+      standalone_section_header:
+        weight: 106
+        enabled: false
+      stats:
+        weight: 107
+        enabled: false
+      stats_item:
+        weight: 108
+        enabled: false
+      tab_section:
+        weight: 109
+        enabled: true
+      table_of_contents:
+        weight: 110
+        enabled: false
+      table_of_contents_panel:
+        weight: 111
+        enabled: false
+      tabs:
+        weight: 112
+        enabled: false
+      text_and_image:
+        weight: 113
+        enabled: false
+      three_up:
+        weight: 114
+        enabled: false
+      three_up_item:
+        weight: 115
+        enabled: false
+      wysiwig:
+        weight: 116
+        enabled: false
+field_type: entity_reference_revisions

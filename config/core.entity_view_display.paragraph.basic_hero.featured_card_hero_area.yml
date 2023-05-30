@@ -1,0 +1,39 @@
+uuid: c8d20ce0-1653-40bf-b98e-64c96f98bcf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.featured_card_hero_area
+    - field.field.paragraph.basic_hero.field_headline
+    - paragraphs.paragraphs_type.basic_hero
+  module:
+    - fences
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.basic_hero.featured_card_hero_area
+targetEntityType: paragraph
+bundle: basic_hero
+mode: featured_card_hero_area
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h1
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,12 @@
+uuid: 8703361c-6f35-498a-8a47-83ff4de50694
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: search_form
+title: 'Search Form'
+block_content_bundle: basic
+default_content: null
+auto_export: 0
+protected: false

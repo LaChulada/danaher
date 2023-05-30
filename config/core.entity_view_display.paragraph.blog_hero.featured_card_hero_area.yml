@@ -1,0 +1,44 @@
+uuid: b62ac926-a2a0-4d13-9f34-4eed8dc7ba9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.featured_card_hero_area
+    - field.field.paragraph.blog_hero.field_image
+    - image.style.card_image_short
+    - paragraphs.paragraphs_type.blog_hero
+  module:
+    - fences
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.blog_hero.featured_card_hero_area
+targetEntityType: paragraph
+bundle: blog_hero
+mode: featured_card_hero_area
+content:
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_image_short
+      image_loading:
+        attribute: eager
+    third_party_settings:
+      fences:
+        fences_field_tag: figure
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

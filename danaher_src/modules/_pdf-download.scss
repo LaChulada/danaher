@@ -1,0 +1,68 @@
+@import "../utility/utility";
+
+.pdf-download {
+
+    .section-headline {
+        @include heading2();
+    }
+
+    .section-description {
+        @include paragraph();
+    }
+
+    .pdf-dl {
+        @include paragraph();
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 0;
+        gap: 16px;
+        margin-top: 32px;
+
+        label {
+            @include caption();
+            margin-bottom: 8px;
+        }
+
+        
+        select {
+            border: 1px solid $color-gray;
+
+            @include paragraph();
+
+            display: flex;
+            align-items: center;
+
+            color: $color-gray;
+            padding: 16px 24px 16px 24px;
+            // appearance: none;
+
+            position: relative;
+            // &::after {
+            //     content: url(/themes/custom/danaher/images/carat_down_small.svg);
+                
+            // }
+        }
+        
+        /*
+        input[type='button'] {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 40px;
+            gap: 10px;
+            border: 2px solid $color-purple;
+            border-radius: 48px;
+            text-align: center;
+            color:  $color-purple;
+            flex: none;
+            order: 0;
+            flex-grow: 0;       
+            background: transparent; 
+        }
+        */
+
+    }
+}

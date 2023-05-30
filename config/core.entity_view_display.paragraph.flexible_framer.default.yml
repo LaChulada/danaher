@@ -1,0 +1,81 @@
+uuid: ce2e1845-a10e-43da-af1a-3419259627ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_framer.field_columns
+    - field.field.paragraph.flexible_framer.field_cta
+    - field.field.paragraph.flexible_framer.field_description
+    - field.field.paragraph.flexible_framer.field_headline
+    - field.field.paragraph.flexible_framer.field_items
+    - paragraphs.paragraphs_type.flexible_framer
+  module:
+    - entity_reference_revisions
+    - fences
+    - text
+id: paragraph.flexible_framer.default
+targetEntityType: paragraph
+bundle: flexible_framer
+mode: default
+content:
+  field_columns:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: section-description
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 4
+    region: content
+hidden:
+  field_cta: true
+  search_api_excerpt: true

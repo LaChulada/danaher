@@ -1,0 +1,32 @@
+uuid: 7d1da3b8-9a04-4a01-8384-098fb5d12fcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+  module:
+    - block_class
+    - entity_reference_revisions
+    - fieldblock
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: blog-hero-right-side
+id: danaher_contentfield_7
+theme: danaher
+region: blog_hero
+weight: -32
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Blog hero field'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_hero
+  formatter_id: entity_reference_revisions_entity_view
+  formatter_settings:
+    view_mode: default
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 63637c39-ea15-4204-8970-ea74a557c3d8
+langcode: en
+status: true
+dependencies: {  }
+id: table_of_contents_panel
+label: 'Table of Contents Panel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

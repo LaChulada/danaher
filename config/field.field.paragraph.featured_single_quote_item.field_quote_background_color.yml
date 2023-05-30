@@ -1,0 +1,21 @@
+uuid: 1c97771c-74cc-43e8-82bd-88c866e8af51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_background_color
+    - paragraphs.paragraphs_type.featured_single_quote_item
+  module:
+    - options
+id: paragraph.featured_single_quote_item.field_quote_background_color
+field_name: field_quote_background_color
+entity_type: paragraph
+bundle: featured_single_quote_item
+label: 'Quote background color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

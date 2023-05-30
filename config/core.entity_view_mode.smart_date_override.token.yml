@@ -1,0 +1,10 @@
+uuid: e70bbf63-0baa-4d8f-b6fa-f742bbc47785
+langcode: en
+status: true
+dependencies:
+  module:
+    - smart_date_recur
+id: smart_date_override.token
+label: Token
+targetEntityType: smart_date_override
+cache: true

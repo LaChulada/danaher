@@ -1,0 +1,33 @@
+uuid: 9b3d5de5-dd6b-403e-a5b4-a13540b7615e
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_end_date
+  module:
+    - block_class
+    - datetime
+    - fieldblock
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: event-end-date
+id: danaher_event_end_date
+theme: danaher
+region: event_hero_info_block
+weight: -19
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Event End Date'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_end_date
+  formatter_id: datetime_custom
+  formatter_settings:
+    timezone_override: ''
+    date_format: 'F j, Y'
+visibility: {  }

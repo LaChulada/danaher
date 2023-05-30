@@ -1,0 +1,26 @@
+uuid: b2c3e902-21e6-4ac3-a61b-48afae72da9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_audio2
+    - paragraphs.paragraphs_type.podcast
+  module:
+    - video_embed_field
+id: paragraph.podcast.field_audio2
+field_name: field_audio2
+entity_type: paragraph
+bundle: podcast
+label: 'Spotify Audio Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    spotify: spotify
+    vimeo: '0'
+    youtube: '0'
+    youtube_playlist: '0'
+field_type: video_embed_field

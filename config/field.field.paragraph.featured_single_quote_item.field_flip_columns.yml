@@ -1,0 +1,23 @@
+uuid: f4438ff6-8599-46ef-891a-319cff28ac80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flip_columns
+    - paragraphs.paragraphs_type.featured_single_quote_item
+id: paragraph.featured_single_quote_item.field_flip_columns
+field_name: field_flip_columns
+entity_type: paragraph
+bundle: featured_single_quote_item
+label: 'Flip Columns?'
+description: 'If this is checked, the logo will appear on the left and the quote will appear on the right.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

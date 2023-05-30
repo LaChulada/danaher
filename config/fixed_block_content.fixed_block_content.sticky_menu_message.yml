@@ -1,0 +1,12 @@
+uuid: 1c8f07c2-5790-4853-bc9b-2fbb60ca080f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: sticky_menu_message
+title: 'Sticky menu message'
+block_content_bundle: basic
+default_content: null
+auto_export: 0
+protected: false

@@ -1,0 +1,15 @@
+uuid: 240a14ac-6253-47ca-a1ed-2c9dbe524702
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: full_bleed_text_and_image
+label: 'Full bleed text and image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

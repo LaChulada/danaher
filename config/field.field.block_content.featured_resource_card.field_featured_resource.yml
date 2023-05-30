@@ -1,0 +1,27 @@
+uuid: daa5a9a0-df12-41ff-9767-c1cdf59f9cd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_resource_card
+    - field.storage.block_content.field_featured_resource
+id: block_content.featured_resource_card.field_featured_resource
+field_name: field_featured_resource
+entity_type: block_content
+bundle: featured_resource_card
+label: 'Featured Resource'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,78 @@
+@import "../utility/utility";
+
+
+.category-pathing {
+
+    .heading {
+        border-top: 0.5px solid rgba($color-body, .3);
+        padding-top: 32px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            margin-bottom: 32px;
+        }
+    }
+    .cta-link {
+        a {
+            @include heading1();
+            @include embedded-link();
+            text-align: left;
+            margin-top: 0;
+            display: block;
+            border: none;
+            color: $color-purple;
+            border: none;
+            
+            &:after {
+                content: url(/themes/custom/danaher/images/large-arrow.svg);
+                width: 28px;
+                height: 24px;
+                display: inline;
+                padding-left: 16px;
+                transition: all 0.25s;
+                vertical-align: text-bottom;
+            }
+        }
+    }
+        
+    &.module {
+        margin-top: $module-med-spacing;
+        @media (max-width: $mobile-width) {
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &--card {
+        &.module {
+            @media (max-width: $mobile-width) {
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        &.container {
+            @media (max-width: $mobile-width) {
+                padding-left: 0;
+                padding-right: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .section-headline {
+        @include heading2();
+        color: $color-body;
+        text-transform: none;
+       }
+
+    .category-description {
+        @include paragraph();
+        p {
+            margin: 0;
+        }
+    }
+
+}

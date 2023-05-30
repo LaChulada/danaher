@@ -1,0 +1,7 @@
+uuid: 5eba3082-ec66-4bb7-906f-b758005e0092
+langcode: en
+status: true
+dependencies: {  }
+id: node__blog_or_news
+label: 'Content: Blog Article'
+tags: {  }

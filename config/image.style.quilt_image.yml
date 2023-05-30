@@ -1,0 +1,24 @@
+uuid: 69540ebd-2158-4703-a8d3-427e8d2603c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: quilt_image
+label: 'Quilt image (604x435)'
+effects:
+  b503e708-422e-4b99-ae04-6ac945823993:
+    uuid: b503e708-422e-4b99-ae04-6ac945823993
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 604
+      height: 435
+      crop_type: focal_point
+  e03e9a00-f78c-4cfe-9dbb-41ff49bbb26e:
+    uuid: e03e9a00-f78c-4cfe-9dbb-41ff49bbb26e
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

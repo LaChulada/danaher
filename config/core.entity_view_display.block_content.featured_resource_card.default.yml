@@ -1,0 +1,53 @@
+uuid: e18ce171-4fb9-4438-b586-d267929c26b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_resource_card
+    - field.field.block_content.featured_resource_card.field_featured_resource
+    - field.field.block_content.featured_resource_card.field_headline
+  module:
+    - fences
+id: block_content.featured_resource_card.default
+targetEntityType: block_content
+bundle: featured_resource_card
+mode: default
+content:
+  field_featured_resource:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: featured_learning_resource_menu
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: h4
+        fences_field_item_classes: section-title
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

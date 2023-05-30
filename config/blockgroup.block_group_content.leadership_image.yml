@@ -1,0 +1,6 @@
+uuid: a4f16e1c-6cd3-46b7-8a93-3fb12f8be4a9
+langcode: en
+status: true
+dependencies: {  }
+id: leadership_image
+label: 'Leadership Image'

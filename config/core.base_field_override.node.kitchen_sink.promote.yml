@@ -1,0 +1,22 @@
+uuid: c9062d1f-c559-41e3-af2d-2dcb9239d7fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.kitchen_sink
+id: node.kitchen_sink.promote
+field_name: promote
+entity_type: node
+bundle: kitchen_sink
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

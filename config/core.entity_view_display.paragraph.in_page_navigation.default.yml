@@ -1,0 +1,35 @@
+uuid: 7dd57e4a-e61a-410e-ac57-4a4fd43e4f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.in_page_navigation.field_in_page_navigation_panel
+    - paragraphs.paragraphs_type.in_page_navigation
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.in_page_navigation.default
+targetEntityType: paragraph
+bundle: in_page_navigation
+mode: default
+content:
+  field_in_page_navigation_panel:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

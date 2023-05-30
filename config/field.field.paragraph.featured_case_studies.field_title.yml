@@ -1,0 +1,19 @@
+uuid: 3adcd33c-a6d0-4eb1-b842-e394f2e57316
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.featured_case_studies
+id: paragraph.featured_case_studies.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: featured_case_studies
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

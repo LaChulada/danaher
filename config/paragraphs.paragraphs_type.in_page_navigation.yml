@@ -1,0 +1,15 @@
+uuid: 12a0db74-6adf-4e0b-b2ab-da158921d657
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: in_page_navigation
+label: 'In-Page Navigation'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

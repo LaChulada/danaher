@@ -1,0 +1,10 @@
+uuid: 849e91ce-7daa-4026-9d5a-4c348ed2e492
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.featured_event
+label: 'Featured Card'
+targetEntityType: node
+cache: true

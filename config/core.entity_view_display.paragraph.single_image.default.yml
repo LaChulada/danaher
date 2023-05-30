@@ -1,0 +1,66 @@
+uuid: fc5bdbfd-e57d-451d-bd74-0d56e1e6817d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_image.field_image
+    - image.style.large_image
+    - paragraphs.paragraphs_type.single_image
+  module:
+    - blazy
+    - fences
+id: paragraph.single_image.default
+targetEntityType: paragraph
+bundle: single_image
+mode: default
+content:
+  field_image:
+    type: blazy_media
+    label: hidden
+    settings:
+      caption:
+        field_caption: field_caption
+        title: '0'
+        alt: '0'
+      class: ''
+      id: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
+      view_mode: default
+      cache: 0
+      skin: ''
+      lazy: ''
+      style: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: auto
+      preload: false
+      responsive_image_style: ''
+      box_style: ''
+      image_style: large_image
+      media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

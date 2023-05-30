@@ -1,0 +1,18 @@
+uuid: bc0accc8-d177-4e49-af33-659e515c022d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: full_size_media
+label: 'Single Image/Video'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

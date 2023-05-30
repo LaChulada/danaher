@@ -1,0 +1,32 @@
+uuid: 0f52116b-c4fb-49fc-8e21-e286e132b876
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pdf_download_file.field_file
+    - field.field.paragraph.pdf_download_file.field_language
+    - paragraphs.paragraphs_type.pdf_download_file
+  module:
+    - file
+id: paragraph.pdf_download_file.default
+targetEntityType: paragraph
+bundle: pdf_download_file
+mode: default
+content:
+  field_file:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_language:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

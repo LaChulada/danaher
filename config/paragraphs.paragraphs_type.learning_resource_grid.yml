@@ -1,0 +1,15 @@
+uuid: d496f5cc-c6b7-4d1e-b828-11854c293f0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: learning_resource_grid
+label: 'Learning Resource Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

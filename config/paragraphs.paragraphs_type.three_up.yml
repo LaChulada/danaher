@@ -1,0 +1,15 @@
+uuid: d4d1a532-46b3-4df3-961d-364cfd191514
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: three_up
+label: 'Three Up'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

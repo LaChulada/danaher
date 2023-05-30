@@ -1,0 +1,42 @@
+uuid: c7697e57-98f6-4b2c-8c27-7d341b399bdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.kitchen_sink.field_widgets
+    - node.type.kitchen_sink
+  module:
+    - entity_reference_revisions
+    - fences
+    - user
+id: node.kitchen_sink.default
+targetEntityType: node
+bundle: kitchen_sink
+mode: default
+content:
+  field_widgets:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

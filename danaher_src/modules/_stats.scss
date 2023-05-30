@@ -1,0 +1,92 @@
+@import "../utility/utility";
+
+
+.stats {
+    text-align: left;
+    text-transform: none;
+
+    font-family: $font-heading;
+    font-style: normal;
+    color: $color-body;
+
+    &.module {
+        margin-top: 72px;
+        margin-bottom: 72px;
+        // if the stats appear in a carousel, we don't need the extra spacing.
+    }
+
+    .link-right  {
+        text-align: right;
+    }
+
+    .no-descrip {
+        .cta-link {
+            a {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .stats-1-up {
+        display: grid;
+        grid-template-columns: 41% 41%;
+        grid-gap: calc(8.33333333% + var(--bs-gutter-x));
+        @media (max-width: $mobile-width) {
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            grid-gap: 48px;
+        }
+
+        [data-columns] {
+            margin-top: 0;
+        }
+
+        .link-right {
+            text-align: left;
+        }
+    }
+
+    @include standard-cta-link();
+
+    .section-title {
+        @include heading2();
+        color: $color-body;
+        margin-bottom: 16px;
+    }
+
+    .section-description {
+        @include paragraph();
+        color: $color-body;
+        margin-bottom: 0;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    [data-columns] {
+        margin-top: 48px;
+    }
+
+    &--item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+            
+        color: $color-body; 
+        border-left: 0.5px solid $color-black;
+        padding-left: 32px;
+    }
+
+    &--large {
+        @include heading1();
+    }
+
+    &--supporting-text {
+        @include paragraph-large();
+        color: $color-body;
+    }
+
+}

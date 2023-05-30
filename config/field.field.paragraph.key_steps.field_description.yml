@@ -1,0 +1,21 @@
+uuid: 72e629a1-40c1-4430-b230-d1b943ba9487
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.key_steps
+  module:
+    - text
+id: paragraph.key_steps.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: key_steps
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

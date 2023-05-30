@@ -1,0 +1,15 @@
+uuid: 75f839ad-1769-4daa-bacb-d2263443bd3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: past_events_grid
+label: 'Past Events Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

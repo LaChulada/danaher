@@ -1,0 +1,24 @@
+uuid: e26a69c1-937c-41fb-9c53-2b1f05c8077d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: blog_hero_image_style
+label: 'Blog Hero Image style (832x508)'
+effects:
+  0a7ab5a5-33e4-45b3-9772-000e060965ed:
+    uuid: 0a7ab5a5-33e4-45b3-9772-000e060965ed
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 832
+      height: 508
+      crop_type: focal_point
+  469f5bca-47e9-46f1-95f3-b0137b4fb9b5:
+    uuid: 469f5bca-47e9-46f1-95f3-b0137b4fb9b5
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

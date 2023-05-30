@@ -1,0 +1,15 @@
+uuid: 2820f295-1c4d-4d98-b324-7b1b0f968d2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: case_study_grid
+label: 'Case Study Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

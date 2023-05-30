@@ -1,0 +1,23 @@
+uuid: e820ea93-e726-4fc6-9bd2-68ee4994f6f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.business_carousel
+  module:
+    - link
+id: paragraph.business_carousel.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: business_carousel
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

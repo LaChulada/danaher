@@ -1,0 +1,45 @@
+uuid: e4210617-41f4-4a0d-9c61-4e80cd75e6ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.product_tier_features_only
+    - field.field.paragraph.product_tier_level.field_cta
+    - field.field.paragraph.product_tier_level.field_description
+    - field.field.paragraph.product_tier_level.field_feature
+    - field.field.paragraph.product_tier_level.field_product_name
+    - paragraphs.paragraphs_type.product_tier_level
+  module:
+    - fences
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.product_tier_level.product_tier_features_only
+targetEntityType: paragraph
+bundle: product_tier_level
+mode: product_tier_features_only
+content:
+  field_feature:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: li
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_cta: true
+  field_description: true
+  field_product_name: true
+  search_api_excerpt: true

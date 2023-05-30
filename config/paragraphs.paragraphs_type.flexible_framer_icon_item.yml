@@ -1,0 +1,10 @@
+uuid: b05b2f63-0a7d-4639-846c-a2a9215c8f50
+langcode: en
+status: true
+dependencies: {  }
+id: flexible_framer_icon_item
+label: 'Flexible Framer Icon Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

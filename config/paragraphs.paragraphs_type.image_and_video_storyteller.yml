@@ -1,0 +1,18 @@
+uuid: 2ac6103c-7eee-4193-9d15-b64d43ef62cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: image_and_video_storyteller
+label: 'Image and Video - Storyteller'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

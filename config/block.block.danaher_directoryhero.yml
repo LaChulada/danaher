@@ -1,0 +1,33 @@
+uuid: 9f2f7baa-2f35-4c7f-b4fa-c0e2453e20c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.directory_hero
+  module:
+    - blockgroup
+    - node
+  theme:
+    - danaher
+id: danaher_directoryhero
+theme: danaher
+region: hero
+weight: -34
+provider: null
+plugin: 'block_group:directory_hero'
+settings:
+  id: 'block_group:directory_hero'
+  label: 'Directory Hero'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      case_study_directory: case_study_directory
+      combined_directory: combined_directory
+      directory: directory
+      event_directory: event_directory

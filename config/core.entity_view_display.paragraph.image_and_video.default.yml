@@ -1,0 +1,35 @@
+uuid: 842fac5c-4c0c-4620-b23e-2718e5bd29b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_and_video.field_image_or_video
+    - paragraphs.paragraphs_type.image_and_video
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.image_and_video.default
+targetEntityType: paragraph
+bundle: image_and_video
+mode: default
+content:
+  field_image_or_video:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

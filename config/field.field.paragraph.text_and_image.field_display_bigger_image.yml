@@ -1,0 +1,23 @@
+uuid: 44fbb359-874c-4b3f-94b5-b203675574e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_bigger_image
+    - paragraphs.paragraphs_type.text_and_image
+id: paragraph.text_and_image.field_display_bigger_image
+field_name: field_display_bigger_image
+entity_type: paragraph
+bundle: text_and_image
+label: 'Display Bigger Image?'
+description: 'This will show a larger image in a square format'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

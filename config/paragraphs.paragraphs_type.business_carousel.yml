@@ -1,0 +1,15 @@
+uuid: 7cb78dea-c155-489e-8e63-4f39ffb673c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: business_carousel
+label: 'Business Carousel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,24 @@
+uuid: fbf12550-fd58-4d82-bcc7-ff8e69fe3f25
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: full_size_header_1440x600_
+label: 'Full-Size header (1440x600)'
+effects:
+  b09a1619-7387-4597-b3f5-15535389b11e:
+    uuid: b09a1619-7387-4597-b3f5-15535389b11e
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 1440
+      height: 600
+      crop_type: focal_point
+  2f3cff15-1c35-470d-bd59-f3d2601c1e85:
+    uuid: 2f3cff15-1c35-470d-bd59-f3d2601c1e85
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

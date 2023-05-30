@@ -1,0 +1,24 @@
+uuid: 552dfafc-ae50-475f-afef-1a9fcfaba84d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.person_template_cta
+    - field.storage.block_content.field_headline_formatted
+  module:
+    - text
+id: block_content.person_template_cta.field_headline_formatted
+field_name: field_headline_formatted
+entity_type: block_content
+bundle: person_template_cta
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: "<p>Join a team that’s doing more</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

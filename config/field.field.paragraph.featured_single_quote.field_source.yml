@@ -1,0 +1,19 @@
+uuid: 905fdac9-2995-4c3b-ae91-b9ab988123e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_source
+    - paragraphs.paragraphs_type.featured_single_quote
+id: paragraph.featured_single_quote.field_source
+field_name: field_source
+entity_type: paragraph
+bundle: featured_single_quote
+label: Source
+description: 'Who said it? (Name only)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

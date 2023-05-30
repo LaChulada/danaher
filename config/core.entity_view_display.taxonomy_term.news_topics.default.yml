@@ -1,0 +1,23 @@
+uuid: 681030ae-5053-4f09-8879-bee07d73dee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.news_topics
+  module:
+    - text
+id: taxonomy_term.news_topics.default
+targetEntityType: taxonomy_term
+bundle: news_topics
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

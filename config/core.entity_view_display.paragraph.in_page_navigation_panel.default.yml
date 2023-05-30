@@ -1,0 +1,37 @@
+uuid: 8249ddd0-bd0d-428f-bd3f-416eff162c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.in_page_navigation_panel.field_inpage_navigation_panel
+    - field.field.paragraph.in_page_navigation_panel.field_title
+    - paragraphs.paragraphs_type.in_page_navigation_panel
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.in_page_navigation_panel.default
+targetEntityType: paragraph
+bundle: in_page_navigation_panel
+mode: default
+content:
+  field_inpage_navigation_panel:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_title: true
+  search_api_excerpt: true

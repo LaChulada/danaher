@@ -1,0 +1,23 @@
+uuid: 1021f946-5756-4aff-8bc8-a59f3e666082
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_theme
+    - paragraphs.paragraphs_type.cta_banner
+  module:
+    - options
+id: paragraph.cta_banner.field_theme
+field_name: field_theme
+entity_type: paragraph
+bundle: cta_banner
+label: Theme
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: manilla
+default_value_callback: ''
+settings: {  }
+field_type: list_string

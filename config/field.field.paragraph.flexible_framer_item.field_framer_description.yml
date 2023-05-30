@@ -1,0 +1,21 @@
+uuid: 8e747ae6-dcee-483b-928c-30815707ece9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_framer_description
+    - paragraphs.paragraphs_type.flexible_framer_item
+  module:
+    - text
+id: paragraph.flexible_framer_item.field_framer_description
+field_name: field_framer_description
+entity_type: paragraph
+bundle: flexible_framer_item
+label: 'Framer description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

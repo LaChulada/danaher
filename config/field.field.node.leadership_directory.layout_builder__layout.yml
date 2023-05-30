@@ -1,0 +1,21 @@
+uuid: 7e92c7d5-f793-4518-b550-826b35e65a2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.leadership_directory
+  module:
+    - layout_builder
+id: node.leadership_directory.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: leadership_directory
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

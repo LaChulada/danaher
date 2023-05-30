@@ -1,0 +1,21 @@
+uuid: cd34920d-7e66-426f-9223-8fa54d477a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.featured_core_product
+  module:
+    - text
+id: paragraph.featured_core_product.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: featured_core_product
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

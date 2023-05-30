@@ -1,0 +1,105 @@
+uuid: 9bbdc4bf-be98-4525-8e04-d76a682c0203
+langcode: en
+status: true
+dependencies: {  }
+id: card_view_4_up
+name: card_view_4_up
+weight: 0
+label: 'Card View 4 up'
+group: ''
+skin: ''
+breakpoints: 1
+optimized: false
+options:
+  options__active_tab: edit-options-responsives
+  settings:
+    mobileFirst: false
+    asNavFor: ''
+    accessibility: true
+    adaptiveHeight: false
+    autoplay: false
+    pauseOnHover: true
+    pauseOnDotsHover: false
+    pauseOnFocus: true
+    autoplaySpeed: 3000
+    arrows: true
+    prevArrow: Previous
+    nextArrow: Next
+    downArrow: false
+    downArrowTarget: ''
+    downArrowOffset: 0
+    centerMode: false
+    centerPadding: 50px
+    dots: false
+    dotsClass: slick-dots
+    appendDots: $(element)
+    draggable: true
+    fade: false
+    focusOnSelect: false
+    infinite: true
+    initialSlide: 0
+    lazyLoad: ondemand
+    mouseWheel: false
+    randomize: false
+    respondTo: slider
+    rtl: false
+    rows: 0
+    slidesPerRow: 1
+    slide: ''
+    slidesToShow: 4
+    slidesToScroll: 3
+    speed: 500
+    swipe: true
+    swipeToSlide: false
+    edgeFriction: 0.35
+    touchMove: true
+    touchThreshold: 5
+    useCSS: true
+    cssEase: ease
+    cssEaseBezier: ''
+    cssEaseOverride: ''
+    useTransform: true
+    easing: linear
+    variableWidth: true
+    vertical: false
+    verticalSwiping: false
+    waitForAnimate: true
+  responsives:
+    responsive:
+      -
+        breakpoint: 768
+        unslick: false
+        settings:
+          adaptiveHeight: false
+          autoplay: false
+          pauseOnHover: false
+          pauseOnDotsHover: false
+          pauseOnFocus: false
+          autoplaySpeed: 3000
+          arrows: true
+          centerMode: false
+          centerPadding: 50px
+          dots: false
+          draggable: true
+          fade: false
+          focusOnSelect: false
+          infinite: true
+          initialSlide: 0
+          respondTo: window
+          rows: 0
+          slidesPerRow: 2
+          slidesToShow: 2
+          slidesToScroll: 1
+          speed: 500
+          swipe: true
+          swipeToSlide: true
+          edgeFriction: 0.35
+          touchMove: true
+          touchThreshold: 5
+          cssEase: ease
+          cssEaseBezier: ''
+          cssEaseOverride: ''
+          variableWidth: false
+          vertical: false
+          verticalSwiping: false
+          waitForAnimate: true

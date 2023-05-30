@@ -1,0 +1,20 @@
+uuid: 989f8451-d176-4015-8e2d-1aa9c521ab5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_scientific_focus
+field_name: field_scientific_focus
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

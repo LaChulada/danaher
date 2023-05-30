@@ -1,0 +1,33 @@
+uuid: e6c2fa79-b827-4e75-af12-c4eb94640310
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_start_date
+  module:
+    - block_class
+    - datetime
+    - fieldblock
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: event-start-date
+id: danaher_event_start_date
+theme: danaher
+region: event_hero_info_block
+weight: -23
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Event Start Date'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_start_date
+  formatter_id: datetime_custom
+  formatter_settings:
+    timezone_override: ''
+    date_format: m.d.y
+visibility: {  }

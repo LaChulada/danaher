@@ -1,0 +1,42 @@
+uuid: bb39fbb7-c555-4dec-a8f2-56255b59e99d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.business_detail.field_business_name
+    - field.field.node.business_detail.field_business_segment
+    - field.field.node.business_detail.field_contact
+    - field.field.node.business_detail.field_description
+    - field.field.node.business_detail.field_hero
+    - field.field.node.business_detail.field_logo
+    - field.field.node.business_detail.field_logo_showcase
+    - field.field.node.business_detail.field_scientific_focus_area
+    - field.field.node.business_detail.field_widgets
+    - field.field.node.business_detail.layout_builder__layout
+    - node.type.business_detail
+  module:
+    - user
+id: node.business_detail.teaser
+targetEntityType: node
+bundle: business_detail
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_business_name: true
+  field_business_segment: true
+  field_contact: true
+  field_description: true
+  field_hero: true
+  field_logo: true
+  field_logo_showcase: true
+  field_scientific_focus_area: true
+  field_widgets: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

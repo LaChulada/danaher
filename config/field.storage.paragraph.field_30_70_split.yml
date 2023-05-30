@@ -1,0 +1,18 @@
+uuid: 9968a0e6-84c5-43b0-8b97-6fe22fc8d1dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_30_70_split
+field_name: field_30_70_split
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

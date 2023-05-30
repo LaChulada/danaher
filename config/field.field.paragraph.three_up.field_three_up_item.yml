@@ -1,0 +1,80 @@
+uuid: 25091d27-ad28-4627-9d78-af1fae99898a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_three_up_item
+    - paragraphs.paragraphs_type.three_up
+    - paragraphs.paragraphs_type.three_up_item
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: paragraph.three_up.field_three_up_item
+field_name: field_three_up_item
+entity_type: paragraph
+bundle: three_up
+label: 'Three Up Column Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      three_up_item: three_up_item
+    negate: 0
+    target_bundles_drag_drop:
+      agenda:
+        weight: 17
+        enabled: false
+      article_hero:
+        weight: 18
+        enabled: false
+      basic_hero:
+        weight: 19
+        enabled: false
+      body_content:
+        weight: 20
+        enabled: false
+      cta_banner:
+        weight: 21
+        enabled: false
+      flexible_framer:
+        weight: 22
+        enabled: false
+      flexible_framer_image_item:
+        weight: 23
+        enabled: false
+      flexible_framer_item:
+        weight: 24
+        enabled: false
+      flexible_framer_with_images:
+        weight: 25
+        enabled: false
+      from_library:
+        weight: 26
+        enabled: false
+      meet_our_team:
+        weight: 27
+        enabled: false
+      speaker_information:
+        weight: 29
+        enabled: false
+      speakers_panel:
+        weight: 28
+        enabled: false
+      text_and_image:
+        weight: 30
+        enabled: false
+      three_up:
+        weight: 31
+        enabled: false
+      three_up_item:
+        weight: 32
+        enabled: true
+field_type: entity_reference_revisions

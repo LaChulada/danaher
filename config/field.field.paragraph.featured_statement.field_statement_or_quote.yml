@@ -1,0 +1,19 @@
+uuid: 6ceb5317-ee56-4c3c-9a02-442b0a6c8772
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_statement_or_quote
+    - paragraphs.paragraphs_type.featured_statement
+id: paragraph.featured_statement.field_statement_or_quote
+field_name: field_statement_or_quote
+entity_type: paragraph
+bundle: featured_statement
+label: 'Statement Or Quote'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,101 @@
+uuid: ea9fbd28-7f7f-4f07-944b-aaf78c4cb695
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.person.field_bio
+    - field.field.node.person.field_category_pathing
+    - field.field.node.person.field_featured_people
+    - field.field.node.person.field_job_title
+    - field.field.node.person.field_media
+    - field.field.node.person.field_meta_tags
+    - field.field.node.person.field_name
+    - field.field.node.person.field_person_type
+    - field.field.node.person.field_text_callout
+    - field.field.node.person.field_widgets
+    - field.field.node.person.field_wysiwig
+    - field.field.node.person.layout_builder__layout
+    - image.style.search_thumbnail
+    - node.type.person
+  module:
+    - fences
+    - layout_builder
+    - media
+    - name
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.person.search_index
+targetEntityType: node
+bundle: person
+mode: search_index
+content:
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: search_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: figure
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_name:
+    type: name_default
+    label: hidden
+    settings:
+      format: full
+      markup: none
+      list_format: ''
+      link_target: ''
+      preferred_field_reference: ''
+      preferred_field_reference_separator: ', '
+      alternative_field_reference: ''
+      alternative_field_reference_separator: ', '
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_bio: true
+  field_category_pathing: true
+  field_featured_people: true
+  field_job_title: true
+  field_meta_tags: true
+  field_person_type: true
+  field_text_callout: true
+  field_widgets: true
+  field_wysiwig: true
+  langcode: true
+  layout_builder__layout: true

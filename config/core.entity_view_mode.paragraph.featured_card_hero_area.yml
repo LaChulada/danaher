@@ -1,0 +1,10 @@
+uuid: baef8cf6-3992-42bd-a96f-5e28bb793bf2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.featured_card_hero_area
+label: 'Featured Card Hero Area'
+targetEntityType: paragraph
+cache: true

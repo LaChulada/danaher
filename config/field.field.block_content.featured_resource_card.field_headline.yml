@@ -1,0 +1,21 @@
+uuid: 2d01a086-d039-4500-85bb-81c67013da77
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_resource_card
+    - field.storage.block_content.field_headline
+id: block_content.featured_resource_card.field_headline
+field_name: field_headline
+entity_type: block_content
+bundle: featured_resource_card
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Featured Resource'
+default_value_callback: ''
+settings: {  }
+field_type: string

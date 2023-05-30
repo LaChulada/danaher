@@ -1,0 +1,52 @@
+uuid: 56d5f7c3-7c85-42e5-beba-626fdfad4fda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_case_study_card.field_featured_card
+    - field.field.paragraph.featured_case_study_card.field_headline
+    - paragraphs.paragraphs_type.featured_case_study_card
+  module:
+    - fences
+id: paragraph.featured_case_study_card.default
+targetEntityType: paragraph
+bundle: featured_case_study_card
+mode: default
+content:
+  field_featured_card:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: featured_event
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: h3
+        fences_field_item_classes: section-title
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

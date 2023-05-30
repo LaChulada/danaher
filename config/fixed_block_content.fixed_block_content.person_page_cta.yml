@@ -1,0 +1,12 @@
+uuid: 06a8e51b-02d7-43f1-900e-108a798223e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.person_template_cta
+id: person_page_cta
+title: 'Person page CTA'
+block_content_bundle: person_template_cta
+default_content: null
+auto_export: 0
+protected: false

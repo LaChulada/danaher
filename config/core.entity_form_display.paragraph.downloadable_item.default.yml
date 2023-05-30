@@ -1,0 +1,32 @@
+uuid: 65b53bf2-4840-409b-887e-28bae03bd901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.downloadable_item.field_file
+    - field.field.paragraph.downloadable_item.field_language
+    - paragraphs.paragraphs_type.downloadable_item
+  module:
+    - file
+id: paragraph.downloadable_item.default
+targetEntityType: paragraph
+bundle: downloadable_item
+mode: default
+content:
+  field_file:
+    type: file_generic
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_language:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

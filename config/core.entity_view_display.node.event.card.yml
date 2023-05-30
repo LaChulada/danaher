@@ -1,0 +1,183 @@
+uuid: 36acf2da-308f-4627-855b-5542c5419a70
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.event.field_business_names
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_end_time
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_link
+    - field.field.node.event.field_event_list
+    - field.field.node.event.field_event_time_zone
+    - field.field.node.event.field_event_topic
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_hero
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_scientific_focus
+    - field.field.node.event.field_start_date
+    - field.field.node.event.field_start_time
+    - field.field.node.event.field_text_callout
+    - field.field.node.event.field_widgets
+    - field.field.node.event.field_wysiwig
+    - field.field.node.event.layout_builder__layout
+    - node.type.event
+  module:
+    - datetime
+    - fences
+    - layout_builder
+    - time_field
+    - tzfield
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.card
+targetEntityType: node
+bundle: event
+mode: card
+content:
+  field_audience:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: li
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_capability:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: li
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 3
+    region: content
+  field_end_date:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F j, Y'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 9
+    region: content
+  field_end_time:
+    type: time_formatter
+    label: hidden
+    settings:
+      time_format: 'g:i a'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 8
+    region: content
+  field_event_time_zone:
+    type: tzfield_date
+    label: hidden
+    settings:
+      format: T
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 7
+    region: content
+  field_start_date:
+    type: datetime_custom
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F j, Y'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 5
+    region: content
+  field_start_time:
+    type: time_formatter
+    label: hidden
+    settings:
+      time_format: 'g:i A'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_business_names: true
+  field_event_address: true
+  field_event_link: true
+  field_event_list: true
+  field_event_topic: true
+  field_event_type: true
+  field_hero: true
+  field_meta_tags: true
+  field_scientific_focus: true
+  field_text_callout: true
+  field_widgets: true
+  field_wysiwig: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 2f18b2a1-536f-40ab-b790-bf0fbeb8f754
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_source
+    - paragraphs.paragraphs_type.featured_statement
+id: paragraph.featured_statement.field_source
+field_name: field_source
+entity_type: paragraph
+bundle: featured_statement
+label: Author
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

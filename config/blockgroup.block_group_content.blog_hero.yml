@@ -1,0 +1,6 @@
+uuid: a1073deb-b250-4f38-8cdb-2a8c869592ca
+langcode: en
+status: true
+dependencies: {  }
+id: blog_hero
+label: 'Blog Hero'

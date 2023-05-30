@@ -1,0 +1,19 @@
+uuid: 65fae9f1-1f01-4de7-9696-b9812160a9af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.featured_people
+id: paragraph.featured_people.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: featured_people
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

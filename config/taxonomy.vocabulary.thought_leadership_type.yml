@@ -1,0 +1,8 @@
+uuid: e98b7f21-e7f2-423d-a548-e98063b1c661
+langcode: en
+status: true
+dependencies: {  }
+name: 'Thought Leadership Type'
+vid: thought_leadership_type
+description: ''
+weight: 0

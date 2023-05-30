@@ -1,0 +1,19 @@
+uuid: 20abcf86-9919-42b4-9467-500903d0e0c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.subcategory_detail_page_hero
+id: paragraph.subcategory_detail_page_hero.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: subcategory_detail_page_hero
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

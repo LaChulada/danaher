@@ -1,0 +1,21 @@
+uuid: f1f58d34-1bc4-4ce6-9e02-2585f952d9ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.category_pathing
+  module:
+    - text
+id: paragraph.category_pathing.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: category_pathing
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

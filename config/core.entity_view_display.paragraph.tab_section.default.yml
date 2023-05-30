@@ -1,0 +1,54 @@
+uuid: a8344e23-97f2-4bb6-8ec9-62bc7ba6ee4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_section.field_footnote
+    - field.field.paragraph.tab_section.field_tab_widgets
+    - field.field.paragraph.tab_section.field_title
+    - paragraphs.paragraphs_type.tab_section
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.tab_section.default
+targetEntityType: paragraph
+bundle: tab_section
+mode: default
+content:
+  field_footnote:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_tab_widgets:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: wrapper
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

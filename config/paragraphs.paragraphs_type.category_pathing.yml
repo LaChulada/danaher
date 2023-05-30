@@ -1,0 +1,15 @@
+uuid: 0a66ae53-b326-4c99-a02e-f00ffaa0ecb9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: category_pathing
+label: 'Category Pathing'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

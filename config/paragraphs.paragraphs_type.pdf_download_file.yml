@@ -1,0 +1,10 @@
+uuid: fd4836ab-5a50-4b0e-82e2-0cb8d30ab567
+langcode: en
+status: true
+dependencies: {  }
+id: pdf_download_file
+label: 'PDF Download File'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

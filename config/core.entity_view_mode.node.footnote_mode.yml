@@ -1,0 +1,10 @@
+uuid: 244b4b06-07f0-4913-83d9-53e3e1e344a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.footnote_mode
+label: 'Footnote mode'
+targetEntityType: node
+cache: true

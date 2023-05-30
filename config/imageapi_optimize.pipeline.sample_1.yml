@@ -1,0 +1,15 @@
+uuid: 32b0bc06-ed4e-4e80-9a7f-2f1c0d002247
+langcode: en
+status: true
+dependencies:
+  module:
+    - webp
+name: sample_1
+label: 'WebP optimization'
+processors:
+  75592ded-1b86-4366-818a-864b82bf26b3:
+    id: webp_webp
+    data:
+      quality: '80'
+    weight: 1
+    uuid: 75592ded-1b86-4366-818a-864b82bf26b3

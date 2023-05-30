@@ -1,0 +1,11 @@
+uuid: fd21b2cf-4811-4e86-b8cf-8652ec81560f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.business_name
+id: taxonomy_term.business_name
+target_entity_type_id: taxonomy_term
+target_bundle: business_name
+default_langcode: site_default
+language_alterable: false

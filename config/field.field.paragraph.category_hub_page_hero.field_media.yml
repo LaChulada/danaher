@@ -1,0 +1,29 @@
+uuid: fb850b87-b75f-481c-94e3-c8f5d34bc9aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media
+    - media.type.image
+    - paragraphs.paragraphs_type.category_hub_page_hero
+id: paragraph.category_hub_page_hero.field_media
+field_name: field_media
+entity_type: paragraph
+bundle: category_hub_page_hero
+label: 'Background Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

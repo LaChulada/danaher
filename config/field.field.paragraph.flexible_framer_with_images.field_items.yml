@@ -1,0 +1,62 @@
+uuid: 931ba275-47ae-4779-a692-29f8120b0e67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_items
+    - paragraphs.paragraphs_type.flexible_framer_image_item
+    - paragraphs.paragraphs_type.flexible_framer_with_images
+  module:
+    - entity_reference_revisions
+    - paragraph_blocks
+third_party_settings:
+  paragraph_blocks:
+    status: 1
+id: paragraph.flexible_framer_with_images.field_items
+field_name: field_items
+entity_type: paragraph
+bundle: flexible_framer_with_images
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      flexible_framer_image_item: flexible_framer_image_item
+    negate: 0
+    target_bundles_drag_drop:
+      article_hero:
+        weight: 11
+        enabled: false
+      basic_hero:
+        weight: 12
+        enabled: false
+      cta_banner:
+        weight: 13
+        enabled: false
+      flexible_framer:
+        weight: 5
+        enabled: false
+      flexible_framer_image_item:
+        weight: 15
+        enabled: true
+      flexible_framer_item:
+        weight: 4
+        enabled: false
+      flexible_framer_with_images:
+        weight: 17
+        enabled: false
+      from_library:
+        weight: 6
+        enabled: false
+      meet_our_team:
+        weight: 19
+        enabled: false
+      text_and_image:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

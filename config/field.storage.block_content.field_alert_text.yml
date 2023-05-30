@@ -1,0 +1,21 @@
+uuid: 42d9d46e-280c-4d8b-9c5b-83ad3a81fc24
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_alert_text
+field_name: field_alert_text
+entity_type: block_content
+type: string
+settings:
+  max_length: 125
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

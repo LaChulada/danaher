@@ -1,0 +1,92 @@
+global-styling:
+  css:
+    component:
+      /modules/contrib/betterlt/css/local_tasks.css: {}
+      /themes/custom/danaher/js/slick/slick.css: {}
+      /themes/custom/danaher/js/slick/slick-theme.css: {}
+      /themes/custom/danaher/css/styles.css: { weight: 40 }
+  js:
+    /libraries/choices.js/public/assets/scripts/choices.min.js: {}
+    /themes/custom/danaher/js/cookie.js: {}
+    /themes/custom/danaher/js/slick/slick.js: {}
+    /themes/custom/danaher/js/tabs/tab-native.js: {}
+    /libraries/hoverintent/dist/hoverintent.min.js: {}
+    /themes/custom/danaher/js/transition.js: {}
+    /themes/custom/danaher/js/navigation.js: {}
+    /themes/custom/danaher/js/global.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.debounce
+    - core/drupal
+
+pdf-download:
+  js: 
+    /themes/custom/danaher/js/pdf-download.js: {}
+    
+accordion:
+  version: 1.x
+  js:
+    /themes/custom/danaher/js/collapse/collapse-native.js: {}
+    /themes/custom/danaher/js/collapse/collapse.js: {}
+
+alert:
+  js:
+    /themes/custom/danaher/js/alert.js: {}
+
+businesscarousel:
+  version: VERSION
+  js:
+    /themes/custom/danaher/js/business-carousel.js: {}
+
+stepscarousel:
+  version: VERSION
+  js:
+    /themes/custom/danaher/js/steps-carousel.js: {}
+
+timelinecarousel:
+  version: VERSION
+  js:
+    /themes/custom/danaher/js/timeline-carousel.js: {}
+
+tabs:
+  version: VERSION
+  js:
+    js/tabs.js: {}
+    /themes/custom/danaher/js/tab-navigation.js: {}
+  dependencies:
+    - core/jquery
+
+people-modal:
+  js:
+    /themes/custom/danaher/js/modal-native.js: {}
+    /themes/custom/danaher/js/modal.js: {}
+    /themes/custom/danaher/js/people-modal.js: {}
+
+case-studies-carousel:
+  js:
+    /themes/custom/danaher/js/case-study-carousel.js: {}
+      
+dynamic-quote-block:
+  css:
+    theme:
+      /themes/custom/danaher/js/slick/slick.css: {}
+      /themes/custom/danaher/js/slick/slick-theme.css: {}
+  js:
+    /themes/custom/danaher/js/slick/slick.js: {}
+    /themes/custom/danaher/js/dynamic-quote-carousel.js: {}
+
+in-page-navigation:
+  js:
+    /themes/custom/danaher/js/in-page-navigation.js: {}
+
+quiz:
+  js:
+    /themes/custom/danaher/js/quiz.js: {}
+
+promotion-banner:
+  js:
+    /themes/custom/danaher/js/promotion-banner.js: {}
+
+full-size-media:
+  js:
+    /themes/custom/danaher/js/full-size-media-video.js: {}

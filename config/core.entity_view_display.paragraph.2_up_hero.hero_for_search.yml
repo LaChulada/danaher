@@ -1,0 +1,50 @@
+uuid: dc22e691-8743-4ff4-9a52-8f214001db3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_for_search
+    - field.field.paragraph.2_up_hero.field_cta
+    - field.field.paragraph.2_up_hero.field_description
+    - field.field.paragraph.2_up_hero.field_headline
+    - field.field.paragraph.2_up_hero.field_media
+    - image.style.search_thumbnail
+    - paragraphs.paragraphs_type.2_up_hero
+  module:
+    - fences
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.2_up_hero.hero_for_search
+targetEntityType: paragraph
+bundle: 2_up_hero
+mode: hero_for_search
+content:
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: search_thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: figure
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_cta: true
+  field_description: true
+  field_headline: true
+  search_api_excerpt: true

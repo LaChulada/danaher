@@ -1,0 +1,8 @@
+uuid: d800987d-fcd4-40c7-811c-e36d7b6dca92
+langcode: en
+status: true
+dependencies: {  }
+name: 'Article Type'
+vid: news_article_type
+description: ''
+weight: 0

@@ -1,0 +1,33 @@
+uuid: 84cf1831-abaa-4941-b11c-5f3a8d5cf5cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - danaher
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: danaher_breadcrumbs
+theme: danaher
+region: breadcrumb
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      business_detail: business_detail
+      content_detail: content_detail
+      kitchen_sink: kitchen_sink
+      person: person

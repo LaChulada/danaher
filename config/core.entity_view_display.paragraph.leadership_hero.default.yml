@@ -1,0 +1,13 @@
+uuid: 6691eff1-5b0c-4b05-a1be-05be80097069
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.leadership_hero
+id: paragraph.leadership_hero.default
+targetEntityType: paragraph
+bundle: leadership_hero
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

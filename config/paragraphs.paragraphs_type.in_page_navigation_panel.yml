@@ -1,0 +1,10 @@
+uuid: 0cee7c68-33c2-4a14-96be-2d2846bc9901
+langcode: en
+status: true
+dependencies: {  }
+id: in_page_navigation_panel
+label: 'In-Page Navigation Panel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

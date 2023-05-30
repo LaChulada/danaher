@@ -1,0 +1,10 @@
+uuid: 70553ab5-960b-4846-96aa-0b0e1d8b2e22
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.tagging_list
+label: 'Tagging list'
+targetEntityType: taxonomy_term
+cache: true

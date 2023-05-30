@@ -1,0 +1,51 @@
+uuid: null
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_accordion_section.field_body
+    - field.field.paragraph.event_accordion_section.field_time
+    - field.field.paragraph.event_accordion_section.field_title
+    - paragraphs.paragraphs_type.event_accordion_section
+  module:
+    - text
+    - time_field
+id: paragraph.event_accordion_section.default
+targetEntityType: paragraph
+bundle: event_accordion_section
+mode: default
+content:
+  field_body:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_event_time:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_time:
+    type: time_range_widget
+    weight: 0
+    region: content
+    settings:
+      enabled: false
+      step: 5
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

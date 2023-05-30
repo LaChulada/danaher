@@ -1,0 +1,8 @@
+uuid: b589b48e-b9e7-4b3b-8b8b-1d9805cf91f4
+langcode: en
+status: true
+dependencies: {  }
+id: featured_resource_card
+label: 'Featured Resource Card'
+revision: 0
+description: ''

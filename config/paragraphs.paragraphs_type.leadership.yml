@@ -1,0 +1,15 @@
+uuid: 1779353f-6649-4d88-967e-8a2b0753e150
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: leadership
+label: Leadership
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

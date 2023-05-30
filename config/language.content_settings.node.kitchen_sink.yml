@@ -1,0 +1,11 @@
+uuid: e0d7bf1e-0130-418e-9397-43d6de71d77e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.kitchen_sink
+id: node.kitchen_sink
+target_entity_type_id: node
+target_bundle: kitchen_sink
+default_langcode: site_default
+language_alterable: false

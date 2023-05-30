@@ -1,0 +1,63 @@
+uuid: 9ce136c4-3592-409b-99dc-d7deb95d4dea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.dynamic_quote_block.field_dynamic_quote_blocks
+    - field.field.paragraph.dynamic_quote_block.field_small_section_header
+    - field.field.paragraph.dynamic_quote_block.field_title
+    - paragraphs.paragraphs_type.dynamic_quote_block
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.dynamic_quote_block.default
+targetEntityType: paragraph
+bundle: dynamic_quote_block
+mode: default
+content:
+  field_dynamic_quote_blocks:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: dynamic-quote-wrapper
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_small_section_header:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

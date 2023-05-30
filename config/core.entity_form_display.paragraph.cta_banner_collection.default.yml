@@ -1,0 +1,52 @@
+uuid: e75319f7-8532-4e53-b320-23150eb6329b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_banner_collection.field_cta_banner
+    - paragraphs.paragraphs_type.cta_banner_collection
+  module:
+    - advanced_text_formatter
+    - maxlength
+    - paragraphs
+id: paragraph.cta_banner_collection.default
+targetEntityType: paragraph
+bundle: cta_banner_collection
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter a unique title here if this module will be placed in a layout.'
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_cta_banner:
+    type: paragraphs
+    weight: -9
+    region: content
+    settings:
+      title: 'CTA Banner'
+      title_plural: 'CTA Banners'
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: cta_banner
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

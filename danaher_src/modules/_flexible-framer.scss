@@ -1,0 +1,98 @@
+@import "../utility/utility";
+
+
+.flexible-framer {
+    &.module {
+        margin-top: $module-med-spacing;
+    }
+    
+
+    & > .section-description {
+        text-align: left;
+    }
+
+    .section-description {
+        @include paragraph();
+        color: $color-body;
+        p {
+            margin: 0;
+        }
+    }
+    
+        
+    .default {
+        a {
+            border-bottom: 2px solid $color-primary;
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-primary;
+            transition: all $transition-time;
+            &:hover {
+                color: $color-dark-blue;
+            
+            }
+            &:active {
+                color: $color-blue;
+            }
+            &:focus {
+                border: 1px dashed $color-dark-blue;
+            color: inherit;
+            
+            }
+        }
+    }
+
+    [data-columns][data-columns] {
+        @extend .module;
+    } 
+
+    
+    .section-title {
+        @include heading2();
+        color: $color-body;
+        margin-bottom: 24px;
+    }
+
+
+    &--item {
+        .section-title {
+            @include heading3();
+            color: $color-body;
+            text-align: left;
+            text-transform: none;
+            margin-bottom: 24px;
+            margin-top: 0;
+        }
+
+        
+        a {
+            @include embedded-link();
+            transition: all $transition-time;
+        }
+
+        figure {
+            aspect-ratio: 16 / 9;
+            margin-bottom: 32px;
+            img {
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+    }
+
+    &--with-icons {
+        .flexible-framer--item {
+            figure {
+                aspect-ratio: unset;
+                img {
+                    object-fit: cover;
+                    // height: 100%;
+                    height: 64px;
+                }
+            }
+        }
+    }
+}

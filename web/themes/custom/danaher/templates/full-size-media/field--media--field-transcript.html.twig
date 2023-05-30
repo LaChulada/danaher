@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ */
+#}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+
+{{ attach_library('danaher/accordion') }}
+
+  {# somewhat rudimentary  way to create a unique ID so that I can open up a specific accordion for the media item. if you have the same item on a page multiple times, it won't work. but multiple videos on the same page is fine #}
+  {% set randomPassword = [] %}
+  {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+  {% set numbers = '0123456789' %}
+
+  {% for i in 1..10 %}
+      {% set randomCharacter = random(alpha ~ alpha|upper ~ numbers) %}
+      {% set randomPassword = randomPassword|merge([randomCharacter]) %}
+  {% endfor %}
+  {% set randomPassword = randomPassword|join %}
+
+
+  <div class="accordion container collapse--alternate collapse--alternate-icon" role="region" aria-label="{{ 'Accordion'|t }}">
+    <div class="panel-group" role="tablist" aria-multiselectable="true">
+
+      {# -- leafs -- #}
+      <div class="card-body">
+        <div class="collapse-item">
+          <button class="collapse-trigger collapsed" role="tab" data-toggle="collapse" data-target="#collapse-item-{{ randomPassword }}" aria-expanded="false" aria-controls="collapse-item-{{ randomPassword }}"">{{ 'Transcript'|t }}</button>
+          <div id="collapse-item-{{ randomPassword }}" class="collapse-target  collapse-content collapse" role="tabpanel">
+            {%- if display_field_tag -%}
+              <{{ field_tag|default('div') }}{{ attributes.addClass(classes, 'field__items') }}>
+            {% endif -%}
+              {%~ if not label_hidden and display_label_tag %}
+                <{{ label_tag|default('div') }}{{ title_attributes.addClass(title_classes) }}>{{ label }}</{{ label_tag|default('div') }}>
+              {%~ endif -%}
+              {% for item in items %}
+                {%- if display_item_tag %}
+                  <{{ field_item_tag|default('div') }}{{ item.attributes.addClass('field__item') }}>
+                {%- endif -%}
+                {{ item.content }}
+                {%- if display_item_tag -%}
+                  </{{ field_item_tag|default('div') }}>
+                {%~ endif -%}
+              {% endfor %}
+            {%- if display_field_tag -%}
+              </{{ field_tag|default('div') }}>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      {# -- end leafs -- #}
+
+    </div>
+  </div>

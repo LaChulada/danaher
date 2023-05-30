@@ -1,0 +1,26 @@
+uuid: 5c35d1fb-1f19-47b3-9f7b-5dc2a7af044b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.business_carousel_card.field_business
+    - paragraphs.paragraphs_type.business_carousel_card
+id: paragraph.business_carousel_card.default
+targetEntityType: paragraph
+bundle: business_carousel_card
+mode: default
+content:
+  field_business:
+    type: entity_reference_autocomplete_tags
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

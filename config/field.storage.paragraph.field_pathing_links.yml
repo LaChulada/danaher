@@ -1,0 +1,19 @@
+uuid: e36d9353-8b8b-46a6-9676-88b42529bb63
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_pathing_links
+field_name: field_pathing_links
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

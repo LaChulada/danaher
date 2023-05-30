@@ -1,0 +1,27 @@
+uuid: ed93a18a-aade-470b-b4bd-8cfa8a24a527
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_organization_type
+    - paragraphs.paragraphs_type.related_content
+id: paragraph.related_content.field_organization_type
+field_name: field_organization_type
+entity_type: paragraph
+bundle: related_content
+label: 'Organization Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

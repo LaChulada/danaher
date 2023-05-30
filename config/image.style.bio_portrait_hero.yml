@@ -1,0 +1,24 @@
+uuid: 3c3f47fe-d68b-4d17-a64d-77e2dc8d6ef9
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: bio_portrait_hero
+label: 'Bio Portrait Hero'
+effects:
+  5d4e30d3-690f-4d04-943b-13302956d3b3:
+    uuid: 5d4e30d3-690f-4d04-943b-13302956d3b3
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+  4fc4b45b-a5de-48ae-8c87-b41c1dde25a8:
+    uuid: 4fc4b45b-a5de-48ae-8c87-b41c1dde25a8
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 704
+      height: 600
+      crop_type: focal_point
+pipeline: ''

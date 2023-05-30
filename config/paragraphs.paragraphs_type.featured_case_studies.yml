@@ -1,0 +1,18 @@
+uuid: 4370e0f9-adb4-48ae-a221-e733038be957
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: featured_case_studies
+label: 'Featured Case Studies'
+icon_uuid: null
+icon_default: null
+description: 'This shows a dynamic carousel of case studies that is filterable.'
+behavior_plugins: {  }

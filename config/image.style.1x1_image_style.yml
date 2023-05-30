@@ -1,0 +1,34 @@
+uuid: 06c994ea-eff7-4f7b-8250-0b40b187fbeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.1x1
+  module:
+    - crop
+    - focal_point
+name: 1x1_image_style
+label: '1x1 image style'
+effects:
+  6e7eb099-cb2c-4621-8dc0-9c0f5a11b740:
+    uuid: 6e7eb099-cb2c-4621-8dc0-9c0f5a11b740
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
+  16734fd0-a0ca-4cbb-8685-b358df59b9c3:
+    uuid: 16734fd0-a0ca-4cbb-8685-b358df59b9c3
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: 1x1
+      automatic_crop_provider: null
+  71632246-23c9-4105-a249-aa640d82ef20:
+    uuid: 71632246-23c9-4105-a249-aa640d82ef20
+    id: focal_point_scale_and_crop
+    weight: 3
+    data:
+      width: 821
+      height: 820
+      crop_type: focal_point
+pipeline: ''

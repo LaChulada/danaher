@@ -1,0 +1,21 @@
+uuid: 5e21c2b9-ffda-4dee-b97c-37939125da3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote
+    - paragraphs.paragraphs_type.featured_single_quote_item
+  module:
+    - text
+id: paragraph.featured_single_quote_item.field_quote
+field_name: field_quote
+entity_type: paragraph
+bundle: featured_single_quote_item
+label: Quote
+description: 'What did they say?'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

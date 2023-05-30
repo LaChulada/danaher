@@ -1,0 +1,24 @@
+uuid: 1ee86043-01d5-4f49-9f48-be21b67d3c88
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: homepage_hero_main_image
+label: 'Homepage Hero Main Image (604x560)'
+effects:
+  68ecd974-22fe-4a51-9eb5-1409b981d92b:
+    uuid: 68ecd974-22fe-4a51-9eb5-1409b981d92b
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 604
+      height: 560
+      crop_type: focal_point
+  b2167b57-cdf9-4aa0-b1f0-f5aa0f684dd2:
+    uuid: b2167b57-cdf9-4aa0-b1f0-f5aa0f684dd2
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

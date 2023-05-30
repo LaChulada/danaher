@@ -1,0 +1,81 @@
+uuid: 20999add-9e3c-4e9e-a361-77c63c218b05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_statement.field_author_title
+    - field.field.paragraph.featured_statement.field_background
+    - field.field.paragraph.featured_statement.field_cta
+    - field.field.paragraph.featured_statement.field_source
+    - field.field.paragraph.featured_statement.field_statement_or_quote
+    - paragraphs.paragraphs_type.featured_statement
+  module:
+    - advanced_text_formatter
+    - link
+    - maxlength
+id: paragraph.featured_statement.default
+targetEntityType: paragraph
+bundle: featured_statement
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_author_title:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 60
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_background:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cta:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_source:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_statement_or_quote:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 120
+      placeholder: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: 200
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: true
+      advanced_text_formatter:
+        show_token_tree: 0
+hidden:
+  created: true
+  status: true

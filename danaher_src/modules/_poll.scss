@@ -1,0 +1,196 @@
+@import "../utility/utility";
+
+.poll {
+
+    &.paragraph {
+        border-top: 1px solid $color-black;
+        padding-top: 32px;
+    }
+
+
+    p:not(.eyebrow) { margin: 0; }
+
+    &.module {
+        margin-top: 72px;
+        margin-bottom: 72px;
+        @media (max-width: $mobile-width) {
+            margin-top: 64px;
+            margin-bottom: 64px;
+        }
+    }
+    &-question {
+        @include heading2();
+        margin-bottom: 72px;
+
+
+        input[type="submit"] {
+            margin-top: 16px;
+        }
+    }
+
+    .chart-desktop {
+        display: block;
+        @media (max-width: $mobile-width) {
+            display: none;
+        }
+    }
+
+    .chart-mobile {
+        display: none;
+        @media (max-width: $mobile-width) {
+            display: block;
+        }
+    }
+
+    .total {
+        @include caption();
+        text-align: left;
+        margin-top: 72px;
+    }
+
+    .percent {
+        @include display2();
+        text-align: center;
+        margin-bottom: 24px;
+        @media (max-width: $mobile-width) {
+            margin-bottom: 12px;
+            text-align: left;
+        }
+    }
+
+    .chart-title {
+        @include heading3();
+        @media (max-width: $mobile-width) {
+            text-align: left;
+            margin-bottom: 16px;
+        }
+    }
+    
+    dl {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 425px 54px;
+
+        @media (max-width: $mobile-width) {
+            display: block;
+        }
+        
+        dd {
+            display: grid;
+            grid-template-rows: 112px 313px;
+            grid-template-columns: 1fr;
+            @media (max-width: $mobile-width) {
+                grid-template-rows: 112px 45px 313px;
+                margin-bottom: 48px;
+            }
+
+            &:nth-child(n+1) {
+                .foreground {
+                    background-color: $color-dark-blue;
+                }
+            }
+
+            &:nth-child(n+2) {
+                .foreground {
+                    background-color: $color-purple;
+                }
+            }
+
+            &:nth-child(n+3) {
+                .foreground {
+                    background-color: $color-dark-pink;
+                }
+            }
+        }
+
+        dt {
+            margin-top: 24px;
+            text-align: center;
+            @include heading3();
+        }
+    }
+
+    .bar {
+        height: 100%;
+        margin: 0;
+        /* background-color: #efefef; */
+        background-color: transparent;
+        transform: rotate(-90deg);
+        line-height: 0;
+        position: static;
+        float: none;
+        clear: both;
+        max-height: 313px;
+        width: 313px;
+        margin-inline: auto;
+        .foreground {
+            height: 100%;
+        }
+
+        @media (max-width: $mobile-width) {
+            transform: none;
+        }
+    }
+
+
+    .form-radios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0;
+        text-align: center;
+        height: 400px;
+
+        .form-item-choice {
+            
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: max-content;
+            align-content: center;
+            justify-content: center;
+        
+            &:nth-child(n+1) {
+                background: $color-dark-blue;
+            }
+
+            &:nth-child(n+2) {
+                background: $color-purple;
+            }
+
+            &:nth-child(n+3) {
+                background: $color-dark-pink;
+            }
+
+            &:nth-child(2n+1) {
+                background: $color-dark-blue;
+            }
+
+            &:nth-child(2n+2) {
+                background: $color-purple;
+            }
+
+            &:nth-child(2n+3) {
+                background: $color-dark-pink;
+            }
+        }
+
+        @media (max-width: $mobile-width) {
+            grid-template-columns: 1fr;
+        }
+
+        [type="radio"] {
+            visibility: hidden;
+        }
+
+
+
+        label {
+            @extend .button-secondary-inverse;
+        }
+
+        [type="radio"]:checked+label {
+            transform: scale(1.1);
+        }
+    }
+}

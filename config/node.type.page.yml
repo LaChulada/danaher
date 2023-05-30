@@ -1,0 +1,37 @@
+uuid: 95bf6cdd-2449-4560-9574-26a732228931
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+    - search_api_exclude
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: true
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: true
+    unpublish_required: false
+    unpublish_revision: false
+  search_api_exclude:
+    enabled: 1
+_core:
+  default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
+name: 'Utility page'
+type: page
+description: 'Use <em>basic pages</em> for your static content.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

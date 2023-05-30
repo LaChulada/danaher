@@ -1,0 +1,26 @@
+uuid: 8b0d0624-667e-4b61-bd61-cbcd3065c4d3
+langcode: en
+status: false
+dependencies:
+  config:
+    - blockgroup.block_group_content.blog_hero_title_section
+  module:
+    - block_class
+    - blockgroup
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: blog-title-section
+id: danaher_blogherotitlesection
+theme: danaher
+region: blog_hero_left_side
+weight: -36
+provider: null
+plugin: 'block_group:blog_hero_title_section'
+settings:
+  id: 'block_group:blog_hero_title_section'
+  label: 'Blog Hero Title Section'
+  label_display: '0'
+  provider: blockgroup
+visibility: {  }

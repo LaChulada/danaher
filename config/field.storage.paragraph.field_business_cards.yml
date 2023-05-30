@@ -1,0 +1,20 @@
+uuid: 17248c80-77e1-4429-8e7c-930f68067494
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+id: paragraph.field_business_cards
+field_name: field_business_cards
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 16
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

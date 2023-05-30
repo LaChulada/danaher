@@ -1,0 +1,6 @@
+uuid: d1105863-3741-4edb-a234-fb6d37ceec76
+langcode: en
+status: true
+dependencies: {  }
+id: tagging_block
+label: 'Tagging Block'

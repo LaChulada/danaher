@@ -1,0 +1,48 @@
+uuid: ab71ca3d-2477-462c-ad9f-03d96786ee20
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.textblock
+    - field.field.block_content.textblock.field_link
+    - field.field.block_content.textblock.field_text
+  module:
+    - fences
+    - link
+id: block_content.textblock.default
+targetEntityType: block_content
+bundle: textblock
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

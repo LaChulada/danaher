@@ -1,0 +1,15 @@
+uuid: 300622c1-6b52-452a-a259-81c54a21df99
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: article_hero
+label: 'Article Hero'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,35 @@
+uuid: 20e6110c-1295-4a3c-a0dc-ebcea8c9ef08
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.info-menu
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: info-menu
+id: infomenu
+theme: danaher
+region: header_menu_group
+weight: -23
+provider: null
+plugin: 'menu_block:info-menu'
+settings:
+  id: 'menu_block:info-menu'
+  label: 'Info Menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'info-menu:'
+  suggestion: info_menu
+visibility: {  }

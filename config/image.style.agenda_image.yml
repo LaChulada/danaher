@@ -1,0 +1,24 @@
+uuid: be873132-7bb4-4cbd-8eb0-1777c4d0df5d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: agenda_image
+label: 'Agenda image (1300x750)'
+effects:
+  68f85316-e2be-4160-8ef9-caf8279debeb:
+    uuid: 68f85316-e2be-4160-8ef9-caf8279debeb
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 1300
+      height: 750
+      crop_type: focal_point
+  a1febb52-8ce3-4bd2-afeb-627d8eef5f3a:
+    uuid: a1febb52-8ce3-4bd2-afeb-627d8eef5f3a
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

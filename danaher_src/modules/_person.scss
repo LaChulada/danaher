@@ -1,0 +1,81 @@
+@import "../utility/utility";
+
+
+.person {
+    @include paragraph();
+    color: $color-body;
+
+    figure {
+        margin: 0;
+    }
+
+    .credentials {
+        display: block;
+        @include paragraph();
+        color: $color-body;
+        padding-top: 4px;
+    }
+
+    .bio-info {
+        @include paragraph();
+        a {
+            color: $color-body;
+            text-decoration: underline;
+            border: none;
+            &:focus, &:hover {
+                color: $color-dark-blue;
+            }
+        }
+    }
+
+    &.node {
+        figure {
+            margin-bottom: 16px;
+        }
+
+        .section-name {
+            text-transform: none;
+            margin-bottom: 8px;
+            @include heading3();
+            color: $color-black;
+        }
+
+        @include standard-cta-link();
+
+        .credentials {
+            display: none;
+        }
+
+       a.cta-link {
+            @include embedded-link();
+            margin-bottom: 8px;
+            margin-top: 0;
+       }
+    }
+
+    &-group {
+
+        &:has(.featured article.person.no-image) {
+            figure {
+                display: none;
+            }
+        }
+
+        .heading {
+            padding-bottom: 48px;
+
+            .cta-link {
+                @include embedded-link();
+                text-align: right;
+                margin-top: 0;
+                display: block;
+                border: none;
+            }
+
+            .section-headline {
+                @include heading2();
+                text-transform: none;
+            }
+        }
+    }
+}

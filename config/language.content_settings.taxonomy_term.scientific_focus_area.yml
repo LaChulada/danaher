@@ -1,0 +1,11 @@
+uuid: 927b1ead-4308-4feb-87a3-bad092aa312c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.scientific_focus_area
+id: taxonomy_term.scientific_focus_area
+target_entity_type_id: taxonomy_term
+target_bundle: scientific_focus_area
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,6 @@
+uuid: afd784b9-606c-464b-94d8-9e99d450f787
+langcode: en
+status: true
+dependencies: {  }
+id: blog_author_section
+label: 'Blog Author Section'

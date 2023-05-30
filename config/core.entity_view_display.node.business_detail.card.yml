@@ -1,0 +1,99 @@
+uuid: 69037e79-25de-4902-8d51-36a5e5bf32f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.business_detail.field_business_name
+    - field.field.node.business_detail.field_business_segment
+    - field.field.node.business_detail.field_contact
+    - field.field.node.business_detail.field_description
+    - field.field.node.business_detail.field_hero
+    - field.field.node.business_detail.field_logo
+    - field.field.node.business_detail.field_logo_showcase
+    - field.field.node.business_detail.field_scientific_focus_area
+    - field.field.node.business_detail.field_widgets
+    - field.field.node.business_detail.layout_builder__layout
+    - image.style.business_logo_208x96_
+    - node.type.business_detail
+  module:
+    - entity_reference_revisions
+    - fences
+    - layout_builder
+    - media
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.business_detail.card
+targetEntityType: node
+bundle: business_detail
+mode: card
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: section-description
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: card
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_logo:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: business_logo_208x96_
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: ''
+        fences_field_item_tag: figure
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_business_name: true
+  field_business_segment: true
+  field_contact: true
+  field_logo_showcase: true
+  field_scientific_focus_area: true
+  field_widgets: true
+  langcode: true
+  layout_builder__layout: true
+  links: true
+  search_api_excerpt: true

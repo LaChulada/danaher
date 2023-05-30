@@ -1,0 +1,54 @@
+uuid: 924a29b4-f68b-4033-9997-7eb888067f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.article_detail.field_hero
+    - field.field.node.article_detail.field_news_article_type
+    - field.field.node.article_detail.field_news_topic
+    - field.field.node.article_detail.field_publication_date
+    - field.field.node.article_detail.field_recirculation_module
+    - field.field.node.article_detail.field_text_callout
+    - field.field.node.article_detail.field_widgets
+    - field.field.node.article_detail.field_wysiwig
+    - field.field.node.article_detail.layout_builder__layout
+    - node.type.article_detail
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.article_detail.search_index
+targetEntityType: node
+bundle: article_detail
+mode: search_index
+content:
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_news_article_type: true
+  field_news_topic: true
+  field_publication_date: true
+  field_recirculation_module: true
+  field_text_callout: true
+  field_widgets: true
+  field_wysiwig: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

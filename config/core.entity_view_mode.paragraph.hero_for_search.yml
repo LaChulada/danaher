@@ -1,0 +1,10 @@
+uuid: 7eb23e8b-4e5c-4f66-817c-2471c549256c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.hero_for_search
+label: 'Hero for Search'
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,34 @@
+uuid: 0cf47bdd-e7af-4c4f-b9a5-a32915e2b896
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.5x4
+  module:
+    - crop
+    - focal_point
+name: portrait_image_style
+label: 'Portrait Image Style (288x360)'
+effects:
+  3c956806-a990-456a-99ed-bd4b9eb71cc1:
+    uuid: 3c956806-a990-456a-99ed-bd4b9eb71cc1
+    id: focal_point_scale_and_crop
+    weight: -8
+    data:
+      width: 288
+      height: 360
+      crop_type: focal_point
+  b4372b91-ff7d-41ca-919d-fdde257f0d14:
+    uuid: b4372b91-ff7d-41ca-919d-fdde257f0d14
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+  a631a770-0912-49ec-b3ca-471008c0b169:
+    uuid: a631a770-0912-49ec-b3ca-471008c0b169
+    id: crop_crop
+    weight: -9
+    data:
+      crop_type: 5x4
+      automatic_crop_provider: null
+pipeline: ''

@@ -1,0 +1,16 @@
+uuid: 5e58055f-b4f4-498d-a6c1-1e2dc4b276bf
+langcode: en
+status: true
+dependencies: {  }
+name: icon_thumbnail
+label: 'Icon thumbnail (75x75)'
+effects:
+  b1882b70-504e-4c63-bf3a-ec802427bbd7:
+    uuid: b1882b70-504e-4c63-bf3a-ec802427bbd7
+    id: image_scale
+    weight: 1
+    data:
+      width: 75
+      height: 75
+      upscale: false
+pipeline: ''

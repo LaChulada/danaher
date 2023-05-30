@@ -1,0 +1,10 @@
+uuid: e488ca33-dc51-457d-b667-77e9f40d6946
+langcode: en
+status: true
+dependencies: {  }
+id: timeline_item
+label: 'Timeline Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,55 @@
+uuid: d03280d6-a6e2-47ba-8d2d-3d693faadb7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_framer_item.field_framer_description
+    - field.field.paragraph.flexible_framer_item.field_framer_link
+    - field.field.paragraph.flexible_framer_item.field_headline
+    - field.field.paragraph.flexible_framer_item.field_media
+    - paragraphs.paragraphs_type.flexible_framer_item
+  module:
+    - fences
+    - text
+id: paragraph.flexible_framer_item.default
+targetEntityType: paragraph
+bundle: flexible_framer_item
+mode: default
+content:
+  field_framer_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: section-description
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h4
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_framer_link: true
+  field_media: true
+  search_api_excerpt: true

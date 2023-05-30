@@ -1,0 +1,44 @@
+uuid: c4c695d2-e363-458b-83de-8c5d92202a5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero
+  module:
+    - entity_reference_revisions
+    - fieldblock
+    - node
+  theme:
+    - danaher
+id: danaher_contentfield
+theme: danaher
+region: hero
+weight: -39
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Hero
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_hero
+  formatter_id: entity_reference_revisions_entity_view
+  formatter_settings:
+    view_mode: default
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article_detail: article_detail
+      business_detail: business_detail
+      content_detail: content_detail
+      event: event
+      high_level_pages: high_level_pages
+      homepage: homepage
+      page: page
+      person: person
+      subcategory_hub_page: subcategory_hub_page

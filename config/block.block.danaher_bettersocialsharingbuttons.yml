@@ -1,0 +1,51 @@
+uuid: 4160058c-7e38-475a-a1b0-87108fc1c004
+langcode: en
+status: true
+dependencies:
+  module:
+    - better_social_sharing_buttons
+    - block_class
+    - node
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: social-share-buttons
+id: danaher_bettersocialsharingbuttons
+theme: danaher
+region: content_below
+weight: -36
+provider: null
+plugin: social_sharing_buttons_block
+settings:
+  id: social_sharing_buttons_block
+  label: 'Share This Page'
+  label_display: '0'
+  provider: better_social_sharing_buttons
+  services:
+    facebook: facebook
+    twitter: twitter
+    email: email
+    linkedin: linkedin
+    copy: copy
+    whatsapp: 0
+    facebook_messenger: 0
+    pinterest: 0
+    digg: 0
+    tumblr: 0
+    reddit: 0
+    evernote: 0
+    print: 0
+  iconset: social-icons--square
+  facebook_app_id: ''
+  print_css: ''
+  width: 30px
+  radius: 100%
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event

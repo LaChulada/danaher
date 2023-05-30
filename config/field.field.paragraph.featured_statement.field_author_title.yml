@@ -1,0 +1,19 @@
+uuid: 4e69b7b7-bf9e-4b57-97fa-ea3775296614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_author_title
+    - paragraphs.paragraphs_type.featured_statement
+id: paragraph.featured_statement.field_author_title
+field_name: field_author_title
+entity_type: paragraph
+bundle: featured_statement
+label: 'Author Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

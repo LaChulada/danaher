@@ -1,0 +1,27 @@
+uuid: 7ff8c2f6-9134-4531-bf5c-8d81b87632bc
+langcode: en
+status: false
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.alert_banner
+  module:
+    - block_class
+    - fixed_block_content
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: alert
+id: danaher_alertbanner
+theme: danaher
+region: pre_header_area
+weight: -31
+provider: null
+plugin: 'fixed_block_content:alert_banner'
+settings:
+  id: 'fixed_block_content:alert_banner'
+  label: 'Alert Banner'
+  label_display: '0'
+  provider: fixed_block_content
+  view_mode: ''
+visibility: {  }

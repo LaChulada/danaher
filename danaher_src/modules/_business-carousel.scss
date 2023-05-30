@@ -1,0 +1,92 @@
+@import "../utility/utility";
+
+.business-carousel {
+
+    &.module {
+        margin-top: 72px;
+        margin-bottom: 77px;
+    }
+    
+    .bcw-nav {
+        &[data-elements='1'] {
+            display: none;
+        }
+
+        position: relative;
+        display: grid;
+        grid-template-columns: max-content max-content max-content;
+        align-items: center;
+
+        .slick-prev, .slick-next {
+            width: 28px;
+            height: 30px;
+            position: static;
+            justify-self: flex-start;
+            transform: none;
+            cursor: pointer;
+            &:active, &:hover, &:focus {
+                transform: scale($scale-factor);
+            }
+        }
+
+        .pagination {
+            @include cta-text();
+            color: $color-body;
+            margin-inline: 16px;
+        }
+
+        .slick-prev, 
+        .prev {
+            justify-self: flex-start;
+        }
+
+        .slick-next, .next {
+            justify-self: flex-end;
+        }
+    }
+
+
+    .section-title {
+        @include heading2();
+    }
+
+    .section-description {
+        @include paragraph();
+    }
+
+    a {
+        // @include standard-cta-link();
+        @include embedded-link();
+        margin-top: 0;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    &-wrapper {
+        .slick-list{
+            padding: 48px 20% 48px 0;
+        }
+
+        .slick-slide { 
+            max-width: 363px; 
+            padding-right: 32px;
+        }
+    }
+
+    &.card {
+        border-left: 1px solid black;
+        padding-left: 32px;
+         figure {
+            max-width: 208px;
+            padding-bottom: 32px;
+         }
+
+         .section-title {
+            margin-bottom: 16px;
+         }
+
+         article {
+            margin-right: 32px;
+         }
+    }
+}

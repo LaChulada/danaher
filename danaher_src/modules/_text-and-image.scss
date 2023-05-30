@@ -1,0 +1,145 @@
+@import "../utility/utility";
+
+
+.text-and-image {
+
+    grid-gap: 50px;
+    grid-auto-rows: 1fr;
+
+    figure {
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+
+        }
+    }
+
+    
+
+    &.featured-core-product {
+        [data-columns][data-columns="2"] {
+            grid-gap: 0;
+        }
+        .text-content {
+            background: $color-dark-pink;
+        }
+    }
+
+
+    .default {
+        a {
+            // @include link_button_stroked_style();
+            @include link_button_style();
+            background: $color-blue;
+            @extend .right;
+            color: $color-primary;
+        }
+    }
+
+    .stroked {
+        a {
+            @include link_button_stroked_style();
+        }
+    }
+
+    .line {
+        a {
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-primary;
+            text-underline-offset: 4px;
+            text-underline-offset: 4px;
+            text-align: left;
+            text-decoration: underline;
+            padding: 0;
+            background-color: transparent;
+            border: none;
+        }
+    }
+
+    .periwinkle {
+        a {
+            @include link_button_style();
+            color: $color-primary;
+            background: $color-blue;
+            @extend .right;
+        }
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 32px;
+        gap: 16px;
+
+        //even for the periwinkle versions of this, there's more space above and below the text. This ensures that.
+        min-height: 350px;
+
+        @media (max-width: $mobile-width) {
+            min-height: 325px;
+        }
+
+        .section-header {
+            $font-family: $font-body;
+            font-style: normal;
+            @include font-size(24px, 32px);
+            line-height: 1.25;
+            color: $color-primary;
+            text-transform: none;
+        }
+
+
+        .section-subhead {
+            $font-family: $font-body;
+            font-style: normal;
+            font-weight: 300;
+            // font-size: 32px;
+            @include font-size(24px, 32px);
+            line-height: 1.25;
+            letter-spacing: 0.5px;
+            color: $color-primary;
+        }
+
+        .eyebrow {
+            font-family: 'Noto Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 26px;
+            color: $color-primary;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section-description {
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: $color-black;
+            margin: 0;
+            padding: 0;
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        @include standard-cta-link();
+        .cta-link {
+            a {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+    }
+
+}

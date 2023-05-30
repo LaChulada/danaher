@@ -1,0 +1,53 @@
+uuid: c058ce55-ca62-4597-8954-c976a03f6975
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_list.field_events
+    - field.field.paragraph.event_list.field_headline
+    - field.field.paragraph.event_list.field_link
+    - paragraphs.paragraphs_type.event_list
+  module:
+    - link
+id: paragraph.event_list.default
+targetEntityType: paragraph
+bundle: event_list
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_events:
+    type: entity_reference_autocomplete
+    weight: -7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: -9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: -8
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,20 @@
+{
+  "name": "2022-bonterra",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://codeserver.dev.23c8d2b1-64d1-4b1a-a92e-81d9d482ab90@codeserver.dev.23c8d2b1-64d1-4b1a-a92e-81d9d482ab90.drush.in:2222/~/repository.git",
+  "author": "MPhil Swinney",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.43.4",
+    "sass-mq": "^5.0.1"
+  }
+}

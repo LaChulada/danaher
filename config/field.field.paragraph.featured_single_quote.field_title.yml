@@ -1,0 +1,19 @@
+uuid: 6f60075e-5111-4937-af4f-aa761707dd66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.featured_single_quote
+id: paragraph.featured_single_quote.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: featured_single_quote
+label: Title
+description: 'What is their title? (Example: Executive Director, Lorem Ipsum Association)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

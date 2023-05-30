@@ -1,0 +1,27 @@
+uuid: a2aa0f93-8555-413c-a9b6-d90677d500dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file
+    - paragraphs.paragraphs_type.pdf_download_file
+  module:
+    - file
+id: paragraph.pdf_download_file.field_file
+field_name: field_file
+entity_type: paragraph
+bundle: pdf_download_file
+label: 'File Upload'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: 16MB
+  description_field: false
+field_type: file

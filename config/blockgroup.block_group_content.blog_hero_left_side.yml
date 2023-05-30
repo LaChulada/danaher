@@ -1,0 +1,6 @@
+uuid: d2cd8819-3b4a-4386-86e1-6cefbeea5c0d
+langcode: en
+status: true
+dependencies: {  }
+id: blog_hero_left_side
+label: 'Blog Hero Left Side'

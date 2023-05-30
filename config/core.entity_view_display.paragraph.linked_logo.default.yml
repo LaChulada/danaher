@@ -1,0 +1,61 @@
+uuid: ac67d6dc-4a2f-447f-b061-27a3f1803ffe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.linked_logo.field_icon
+    - field.field.paragraph.linked_logo.field_link
+    - image.style.business_icon_style
+    - paragraphs.paragraphs_type.linked_logo
+  module:
+    - fences
+    - link
+    - media
+id: paragraph.linked_logo.default
+targetEntityType: paragraph
+bundle: linked_logo
+mode: default
+content:
+  field_icon:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: business_icon_style
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: figure
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,27 @@
+uuid: 38725b80-fe3d-41ae-9dd4-d169f0b43aa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topics
+    - paragraphs.paragraphs_type.related_content
+id: paragraph.related_content.field_topics
+field_name: field_topics
+entity_type: paragraph
+bundle: related_content
+label: Topics
+description: 'Choose up to three topics.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

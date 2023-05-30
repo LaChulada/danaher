@@ -1,0 +1,18 @@
+uuid: a07d5d98-a495-4082-8199-8ea262ac040f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: single_video
+label: 'Single Video'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

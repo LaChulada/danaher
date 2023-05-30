@@ -1,0 +1,82 @@
+uuid: 08537a1b-1725-421f-8a42-e46083adc1c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.product_tier_heading_only
+    - field.field.paragraph.product_tier_level.field_cta
+    - field.field.paragraph.product_tier_level.field_description
+    - field.field.paragraph.product_tier_level.field_feature
+    - field.field.paragraph.product_tier_level.field_product_name
+    - paragraphs.paragraphs_type.product_tier_level
+  module:
+    - fences
+    - layout_builder
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.product_tier_level.product_tier_heading_only
+targetEntityType: paragraph
+bundle: product_tier_level
+mode: product_tier_heading_only
+content:
+  field_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: section-description
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_product_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h4
+        fences_field_classes: product-name
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_feature: true
+  search_api_excerpt: true

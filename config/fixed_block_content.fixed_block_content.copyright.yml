@@ -1,0 +1,12 @@
+uuid: dc33c714-408b-4030-b31c-0408732e6d10
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+id: copyright
+title: Copyright
+block_content_bundle: basic
+default_content: null
+auto_export: 0
+protected: false

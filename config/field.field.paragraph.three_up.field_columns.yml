@@ -1,0 +1,25 @@
+uuid: 20534f89-1d4b-412b-85de-b246ad99a3fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_columns
+    - paragraphs.paragraphs_type.three_up
+id: paragraph.three_up.field_columns
+field_name: field_columns
+entity_type: paragraph
+bundle: three_up
+label: Columns
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings:
+  min: 2
+  max: 4
+  prefix: ''
+  suffix: ''
+field_type: integer

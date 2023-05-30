@@ -1,0 +1,23 @@
+uuid: 39ba4dfb-6498-48f1-bd14-5876a5b35a9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_periwinkle_background
+    - paragraphs.paragraphs_type.featured_core_product
+id: paragraph.featured_core_product.field_use_periwinkle_background
+field_name: field_use_periwinkle_background
+entity_type: paragraph
+bundle: featured_core_product
+label: 'Use Periwinkle Background?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

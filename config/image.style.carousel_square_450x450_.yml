@@ -1,0 +1,22 @@
+uuid: 4e1d7056-5e17-4bce-82f2-6ecefb7ad2d2
+langcode: en
+status: true
+dependencies: {  }
+name: carousel_square_450x450_
+label: 'Carousel Square (450x450)'
+effects:
+  e6018acb-ba91-44b4-83ba-a5c8689f013e:
+    uuid: e6018acb-ba91-44b4-83ba-a5c8689f013e
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 450
+      height: 450
+      anchor: center-center
+  c3b07a6e-0a7f-4856-a399-66847962e86f:
+    uuid: c3b07a6e-0a7f-4856-a399-66847962e86f
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

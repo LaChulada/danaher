@@ -1,0 +1,6 @@
+uuid: 16d46bc8-4eaa-4dd5-a325-ac96aa4b219a
+langcode: en
+status: true
+dependencies: {  }
+id: event_landing_right_side
+label: 'Event Landing Right side'

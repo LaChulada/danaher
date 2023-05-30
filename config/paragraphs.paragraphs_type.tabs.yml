@@ -1,0 +1,18 @@
+uuid: 2403c9ad-dd3a-4eaa-afb0-23663476861c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: tabs
+label: 'Horizontal Listicle'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

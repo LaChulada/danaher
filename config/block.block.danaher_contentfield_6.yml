@@ -1,0 +1,52 @@
+uuid: 4a239838-79f4-409f-b0e3-fbd3b49eb0ce
+langcode: en
+status: false
+dependencies:
+  module:
+    - advanced_text_formatter
+    - block_class
+    - fieldblock
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: blog-title
+id: danaher_contentfield_6
+theme: danaher
+region: blog_hero_title_section
+weight: -36
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Blog Title'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: title
+  formatter_id: advanced_text
+  formatter_settings:
+    trim_length: '600'
+    ellipsis: 1
+    word_boundary: 1
+    use_summary: 0
+    token_replace: 0
+    filter: input
+    format: plain_text
+    allowed_html:
+      - a
+      - b
+      - br
+      - dd
+      - dl
+      - dt
+      - em
+      - i
+      - li
+      - ol
+      - p
+      - strong
+      - u
+      - ul
+    autop: 0
+visibility: {  }

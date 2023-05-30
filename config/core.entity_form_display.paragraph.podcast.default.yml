@@ -1,0 +1,39 @@
+uuid: c4e12adc-ab43-4bdc-a527-94f9cbfb0cbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcast.field_audio2
+    - paragraphs.paragraphs_type.podcast
+  module:
+    - advanced_text_formatter
+    - maxlength
+    - video_embed_field
+id: paragraph.podcast.default
+targetEntityType: paragraph
+bundle: podcast
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter a unique title here if this module will be placed in a layout.'
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_audio2:
+    type: video_embed_field_textfield
+    weight: -8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

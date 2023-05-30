@@ -1,0 +1,18 @@
+uuid: ac78efb7-9c4b-4b71-b544-597ea754fbb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: author_image_50x50_
+label: 'Author Image (50x50)'
+effects:
+  cbcbd77c-b0a6-4870-b9a8-8e732e62ab98:
+    uuid: cbcbd77c-b0a6-4870-b9a8-8e732e62ab98
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 50
+      height: 50
+      crop_type: focal_point
+pipeline: sample_1

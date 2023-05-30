@@ -1,0 +1,23 @@
+uuid: b9d241e5-8d0a-4f5d-b86d-c414b6446662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_30_70_split
+    - paragraphs.paragraphs_type.image_and_video_article
+id: paragraph.image_and_video_article.field_30_70_split
+field_name: field_30_70_split
+entity_type: paragraph
+bundle: image_and_video_article
+label: '30/70 Split?'
+description: 'By default, the split is 50/50'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

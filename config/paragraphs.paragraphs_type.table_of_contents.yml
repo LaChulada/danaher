@@ -1,0 +1,15 @@
+uuid: c2fff045-90a1-4d84-9992-8b3d14ac9b98
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: table_of_contents
+label: 'Table of Contents'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

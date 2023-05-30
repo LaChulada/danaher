@@ -1,0 +1,37 @@
+uuid: da3ba7c6-7341-4360-ba55-1a13b9e0792f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_case_study_card.field_headline
+    - paragraphs.paragraphs_type.featured_case_study_card
+id: paragraph.featured_case_study_card.default
+targetEntityType: paragraph
+bundle: featured_case_study_card
+mode: default
+content:
+  admin_title:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter a unique title here if this module will be placed in a layout.'
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      advanced_text_formatter:
+        show_token_tree: 0
+  field_headline:
+    type: string_textfield
+    weight: -9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

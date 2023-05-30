@@ -1,0 +1,165 @@
+uuid: 47aaa937-081c-42ef-a4ce-2abf57d30ba3
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - danaher
+id: socialmedialinks
+theme: danaher
+region: footer_bottom
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: social_media_links
+  platforms:
+    rss:
+      value: ''
+      description: ''
+      weight: '-10'
+    email:
+      value: ''
+      description: ''
+      weight: '-9'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '-8'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '-7'
+    telegram:
+      value: ''
+      description: ''
+      weight: '-6'
+    meetup:
+      value: ''
+      description: ''
+      weight: '-5'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-4'
+    website:
+      value: ''
+      description: ''
+      weight: '-3'
+    instagram:
+      value: danahercorporation
+      description: ''
+      weight: '-2'
+    mastodon:
+      value: ''
+      description: ''
+      weight: '-1'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '0'
+    github:
+      value: ''
+      description: ''
+      weight: '1'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '2'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '3'
+    drupal:
+      value: ''
+      description: ''
+      weight: '4'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '5'
+    contact:
+      value: ''
+      description: ''
+      weight: '6'
+    behance:
+      value: ''
+      description: ''
+      weight: '7'
+    flickr:
+      value: ''
+      description: ''
+      weight: '8'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '9'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '10'
+    linkedin:
+      value: company/danaher/
+      description: ''
+      weight: '11'
+    twitter:
+      value: DanaherCorp
+      description: ''
+      weight: '12'
+    patreon:
+      value: ''
+      description: ''
+      weight: '13'
+    xing:
+      value: ''
+      description: ''
+      weight: '14'
+    youtube:
+      value: '@danahercorporation'
+      description: ''
+      weight: '15'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '16'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '17'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '18'
+    facebook:
+      value: danahercorporation
+      description: ''
+      weight: '19'
+    amazon:
+      value: ''
+      description: ''
+      weight: '20'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '21'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '22'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

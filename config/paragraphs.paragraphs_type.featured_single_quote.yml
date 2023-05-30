@@ -1,0 +1,18 @@
+uuid: 3f9dbc87-8078-4e3a-9246-668df2a3e28f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: featured_single_quote
+label: 'Featured Quote'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

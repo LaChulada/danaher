@@ -1,0 +1,70 @@
+uuid: 87d10b6d-a98b-458e-8d71-e3d1d715fec5
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_entity_browser_modal
+    - field.field.paragraph.homepage_hero.field_animated_headline_1
+    - field.field.paragraph.homepage_hero.field_animated_headline_2
+    - field.field.paragraph.homepage_hero.field_animated_headline_3
+    - field.field.paragraph.homepage_hero.field_embedded_video
+    - field.field.paragraph.homepage_hero.field_headline
+    - paragraphs.paragraphs_type.homepage_hero
+  module:
+    - entity_browser
+id: paragraph.homepage_hero.default
+targetEntityType: paragraph
+bundle: homepage_hero
+mode: default
+content:
+  field_animated_headline_1:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_animated_headline_2:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_animated_headline_3:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_embedded_video:
+    type: entity_browser_entity_reference
+    weight: 2
+    region: content
+    settings:
+      entity_browser: media_entity_browser_modal
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: default
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

@@ -1,0 +1,115 @@
+@import "../utility/utility";
+
+
+// side modal
+// --------------------------------------------------
+.modal {
+   // inherits from base modal
+
+   &--side {
+      .modal {
+         // side modal dialog
+         &-dialog {
+            @include position(reset);
+            position: fixed;
+            margin: auto;
+            padding: 0;
+         }
+
+         // side modal content
+         &-content {
+            height: 100%;
+            overflow-y: auto;
+         }
+      }
+
+      // left side
+      &.left {
+         .modal {
+            &-dialog {
+               top: 0;
+               bottom: 0;
+               left: 0;
+               width: auto;
+               height: 100%;
+            }
+         }
+         &.animate-in {
+            @include animate-css(slideInLeft, $duration: 0.5s);
+         }
+
+         &.animate-out {
+            @include animate-css(slideOutLeft, $duration: 0.5s);
+         }
+      }
+
+      // right side
+      &.right {
+         .modal {
+            &-dialog {
+               top: 0;
+               bottom: 0;
+               right: 0;
+               width: auto;
+               height: 100%;
+            }
+         }
+
+         // custom animate in
+         &.animate-in {
+            @include animate-css(slideInRight, $duration: 0.5s);
+         }
+
+         // custom animate out
+         &.animate-out {
+            @include animate-css(slideOutRight, $duration: 0.5s);
+         }
+      }
+
+      // top side
+      &.top {
+         .modal {
+            &-dialog {
+               top: 0;
+               right: 0;
+               left: 0;
+               width: 100%;
+               max-width: inherit;
+            }
+         }
+
+         // custom animate in
+         &.animate-in {
+            @include animate-css(slideInDown, $duration: 0.5s);
+         }
+
+         // custom animate out
+         &.animate-out {
+            @include animate-css(slideOutUp, $duration: 0.5s);
+         }
+      }
+
+      // bottom side
+      &.bottom {
+         .modal {
+            &-dialog {
+               bottom: 0;
+               right: 0;
+               left: 0;
+               width: 100%;
+               max-width: inherit;
+            }
+         }
+
+         // custom animate in
+         &.animate-in {
+            @include animate-css(slideInUp, $duration: 0.5s);
+         }
+
+         // custom animate out
+         &.animate-out {
+            @include animate-css(slideOutDown, $duration: 0.5s);
+         }
+      }
+   }
+}

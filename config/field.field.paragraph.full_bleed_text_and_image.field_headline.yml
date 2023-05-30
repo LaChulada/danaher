@@ -1,0 +1,19 @@
+uuid: 6a5a1acf-59e8-4399-bab7-d2264429b3a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.full_bleed_text_and_image
+id: paragraph.full_bleed_text_and_image.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: full_bleed_text_and_image
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

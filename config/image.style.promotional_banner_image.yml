@@ -1,0 +1,24 @@
+uuid: 098edf43-6a1c-47a1-bfaa-11c90d9fb59a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: promotional_banner_image
+label: 'Promotional Banner Image (604x350)'
+effects:
+  c566f1b4-f6f7-440c-9251-f476df3ca501:
+    uuid: c566f1b4-f6f7-440c-9251-f476df3ca501
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 604
+      height: 350
+      crop_type: focal_point
+  23e16294-e15f-4aea-91bf-8a9f778f39dd:
+    uuid: 23e16294-e15f-4aea-91bf-8a9f778f39dd
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

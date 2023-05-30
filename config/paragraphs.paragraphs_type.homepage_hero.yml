@@ -1,0 +1,15 @@
+uuid: 0c7491e1-e8a3-40a6-ba6a-d0aa10a43a46
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: homepage_hero
+label: 'Homepage Hero'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

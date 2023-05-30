@@ -1,0 +1,28 @@
+uuid: 6d358c03-c876-4a73-91f3-a7628ae21d32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+  module:
+    - entity_reference_revisions
+    - fieldblock
+  theme:
+    - danaher
+id: contact_field
+theme: danaher
+region: content_below
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Contact
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_contact
+  formatter_id: entity_reference_revisions_entity_view
+  formatter_settings:
+    view_mode: default
+visibility: {  }

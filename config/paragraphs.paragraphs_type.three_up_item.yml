@@ -1,0 +1,10 @@
+uuid: f93f0cbd-9261-4ed6-ac0f-af98434fc278
+langcode: en
+status: true
+dependencies: {  }
+id: three_up_item
+label: 'Three Up Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

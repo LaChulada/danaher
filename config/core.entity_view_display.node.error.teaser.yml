@@ -1,0 +1,28 @@
+uuid: 0ebfabf4-d7ad-4dad-b14e-02444ba144c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.error.field_error_links
+    - field.field.node.error.field_wysiwig
+    - field.field.node.error.layout_builder__layout
+    - node.type.error
+  module:
+    - user
+id: node.error.teaser
+targetEntityType: node
+bundle: error
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_error_links: true
+  field_wysiwig: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

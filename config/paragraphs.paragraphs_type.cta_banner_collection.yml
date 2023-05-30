@@ -1,0 +1,18 @@
+uuid: 96f95a9f-8021-41c5-81e2-88d222c8bea8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: cta_banner_collection
+label: 'CTA Banner Collection'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: b9294cab-f262-4c6e-a4e9-77179676faee
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.person_template_cta
+    - field.storage.block_content.field_theme
+  module:
+    - options
+id: block_content.person_template_cta.field_theme
+field_name: field_theme
+entity_type: block_content
+bundle: person_template_cta
+label: Theme
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: primary
+default_value_callback: ''
+settings: {  }
+field_type: list_string

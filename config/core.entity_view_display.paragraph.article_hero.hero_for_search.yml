@@ -1,0 +1,31 @@
+uuid: 73b17386-db11-4e31-b14a-294ee4400157
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_for_search
+    - field.field.paragraph.article_hero.field_headline
+    - field.field.paragraph.article_hero.field_media
+    - paragraphs.paragraphs_type.article_hero
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.article_hero.hero_for_search
+targetEntityType: paragraph
+bundle: article_hero
+mode: hero_for_search
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_media: true
+  search_api_excerpt: true

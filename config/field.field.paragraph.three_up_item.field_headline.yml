@@ -1,0 +1,19 @@
+uuid: dd9928bf-3818-498f-9eeb-2e16a2b99a8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.three_up_item
+id: paragraph.three_up_item.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: three_up_item
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

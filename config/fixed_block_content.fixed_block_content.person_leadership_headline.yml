@@ -1,0 +1,14 @@
+uuid: 928a421b-2890-432f-a4cd-4d73f2fafebc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+  content:
+    - 'block_content:basic:ce5a0601-ba40-4724-9821-a5808c86623e'
+id: person_leadership_headline
+title: 'Person Leadership Headline'
+block_content_bundle: basic
+default_content: '{"_links":{"self":{"href":"http:\/\/bonterratech:8891\/block\/4?_format=hal_json"},"type":{"href":"http:\/\/fixed_block_content.drupal.org\/rest\/type\/block_content\/basic"}},"langcode":[{"value":"en","lang":"en"}],"type":[{"target_id":"basic"}],"status":[{"value":true,"lang":"en"}],"info":[{"value":"Person Leadership Headline","lang":"en"}],"reusable":[{"value":true}],"default_langcode":[{"value":true,"lang":"en"}],"revision_translation_affected":[{"value":true,"lang":"en"}],"metatag":[{"value":{"canonical_url":"http:\/\/bonterratech:8891\/block\/4","generator":"-","title":"| Bonterra Tech"}}],"body":[{"value":"\u003Ch3 class=\u0022section-title\u0022\u003EMeet the rest of the team\u003C\/h3\u003E\r\n","format":"full_html","processed":"\u003Ch3 class=\u0022section-title\u0022\u003EMeet the rest of the team\u003C\/h3\u003E\n","summary":"","lang":"en"}]}'
+auto_export: 0
+protected: false

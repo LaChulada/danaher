@@ -1,0 +1,15 @@
+uuid: ecbf9cbe-a748-4c46-ac97-b2f09ba8c34c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: flexible_framer_with_images
+label: 'Flexible Framer with Images'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

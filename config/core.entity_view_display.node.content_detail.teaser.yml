@@ -1,0 +1,30 @@
+uuid: 43612d08-4b4a-4fa0-b191-8b0de26e9e05
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.content_detail.field_hero
+    - field.field.node.content_detail.field_text_callout
+    - field.field.node.content_detail.field_widgets
+    - field.field.node.content_detail.layout_builder__layout
+    - node.type.content_detail
+  module:
+    - user
+id: node.content_detail.teaser
+targetEntityType: node
+bundle: content_detail
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hero: true
+  field_text_callout: true
+  field_widgets: true
+  langcode: true
+  layout_builder__layout: true
+  search_api_excerpt: true

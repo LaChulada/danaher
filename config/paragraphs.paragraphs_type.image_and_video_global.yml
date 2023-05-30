@@ -1,0 +1,18 @@
+uuid: 70274bd2-395a-4fb3-b90f-52f25344cdb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: image_and_video_global
+label: 'Image and Video - Global'
+icon_uuid: null
+icon_default: null
+description: 'Allows one Single Image and one Single Video'
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: b89a4e24-7ba6-412c-a331-f08a19e45356
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.flexible_framer_item
+id: paragraph.flexible_framer_item.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: flexible_framer_item
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

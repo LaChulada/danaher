@@ -1,0 +1,46 @@
+uuid: d22f59be-5309-499a-b510-88ba925eaea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.featured_square_thumbnail
+    - field.field.paragraph.case_study_hero.field_image
+    - field.field.paragraph.case_study_hero.field_title
+    - image.style.featured_square_thumbnail
+    - paragraphs.paragraphs_type.case_study_hero
+  module:
+    - fences
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.case_study_hero.featured_square_thumbnail
+targetEntityType: paragraph
+bundle: case_study_hero
+mode: featured_square_thumbnail
+content:
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: featured_square_thumbnail
+      image_loading:
+        attribute: eager
+    third_party_settings:
+      fences:
+        fences_field_tag: figure
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_title: true
+  search_api_excerpt: true

@@ -1,0 +1,18 @@
+uuid: d3f1ef27-a3c6-41f8-ae25-34e8c60a1e9f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: footer_logo_style
+label: 'Footer Logo Style (160x60)'
+effects:
+  859bc619-7610-4c7a-8ee5-1c7cdb8c212d:
+    uuid: 859bc619-7610-4c7a-8ee5-1c7cdb8c212d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 160
+      height: 60
+      crop_type: focal_point
+pipeline: sample_1

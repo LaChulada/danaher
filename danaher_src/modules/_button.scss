@@ -1,0 +1,46 @@
+@import "../utility/utility";
+
+// button style
+// --------------------------------------------------
+.btn {
+   @include button(default);
+
+   // button variant -- primary
+   &--primary {
+      @include button(primary);
+   }
+
+   // button variant -- secondary
+   &--secondary {
+      @include button(secondary);
+   }
+
+   // button reset
+   &--reset {
+      @include button(reset);
+   }
+}
+
+.button--primary,
+.button-primary {
+   @include button('primary');
+
+   &:after {
+      content: unset;
+   }
+}
+
+.button--primary-inverse,
+.button-primary-inverse {
+   @include button('primary-inverse');
+}
+
+.button--secondary,
+.button-secondary {
+   @include button('secondary');
+}
+
+.button--secondary-inverse,
+.button-secondary-inverse {
+   @include button('secondary-inverse');
+}

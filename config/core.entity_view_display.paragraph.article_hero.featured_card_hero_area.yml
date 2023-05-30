@@ -1,0 +1,41 @@
+uuid: 3606db38-6156-4141-8a07-ee820016f74f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.featured_card_hero_area
+    - field.field.paragraph.article_hero.field_headline
+    - field.field.paragraph.article_hero.field_media
+    - paragraphs.paragraphs_type.article_hero
+  module:
+    - fences
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.article_hero.featured_card_hero_area
+targetEntityType: paragraph
+bundle: article_hero
+mode: featured_card_hero_area
+content:
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h1
+        fences_field_classes: section-heading
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  field_media: true
+  search_api_excerpt: true

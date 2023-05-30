@@ -1,0 +1,21 @@
+uuid: fb7eda6f-f617-4159-8000-952468e8dbf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_types_restricted
+    - paragraphs.paragraphs_type.related_content
+  module:
+    - options
+id: paragraph.related_content.field_content_types_restricted
+field_name: field_content_types_restricted
+entity_type: paragraph
+bundle: related_content
+label: 'Content Types'
+description: 'Choose up to three types of content. The system will choose up to 12 pieces of content to populate the carousel.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

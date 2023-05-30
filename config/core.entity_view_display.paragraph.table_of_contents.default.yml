@@ -1,0 +1,72 @@
+uuid: 66da8b03-2465-4b21-99f3-3ee9b8633376
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.table_of_contents.field_intro_module
+    - field.field.paragraph.table_of_contents.field_table_of_content_panels
+    - field.field.paragraph.table_of_contents.field_title
+    - paragraphs.paragraphs_type.table_of_contents
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.table_of_contents.default
+targetEntityType: paragraph
+bundle: table_of_contents
+mode: default
+content:
+  field_intro_module:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_table_of_content_panels:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h3
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

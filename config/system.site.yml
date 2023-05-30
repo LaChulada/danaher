@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: en
+uuid: bd729758-1cb3-491a-89cd-df165b069a89
+name: Danaher
+mail: tyrone.mitchell@lippincott.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/14
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en

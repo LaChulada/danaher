@@ -1,0 +1,19 @@
+uuid: ac7f0725-3708-4890-b385-526205337880
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.wysiwig
+id: paragraph.wysiwig.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: wysiwig
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,15 @@
+uuid: dc9aefb6-b7cf-401e-be65-1c76b3031bfa
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: dev
+description: ''
+weight: 0
+folder: dev
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

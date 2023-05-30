@@ -1,0 +1,19 @@
+uuid: 5a8a9a00-09cc-4bfd-a1e6-a4cb68267a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headline
+    - paragraphs.paragraphs_type.contact
+id: paragraph.contact.field_headline
+field_name: field_headline
+entity_type: paragraph
+bundle: contact
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

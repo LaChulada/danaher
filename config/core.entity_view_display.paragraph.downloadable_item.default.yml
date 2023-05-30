@@ -1,0 +1,33 @@
+uuid: e6550faf-4765-49b6-a69f-25ef33048e38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.downloadable_item.field_file
+    - field.field.paragraph.downloadable_item.field_language
+    - paragraphs.paragraphs_type.downloadable_item
+  module:
+    - file
+id: paragraph.downloadable_item.default
+targetEntityType: paragraph
+bundle: downloadable_item
+mode: default
+content:
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_language:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

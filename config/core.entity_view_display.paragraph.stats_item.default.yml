@@ -1,0 +1,51 @@
+uuid: c05d4cb8-0734-41fc-ac2e-ea86cf0e480c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stats_item.field_large_stat_text
+    - field.field.paragraph.stats_item.field_supporting_text
+    - paragraphs.paragraphs_type.stats_item
+  module:
+    - fences
+id: paragraph.stats_item.default
+targetEntityType: paragraph
+bundle: stats_item
+mode: default
+content:
+  field_large_stat_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: stats--large
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_supporting_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: stats--supporting-text
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

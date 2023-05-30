@@ -1,0 +1,27 @@
+uuid: 5e33cbca-91ac-46c8-8c5b-73c3454ee0fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - node.type.case_study
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.case_study.search_index
+targetEntityType: node
+bundle: case_study
+mode: search_index
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

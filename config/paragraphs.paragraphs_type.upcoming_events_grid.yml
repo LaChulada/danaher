@@ -1,0 +1,15 @@
+uuid: d9f47b6c-ab93-4d7b-b139-6e1038937ee3
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: upcoming_events_grid
+label: 'Upcoming Events Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

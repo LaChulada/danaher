@@ -1,0 +1,11 @@
+uuid: f695d9ff-b7bc-49ee-ad81-249dcf88fa80
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.business_segment
+id: taxonomy_term.business_segment
+target_entity_type_id: taxonomy_term
+target_bundle: business_segment
+default_langcode: site_default
+language_alterable: false

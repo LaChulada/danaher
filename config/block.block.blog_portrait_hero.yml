@@ -1,0 +1,39 @@
+uuid: 923f0df5-78bb-4490-b233-ae7a2e7380d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+  module:
+    - fieldblock
+    - media
+    - node
+  theme:
+    - danaher
+id: blog_portrait_hero
+theme: danaher
+region: hero
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Bio Hero Portrait'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_media
+  formatter_id: media_thumbnail
+  formatter_settings:
+    image_link: ''
+    image_style: bio_portrait_hero
+    image_loading:
+      attribute: eager
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      person: person

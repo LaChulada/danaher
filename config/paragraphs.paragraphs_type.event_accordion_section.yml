@@ -1,0 +1,10 @@
+uuid: eeba99c6-1484-4cd7-a59b-4e61e59e2a9d
+langcode: en
+status: true
+dependencies: {  }
+id: event_accordion_section
+label: 'Event Accordion Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

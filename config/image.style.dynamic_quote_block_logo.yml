@@ -1,0 +1,24 @@
+uuid: 76e780ad-6cc4-4f03-9d29-bdaf6e735533
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: dynamic_quote_block_logo
+label: 'Dynamic Quote Block Logo (140x140)'
+effects:
+  50d33ee3-a9ab-46a9-8154-58ccbadec729:
+    uuid: 50d33ee3-a9ab-46a9-8154-58ccbadec729
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 140
+      height: 140
+      crop_type: focal_point
+  e20b7b62-993c-4da5-87af-b145a3a3ed2f:
+    uuid: e20b7b62-993c-4da5-87af-b145a3a3ed2f
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

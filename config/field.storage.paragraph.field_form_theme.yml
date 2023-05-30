@@ -1,0 +1,33 @@
+uuid: 1de59451-8204-4148-aba4-0eeaf367cc0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_form_theme
+field_name: field_form_theme
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: white
+      label: White
+    -
+      value: light_periwinkle
+      label: 'Light Periwinkle'
+    -
+      value: medium_periwinkle
+      label: 'Medium Periwinkle'
+    -
+      value: pale_periwinkle
+      label: 'Pale Periwinkle'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

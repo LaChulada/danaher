@@ -1,0 +1,19 @@
+uuid: cb20cf96-79f7-45a0-a7db-f5802fa08575
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature
+    - paragraphs.paragraphs_type.product_tier_level
+id: paragraph.product_tier_level.field_feature
+field_name: field_feature
+entity_type: paragraph
+bundle: product_tier_level
+label: Feature
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

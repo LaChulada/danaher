@@ -1,0 +1,26 @@
+uuid: 6e732c4c-3b2c-4c21-94ad-95777157db68
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.header_menu_group
+  module:
+    - block_class
+    - blockgroup
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    replaced_id: header-menu-group
+id: headermenugroup
+theme: danaher
+region: header
+weight: 0
+provider: null
+plugin: 'block_group:header_menu_group'
+settings:
+  id: 'block_group:header_menu_group'
+  label: 'Header Menu Group'
+  label_display: '0'
+  provider: blockgroup
+visibility: {  }

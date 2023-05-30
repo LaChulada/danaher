@@ -1,0 +1,20 @@
+uuid: 5a4f469b-abb3-4f50-aeb5-8fc708ec05b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_featured_card
+field_name: field_featured_card
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: fb367200-6cc3-4f6d-8219-70b881fa79c5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Scientific Focus Area'
+vid: scientific_focus_area
+description: ''
+weight: 0

@@ -1,0 +1,30 @@
+uuid: 633f5ace-5461-467d-b26a-ad9261c9445b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_theme
+field_name: field_theme
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: manilla
+      label: 'Manilla Yellow'
+    -
+      value: primary
+      label: Periwinkle
+    -
+      value: medium-periwinkle
+      label: 'Medium Periwinkle'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

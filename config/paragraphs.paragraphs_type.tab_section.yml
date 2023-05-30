@@ -1,0 +1,15 @@
+uuid: ae3cb2a0-6650-4a98-a6d0-207a8210d0a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
+id: tab_section
+label: 'Horizontal Listicle Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

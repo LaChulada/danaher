@@ -1,0 +1,24 @@
+uuid: f31a2a3b-a750-4e43-bff1-851b7db0b62b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: dynamic_quote_decorative_image_style
+label: 'Dynamic Quote Decorative Image Style (850x170)'
+effects:
+  813b59d6-764e-4997-a078-e11f27648fe5:
+    uuid: 813b59d6-764e-4997-a078-e11f27648fe5
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 900
+      height: 200
+      crop_type: focal_point
+  a3b34637-1755-4b47-a60d-07c7bf55ca13:
+    uuid: a3b34637-1755-4b47-a60d-07c7bf55ca13
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

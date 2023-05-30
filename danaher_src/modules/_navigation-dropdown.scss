@@ -1,0 +1,76 @@
+// import utilities
+@import "../utility/utility";
+
+// scoped variables
+$navigation-dropdown-background: $color-white;
+$navigation-dropdown-min-width: 200px;
+
+// navigation dropdown
+// --------------------------------------------------
+.navigation-dropdown {
+   background: $navigation-dropdown-background;
+   padding: 30px 30px 30px 30px;
+   position: absolute;
+   color: $color-white;
+   z-index: $z-index-var * 10;
+   right: 0;
+   min-width: $navigation-dropdown-min-width;
+   box-shadow: 0 2px 10px rgba($color-black, .5);
+   white-space: normal;
+
+   // when open
+   &.is-visible {
+      display: block;
+      visibility: visible;
+   }
+
+   // when closed
+   &.is-hidden {
+      display: none;
+      visibility: hidden;
+   }
+
+   // animate dropdown in
+   &.is-animating-in {
+      @include animate-css(fadeIn, $duration: .25s);
+      display: block;
+      visibility: visible;
+   }
+
+   // animate dropdown out
+   &.is-animating-out {
+      @include animate-css(fadeOut, $duration: .25s);
+   }
+
+   // right align menu if parent item has 'is-last' class
+   .is-last & {
+      left: auto;
+      right: 0;
+   }
+
+   // navigation dropdown content
+   &-content {
+      ul {
+         @include list-style(reset);
+         li {
+            margin: 20px 0;
+            @include font-size(14px);
+            font-weight: $font-weight-semi;
+            &:first-of-type {
+               margin-top: 0;
+            }
+            &:last-of-type {
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+
+   a {
+      color: $color-white;
+      text-decoration: none;
+      &:hover {
+         color: $color-yellow;
+      }
+   }
+}

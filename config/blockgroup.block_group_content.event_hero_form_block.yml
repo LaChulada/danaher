@@ -1,0 +1,6 @@
+uuid: 91dbc168-3882-460f-88c5-c13af74b092f
+langcode: en
+status: true
+dependencies: {  }
+id: event_hero_form_block
+label: 'Event Hero Form Block'

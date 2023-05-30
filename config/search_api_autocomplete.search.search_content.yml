@@ -1,0 +1,31 @@
+uuid: 92db95a2-c86d-4787-93a4-c68c1d2c0e71
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_index
+    - views.view.search_content
+  module:
+    - views
+    - search_api_autocomplete
+id: search_content
+label: 'Search content'
+index_id: default_index
+suggester_settings:
+  server:
+    fields: {  }
+suggester_weights:
+  server: 0
+suggester_limits: {  }
+search_settings:
+  'views:search_content':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 1
+  show_count: true
+  delay: null
+  submit_button_selector: ':submit'
+  autosubmit: true

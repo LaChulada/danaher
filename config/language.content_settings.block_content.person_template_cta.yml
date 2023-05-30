@@ -1,0 +1,11 @@
+uuid: f21219c5-dea5-4e7d-82a1-5de771a2c539
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.person_template_cta
+id: block_content.person_template_cta
+target_entity_type_id: block_content
+target_bundle: person_template_cta
+default_langcode: site_default
+language_alterable: false

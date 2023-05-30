@@ -1,0 +1,6 @@
+uuid: 16c048b5-636e-4dd1-854b-0fee5751174c
+langcode: en
+status: true
+dependencies: {  }
+id: product_fields
+label: 'Product Fields'

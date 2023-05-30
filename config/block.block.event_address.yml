@@ -1,0 +1,27 @@
+uuid: c4387bb7-bc8c-4a81-afb5-1fa5afbcd4fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_address
+  module:
+    - address
+    - fieldblock
+  theme:
+    - danaher
+id: event_address
+theme: danaher
+region: event_hero_info_block
+weight: -21
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Event Address'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_event_address
+  formatter_id: address_default
+  formatter_settings: {  }
+visibility: {  }

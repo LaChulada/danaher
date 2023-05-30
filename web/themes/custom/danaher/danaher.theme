@@ -1,0 +1,348 @@
+<?php
+use Drupal\block\Entity\Block;
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Render\Markup;
+use Drupal\node\NodeInterface;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\views\Views;
+
+use Drupal\Core\Cache\CacheableMetadata;
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\media_entity\MediaInterface;
+use Drupal\node\Entity\Node;
+
+function danaher_page_attachments_alter(array &$attachments) {
+    //remove the generator tag  that tells you it's Drupal
+  foreach ($attachments['#attached']['html_head'] as $key => $attachment) {
+    if ($attachment[1] == 'system_meta_generator') {
+      unset($attachments['#attached']['html_head'][$key]);
+    }
+  }
+}
+
+function danaher_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $node = \Drupal::request()->attributes->get('node');
+        $contentType = $node->getType();
+        if ($contentType == "person" || $contentType == "event_landing" || $contentType == "event") {
+            $suggestions[] = 'page__' . $contentType;
+        }
+
+        if ($contentType == "error") {
+            $suggestions[] = 'page__404';
+        }
+    }
+
+}
+
+function danaher_theme_suggestions_menu_alter(array &$suggestions, array $variables, $hook) {
+    // Bug fix until drupal stops duplicate theme suggestions from getting into the system
+    if (isset($variables['attributes']['data-region']) && $variables['attributes']['data-region']=="primary_menu_mobile") {
+        if ($variables['menu_block_configuration']['suggestion'] == 'mega_menu_mobile_top') {
+            $suggestions = ['menu__extras__mega_menu_mobile_top'];
+        }
+    }
+}
+
+function danaher_preprocess_paragraph(array &$variables) {
+
+    if (isset($variables['paragraph']))
+    {
+        $paragraph = $variables['paragraph'];
+        $bundle = $paragraph->bundle();
+        switch($bundle) {
+            case 'subcategory_detail_page_hero':
+                $parent = $paragraph->getParentEntity();
+                if ($parent instanceof NodeInterface) {
+                    $type = $parent->getType();
+                   
+                    $parent_entity = $parent;
+
+                    if ($parent_entity) {
+                        $parent_entity_type = $parent_entity->getEntityTypeId();
+    
+                        //get the name of the content type this thing is attached to.
+                        $name = $parent_entity->type->entity->label();
+    
+                        $variables['eyebrow'] = $name;
+                      }
+
+                   
+                    if ($type == 'business_detail') {
+                        $mynode = $parent->get('field_business_segment');
+                        $label = $mynode->referencedEntities()[0]->label();
+                        $variables['eyebrow'] = $label;
+                    }
+                }
+                break;
+            // case 'pdf_download':
+            //     $uploads = $paragraph->field_file_upload->getValue()[0];
+                
+
+            //     $numArgs = $paragraph->field_file_upload->count();
+            //     for ($i = 0; $i < $numArgs; $i++) {
+            //         $fileupload = $paragraph->field_file_upload->getValue()[$i];
+            //         dump($fileupload);
+            //         $lang = $fileupload['target_id'];
+            //         dump($lang);
+            //         $term_name = Term::load($lang);
+            //         dump($term_name);
+            //    }
+
+            //     break;
+            case 'article_hero':
+            case 'press_release_hero':
+                $parent = $paragraph->getParentEntity();
+                if ($parent instanceof NodeInterface) {
+                    $type = $parent->getType();
+
+                    $variables['eyebrow'] = $parent->getTitle();
+                    
+                    $media_id = $paragraph->field_media->getValue()[0]['target_id'];
+
+                    $media = Media::load($media_id);
+
+                    if ($type == 'article_detail') {
+                        // $mynode = $parent->get('field_publication_date')->getValue()[0]["value"];
+                        // $variables['eyebrow'] = $mynode;
+
+                        $parent_entity = $parent;
+
+                        if ($parent_entity) {
+                            $parent_entity_type = $parent_entity->getEntityTypeId();
+        
+                            //get the name of the content type this thing is attached to.
+                            $name = $parent_entity->type->entity->label();
+        
+                            $variables['eyebrow'] = $name;
+                          }
+                    }
+                }
+                
+                break;
+            case 'blog_hero':
+                $parent = $paragraph->getParentEntity();
+                if ($parent instanceof NodeInterface) {
+                    $type = $parent->getType();
+                    if ($type == 'blog_or_news' or $type == 'news') {
+                            $title = $parent->getTitle();
+                            $variables['hero_title'] = $title;
+                            $variables['eyebrow'] = "Blog";
+                            if ($type == 'news') {
+                                $variables['eyebrow'] = "News";
+                            }
+                        }
+                    }
+                break;
+            case 'related_content':
+                $args = [];
+
+                //get a list of the topics (by taxonomy ID)
+                $term_ids = array();
+                $numArgs = $paragraph->field_topics->count();
+                for ($i = 0; $i < $numArgs; $i++) {
+                    $term_ids[] = $paragraph->field_topics->getValue()[$i]['target_id'];
+                }
+                $term_ids = implode("+", $term_ids);
+
+                $numContentRestrictedArgs = $paragraph->field_content_types_restricted->count();
+
+                $term_crids = array();
+                for ($i = 0; $i < $numContentRestrictedArgs; $i++) {
+                    $term_crids[] = $paragraph->field_content_types_restricted->getValue()[$i]["value"];
+                }
+                $term_crids = implode("+", $term_crids);
+                $args = array($term_ids, $term_crids);
+
+                $orgs = array();
+                $numOrgs = $paragraph->field_organization_type->count();
+                for ($i = 0; $i < $numOrgs; $i++) {
+                    $orgs[] = $paragraph->field_organization_type->getValue()[$i]['target_id'];
+                }
+                $orgs = implode("+", $orgs);
+                
+                $view = Views::getView('related_articles');
+                if (is_object($view)) {
+                    $view->setArguments($args);
+                    $view->setDisplay('related_articles_by_content');
+                    $view->preExecute();
+                    $view->execute();
+                    $content = $view->buildRenderable('related_articles_by_content', $args);
+                    // $view->render();
+                    $variables['dc_feed_output'] = views_embed_view('related_articles', 'related_articles_by_content', $term_ids, $term_crids, $orgs);
+                }
+                break;
+            case 'category_hub_page_hero':
+                $parent_entity = $paragraph->getParentEntity();
+
+                if ($parent_entity) {
+                    $parent_entity_type = $parent_entity->getEntityTypeId();
+
+                    //get the name of the content type this thing is attached to.
+                    $name = $parent_entity->type->entity->label();
+
+                    $variables['eyebrow'] = $name;
+                  }
+                break;
+            case 'high_level_page_hero':
+                $parent = $paragraph->getParentEntity();
+                if ($parent instanceof NodeInterface) {
+                    $title = $parent->getTitle();
+                    $variables['eyebrow'] = $title;
+                    }
+                break;
+            case '2_up_hero':
+                $parent = $paragraph->getParentEntity();
+                if ($parent instanceof NodeInterface) {
+                    $type = $parent->getType();
+
+                    if ($type == 'learning_resource') {
+                        $mynode = $parent->get('field_learning_resource_type');
+                        $label = $mynode->referencedEntities()[0]->label();
+                        $variables['eyebrow'] = $label;
+                    }
+                    if ($type == 'product') {
+                        $title = $parent->getTitle();
+                        $variables['eyebrow'] = $title;
+                    }
+                }
+                break;
+            case 'directory_hero':
+                $parent = $paragraph->getParentEntity();
+                if ($parent instanceof NodeInterface) {
+                    $type = $parent->getType();
+                    if ($type == 'directory' or $type == 'event_directory' or $type == 'case_study_directory' ) {
+                            $mynode = $parent->get('field_directory_type');
+                            $label = $mynode->referencedEntities()[0]->label();
+                            $variables['eyebrow'] = $label;
+                        }
+                    }
+                break;
+            case 'event_hero':
+                $parent = $paragraph->getParentEntity();
+                if ($parent instanceof NodeInterface) {
+                    $type = $parent->getType();
+                    $title = $parent->getTitle();
+
+
+                    $event_tz = null;
+                    $event_link = null;
+                    $event_start_date = null;
+                    $event_end_date = null;
+                    $event_start_time = null;
+                    $event_type = null;
+
+                    if ($type == 'directory' or $type == 'event_directory' or $type == 'event') {
+                            $event_type = $parent->get('field_event_type')->referencedEntities()[0]->label();
+                            
+                            if ($parent->get('field_event_link')->getValue()) {
+                                $event_link = $parent->get('field_event_link')->getValue()[0]['uri'];
+                            }
+
+                            if ($parent->get('field_start_date')->getValue()) {
+                                $event_start_date = $parent->get('field_start_date')->getValue()[0]["value"];
+                            }
+
+                            if ($parent->get('field_end_date')->getValue()) {
+                                $event_end_date = $parent->get('field_end_date')->getValue()[0]["value"];
+                            }
+                            
+                            if ($parent->get('field_event_time_zone')->getValue()) {
+                                $event_tz = $parent->get('field_event_time_zone')->getValue()[0]["value"];
+                            }
+
+                            if ($parent->get('field_start_time')->getValue()) {
+                                $event_start_time = $parent->get('field_start_time')->getValue()[0]["value"];
+                            }
+                            
+                            $variables['eyebrow'] = $event_type;
+
+                            $variables['headline'] = $title;
+                            $variables['event_link'] = $event_link;
+
+                            $variables['event_start_date'] = $event_start_date;                           
+                            $variables['event_end_date'] = $event_end_date;  
+                            
+                            $variables['event_tz'] = $event_tz;
+                            $variables['event_start_time'] = $event_start_time;
+
+                            // dump($variables);
+                        }
+                    }
+                break;
+        }
+    }
+}
+
+function danaher_preprocess_node(array &$variables) {
+    $node = $variables['node'];
+    $type_name = $node->type->entity->label();
+
+    $variables['content_type_name'] = $type_name;
+    /*
+    if ($type_name == "person" or $type_name == "Person") {
+        $terms = [];
+        $categories = $node->field_person_type;
+        //dump($categories);
+
+        foreach ($categories as $category) {
+            // dump($category);
+            // dump($category->getValue()['target_id']);
+
+            $term = Term::load($category->getValue()['target_id']);
+            $terms[] = $term->getName();
+        }
+
+        // dump($terms);
+        //$variables['person_types'] = $terms;
+        $variables['person_types'] = $terms;
+
+        $node->persontype = $terms;
+    }
+    */
+
+}
+
+
+
+/**** sort paragraph types begin */
+/**
+ * Implements hook_form_alter().
+ *
+ * Sorting the paragraphs in the "add more" display
+ * alphabetically.
+ */
+function danaher_form_alter(&$form, $form_state, $form_id) {
+    $paragraphs_field_name = 'field_widgets';
+  
+    if (!empty($form[$paragraphs_field_name]['widget']['add_more'])) {
+      // Doing an initial sort, as the add_more array has
+      // non-keyed/non-field elements. We want those in the
+      // edge of the array.
+      ksort($form[$paragraphs_field_name]['widget']['add_more']);
+  
+      // Doing a sort, based on the label of the paragraph.
+      uasort($form[$paragraphs_field_name]['widget']['add_more'], '_danaher_compare_paragraph_labels');
+    }
+  }
+  
+  /**
+   * Helper function, used to sort paragraph labels.
+   *
+   * @see EXAMPLE_form_alter()
+   */
+  function _danaher_compare_paragraph_labels($a, $b) {
+    if (is_object($a) || is_object($b)) {
+        return 1;
+      }
+      else if (!isset($a['#value']) || !isset($b['#value'])) {
+        return 1;
+      }
+    
+      return strnatcmp($a['#value']->__tostring(), $b['#value']->__tostring());
+  }
+
+  /**** sort paragraph types end */

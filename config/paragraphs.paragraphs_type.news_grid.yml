@@ -1,0 +1,15 @@
+uuid: 16d01230-4a19-4931-98a0-49a8258a9085
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: news_grid
+label: 'News Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

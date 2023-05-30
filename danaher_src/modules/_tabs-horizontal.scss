@@ -1,0 +1,290 @@
+// import utilities
+@import "../utility/utility";
+
+
+// horizontal tabs styles
+// --------------------------------------------------
+.tab {
+   // inherit from base tabs
+
+   &--horizontal {
+      display: grid;
+      grid-gap: 30px;
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+
+      .nav-tabs {
+         background: darken($color-white, 5%);
+         border-bottom: 1px solid darken($color-white, 20%);
+         display: flex;
+         overflow: hidden;
+
+         @include media-breakpoint-down(md) {
+            overflow-x: auto;
+         }
+
+         &-item {
+            display: inline-block;
+            border-left: 1px solid darken($color-white, 20%);
+            flex-grow: 1;
+
+            &:first-child {
+               border-left: none;
+            }
+
+            a {
+               color: $color-black;
+               display: flex;
+               height: 100%;
+               flex-direction: column;
+               justify-content: center;
+               text-align: center;
+               padding: 20px 20px;
+               min-height: 80px;
+
+               &:after {
+                  content: "";
+                  position: absolute;
+                  height: 5px;
+                  background: darken($color-white, 20%);
+                  left: -1px;
+                  right: -1px;
+                  bottom: 0;
+               }
+
+               &.active {
+                  background-color: darken($color-white, 10%);
+                  border-color: $color-white;
+
+                  &:after {
+                     background: $color-white;
+                     z-index: 1;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+.dark-tab {
+
+   &-module {
+      margin: 0 auto;
+      padding: 0;
+      position: relative;
+
+      .tab--horizontal {
+         grid-gap: 0;
+
+         .tab-navigation {
+            display: flex;
+            gap: 16px;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 16px;
+
+            button.prev {
+               background-image: url("/themes/custom/danaher/images/previous-carousel-arrow.svg");
+               background-size: cover;
+               width: 29px;
+               height: 28px;
+               appearance: none;
+               -webkit-appearance: none;
+               text-indent: -9999px;
+               background-color: transparent;
+               border: none;
+               cursor: pointer;
+           }
+           
+           .pagination {
+               font-family: $font-body;
+               font-style: normal;
+               font-weight: 400;
+               @include font-size(20px, 24px);
+               line-height: 1.25;
+
+               text-align: center;
+               color: $color-primary;
+               display: inherit;
+               cursor: pointer;
+           }
+
+           button.next {
+               background-image: url("/themes/custom/danaher/images/next-carousel-arrow.svg");
+               background-size: cover;
+               width: 29px;
+               height: 28px;
+               appearance: none;
+               -webkit-appearance: none;
+               text-indent: -9999px;
+               background-color: transparent;
+               border: none;
+           }
+         }
+
+         .tab-overflow {
+            background: $color-primary;
+         }
+
+         .nav-tabs {
+            background: transparent;
+            position: relative;
+            padding-bottom: 2px;
+            justify-content: space-evenly;
+            align-items: center;
+
+            font-family: $font-body;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: $color-blue;
+            padding: 9px 0;
+
+            &-item {
+               display: inline-block;
+               border-left: none;
+               flex-grow: 0;
+               margin: 0 18px;
+
+               &:first-of-type {
+                  margin-left: 0;
+               }
+
+               a {
+                  padding: 10px 0;
+                  min-height: initial;
+                  border-bottom: none;
+                  color: $color-blue;
+                  font-weight: normal;
+
+                  &:after {
+                     opacity: 0;
+                     transition: all 0.3s ease;
+                     bottom: -2px;
+                     height: 3px;
+                  }
+
+                  &.active {
+                     background-color: transparent;
+                     border-color: $color-white;
+                     color: $color-white;
+
+                     font-weight: normal;
+
+                     &:after {
+                        background: $color-blue;
+                        opacity: 1;
+                     }
+                  }
+               }
+            }
+
+            @include media-breakpoint-up(md) {
+               border-bottom: 0;
+               &:after {
+                  content: '';
+                  border-bottom: 1px solid $color-black;
+                  position: absolute;
+                  bottom: 1px;
+                  left: 0;
+                  right: 0;
+
+
+               }
+            }
+         }
+
+         .tab-content {
+            color: $color-white;
+            //padding-top: 25px;
+
+            &>.tab-pane {
+               padding: 0;
+            }
+
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+               color: $color-white;
+            }
+
+            .section-headline, .section-subhead {
+               color: $color-primary;
+            }
+
+            h2 {
+               @include font-size(20px, 35px);
+            }
+
+            .content-well {
+               h2 {
+                  @include font-size(20px, 35px);
+               }
+            }
+
+            .fs-media {
+               width: 100%;
+               .media {
+                  img {
+                     width: 100%;
+                  }
+               }
+            }
+
+            .module {
+               margin: 0;
+            }
+
+            .collapse--alternate {
+               .collapse-trigger {
+                  color: $color-primary;
+               }
+            }
+
+            @include media-breakpoint-up(xl) {
+               [data-max-columns][data-max-columns="2"] {
+                  grid-gap: 0 150px;
+               }
+            }
+         }
+      }
+
+      // &:after {
+      //    content: '';
+      //    background: url('../../assets/bg-misti-dots.svg') repeat;
+      //    position: absolute;
+      //    bottom: 0;
+      //    left: 10px;
+      //    width: 191px;
+      //    height: 103px;
+
+      //    @include media-breakpoint-down(md) {
+      //       width: 157px;
+      //       height: 72px;
+      //       left: 0;
+      //    }
+      // }
+
+      @include media-breakpoint-down(sm) {
+         margin: 50px 12px;
+      }
+   }
+
+   &-container {
+      @include make-container();
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   &-title {
+      color: $color-white;
+   }
+
+
+}

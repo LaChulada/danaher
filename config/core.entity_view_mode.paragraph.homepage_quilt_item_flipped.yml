@@ -1,0 +1,10 @@
+uuid: 67131efb-ee9f-4eb9-b683-cf83be980d7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.homepage_quilt_item_flipped
+label: 'Homepage Quilt Item Flipped'
+targetEntityType: paragraph
+cache: true

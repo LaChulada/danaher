@@ -1,0 +1,10 @@
+uuid: cdf8b66b-124f-4003-8e90-e2a2df3e8f48
+langcode: en
+status: true
+dependencies: {  }
+id: business_carousel_card
+label: 'Business Carousel Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

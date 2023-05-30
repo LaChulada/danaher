@@ -1,0 +1,31 @@
+uuid: fb4080f7-e28c-4c06-b1ff-3b56a660226f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.mega-menu
+  module:
+    - menu_block
+  theme:
+    - danaher
+id: megamenu
+theme: danaher
+region: header_menu_group
+weight: -22
+provider: null
+plugin: 'menu_block:mega-menu'
+settings:
+  id: 'menu_block:mega-menu'
+  label: 'Mega Menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 2
+  expand_all_items: true
+  parent: 'mega-menu:'
+  suggestion: mega_menu
+visibility: {  }

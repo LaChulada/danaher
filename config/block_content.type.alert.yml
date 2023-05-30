@@ -1,0 +1,8 @@
+uuid: 8ad11347-2902-4361-ad8f-89db040a24ac
+langcode: en
+status: true
+dependencies: {  }
+id: alert
+label: Alert
+revision: 0
+description: ''

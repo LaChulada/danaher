@@ -1,0 +1,403 @@
+@import "../utility/utility";
+
+
+// scoped variables
+$collapse-indent-space: 20px;
+$collapse-padding-x: 0;
+$collapse-padding-y: 32px;
+$collapse-content-padding-x: 0;
+$collapse-content-padding-y: 20px;
+$collapse-border-width: 1px;
+// $collapse-border-color: #B3B3B3;
+$collapse-border-color: rgba($color-body, .3);
+$collapse-border-radius: 0;
+
+$color-link: $color-primary;
+// collapse styles
+// --------------------------------------------------
+.accordion {
+   // max-width: 1400px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 0;
+   padding-bottom: $module-spacing;
+   
+   .site-footer & {
+
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .collapse-item {
+         border: none;
+     }
+
+   }
+
+   .panel-group {
+      border-top: $collapse-border-width solid $collapse-border-color;
+   }
+
+   .section-title {
+      font-family: $font-heading;
+      font-style: normal;
+      font-weight: 800;
+      @include font-size(24px, 28px);
+      line-height: 1.1;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 32px;
+      color: $color-primary;
+      .body-content & { 
+         padding-bottom: 0; 
+         margin-bottom: 32px;
+      }
+      
+   }
+
+   .subhead-text {
+      font-family: $font-body;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+      color: $color-primary;
+      margin: 24px auto;
+      text-transform: none;
+    }
+
+   &.event {
+
+      .collapse {
+         &-trigger {
+            display: grid;
+            grid-template-columns: 15% 1fr;
+            color: $color-black;
+
+
+            .time-range {
+               font-family: $font-body;
+               font-style: normal;
+               font-weight: 700;
+               font-size: 16px;
+               line-height: 22px;
+               color: $color-black;
+            }
+         }
+      }
+   }
+}
+
+.imagesection {
+
+   @media (max-width: $mobile-width) {
+      display: none;
+   }
+   .collapse-item {
+      border: none;
+   }
+   .collapse-trigger:not(.collapsed):before {
+      content: "";
+   }
+
+   .collapse-trigger {
+      display: none;
+   }
+}
+
+.collapse {
+   &-item {
+      border-bottom: $collapse-border-width solid $collapse-border-color;
+      margin-top: -1px;
+
+      &:first-of-type {
+         margin-top: 0;
+      }
+
+
+      .cta-link {
+         a {
+             @include text-link;
+             margin-top: 26px;
+             border-bottom: none;
+             display: inline-block;
+ 
+             &:after {
+                 content: url(/themes/custom/danaher/images/arrow-left.svg);
+                 width: 9px;
+                 height: 15px;
+                 display: inline-block;
+                 padding-left: 8px;
+                 transition: all 0.25s;
+             }
+ 
+             &:hover, &:focus {
+                 text-decoration: none;
+                 &:after {
+                     transform: translateX(10px);
+                 }
+             }
+         }
+     }
+   }
+
+   // collapse trigger
+   &-trigger {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: flex-start;
+      border: none;
+      border-radius: $collapse-border-radius;
+      flex-direction: column;
+      padding: $collapse-padding-y $collapse-padding-x $collapse-padding-y (($collapse-padding-x * 2) + $collapse-indent-space);
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      $font-family: $font-body;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 22px;
+      color: $color-black;
+
+      font-family: $font-heading;
+      // icon
+      &:before {
+         // @include icon-font("chevron-up");
+         // content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTBIMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K); 
+         content: "+";
+         @include transition(transform 0.25s ease-in-out);
+         @include position(translateY);
+         left: $collapse-padding-x;
+      }
+
+      &:after {
+         content: "";
+         display: block;
+         width: 3px;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         height: 100%;
+         // background-color: $color-link;
+         background-color: transparent;
+         transition: height .2s linear;
+      }
+
+      // icon collapsed
+      &.collapsed {
+         &:before {
+            transform: translateY(-50%);
+         }
+         &:after {
+            height: 0;
+            transition: height .2s linear;
+         }
+      }
+
+      transition: all $transition-time;
+      &:hover {
+          color: $color-black;
+      }
+      &:active {
+          color: $color-light-blue;
+      }
+      &:focus {
+         text-decoration: underline;
+         text-underline-offset: 3px;
+      }
+   }
+
+   // collapse content
+   &-content {
+      padding: 0 $collapse-content-padding-x $collapse-content-padding-y $collapse-content-padding-x;
+      position: relative;
+ 
+      font-family: $font-body;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+
+      color: $color-black;
+
+      &:after {
+         content: "";
+         display: block;
+         width: 3px;
+         position: absolute;
+         left: 0;
+         top: 0;
+         bottom: 0;
+         // background-color: $color-link;
+         background-color: transparent;
+      }
+
+      figure {
+         display: none;
+         .imagesection & {
+            display: block;
+         }
+         @media (max-width: $mobile-width) {
+            display: block;
+            padding-bottom: 24px;
+         }
+      }
+
+      
+   }
+
+   // collapse target
+   &-target {
+      &.collapse {
+         &:not(.show) {
+            display: none;
+         }
+      }
+
+      &.collapsing {
+         @include transition(height 0.25s ease);
+         height: 0;
+         overflow: hidden;
+         position: relative;
+      }
+   }
+
+   // alternate layout - icon on right
+   // --------------------------------------------------
+   &--alternate {
+      .collapse {
+         &-trigger {
+            padding-left: $collapse-padding-x;
+            padding-right: (($collapse-padding-x * 2) + $collapse-indent-space * 2);
+            background: transparent;
+      
+            &:before {
+               left: auto;
+               right: $collapse-padding-x;
+            }
+         }
+      }
+      // alternate icon
+      &-icon {
+         .collapse {
+            &-trigger {
+               // Alternate icon default state
+               &:before {
+                  // @include icon-font("icon-close-thin");
+                  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE1MzBfNDM1NCkiPgo8cGF0aCBkPSJNMCAxMEgyMCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxwYXRoIGQ9Ik0xMCAwTDEwIDIwIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjMiLz4KPHBhdGggZD0iTTEwIDBMMTAgMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzE1MzBfNDM1NCI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K);
+                  // content: "+";
+                  @include font-size(24px);
+                  color: $color-link;
+               }
+
+               &:not(.collapsed) {
+                  &:before {
+                     content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMTBIMjAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K);
+                     // content: "-";
+                     // transform: translateY(-50%);
+                  }
+               }
+
+               // Alternate icon collapsed state
+               &.collapsed {
+                  &:before {
+                     // transform: translateY(-50%);
+                     color: $color-black;
+                     @include media-breakpoint-down(sm) {
+                        .left-nav & {
+                           color: $color-link;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   // default (no padding, icon on right)
+   // --------------------------------------------------
+   &--default {
+      .collapse {
+         &-trigger {
+            padding-left: 0;
+            padding-right: $collapse-padding-x * 2;
+            background-color: transparent;
+
+            &:before {
+               left: auto;
+               right: 0;
+            }
+         }
+
+         &-content {
+            padding-left: 0;
+            padding-right: 0;
+         }
+      }
+   }
+}
+
+// responsive collapse
+// generate series of `.responsive-collapse-target-*` responsive classes for configuring
+// where your container collapses.
+.collapse-target- {
+   @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+
+      &#{$infix} {
+         @include media-breakpoint-down($breakpoint) {
+            &.collapse {
+               &:not(.show) {
+                  display: none;
+               }
+            }
+            &.collapsing {
+               @include transition(height 0.25s ease);
+               height: 0;
+               overflow: hidden;
+               position: relative;
+            }
+         }
+         @include media-breakpoint-up($next) {
+            &.collapse {
+               display: block !important;
+               height: auto !important;
+               overflow: visible !important;
+
+               &.show {
+                  overflow-y: visible;
+               }
+            }
+         }
+      }
+   }
+}
+
+// generate series of `.responsive-collapse-trigger-*` responsive classes for configuring
+// where your trigger collapses.
+.collapse-trigger- {
+   @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+
+      &#{$infix} {
+         @include media-breakpoint-up($next) {
+            display: none !important;
+            visibility: hidden;
+         }
+      }
+   }
+}
+
+// .accordion .card-body:first-of-type .collapse-trigger {
+//    padding-top: 0;
+//    &:before {
+//       transform: translateY(-100%);
+//   }
+// }

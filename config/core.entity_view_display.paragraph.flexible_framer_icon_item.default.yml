@@ -1,0 +1,88 @@
+uuid: 294d99bd-0fb3-48ca-bb21-3d3ace92db8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.flexible_framer_icon_item.field_framer_description
+    - field.field.paragraph.flexible_framer_icon_item.field_framer_link
+    - field.field.paragraph.flexible_framer_icon_item.field_headline
+    - field.field.paragraph.flexible_framer_icon_item.field_media
+    - image.style.max_650x650
+    - paragraphs.paragraphs_type.flexible_framer_icon_item
+  module:
+    - fences
+    - link
+    - media
+    - text
+id: paragraph.flexible_framer_icon_item.default
+targetEntityType: paragraph
+bundle: flexible_framer_icon_item
+mode: default
+content:
+  field_framer_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: section-description
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+    weight: 2
+    region: content
+  field_framer_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_headline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      fences:
+        fences_field_tag: h4
+        fences_field_classes: section-title
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 1
+    region: content
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: max_650x650
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: figure
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,44 @@
+uuid: b4fc5026-12eb-409b-9012-c314d86827ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_entity_browser_modal
+    - field.field.paragraph.linked_logo.field_icon
+    - field.field.paragraph.linked_logo.field_link
+    - paragraphs.paragraphs_type.linked_logo
+  module:
+    - entity_browser
+    - link
+id: paragraph.linked_logo.default
+targetEntityType: paragraph
+bundle: linked_logo
+mode: default
+content:
+  field_icon:
+    type: entity_browser_entity_reference
+    weight: 0
+    region: content
+    settings:
+      entity_browser: media_entity_browser_modal
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings:
+        view_mode: default
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  admin_title: true
+  created: true
+  status: true

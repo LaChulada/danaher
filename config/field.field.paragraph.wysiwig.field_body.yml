@@ -1,0 +1,21 @@
+uuid: d219b04a-b00c-4cdb-99b3-e2c459665fde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.wysiwig
+  module:
+    - text
+id: paragraph.wysiwig.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: wysiwig
+label: Body
+description: 'From the Style dropdown, choose Heading 2 or Heading 3 to allow for a proper heading treatment.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

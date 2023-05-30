@@ -1,0 +1,35 @@
+uuid: 999e8420-1d59-4e19-98d0-e2a72ade4b4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cta_banner_collection.field_cta_banner
+    - paragraphs.paragraphs_type.cta_banner_collection
+  module:
+    - entity_reference_revisions
+    - fences
+id: paragraph.cta_banner_collection.default
+targetEntityType: paragraph
+bundle: cta_banner_collection
+mode: default
+content:
+  field_cta_banner:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_items_wrapper_tag: none
+        fences_field_items_wrapper_classes: none
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

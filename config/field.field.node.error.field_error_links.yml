@@ -1,0 +1,23 @@
+uuid: 36032d50-4690-456d-a23b-ac7b6e9c4964
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_error_links
+    - node.type.error
+  module:
+    - link
+id: node.error.field_error_links
+field_name: field_error_links
+entity_type: node
+bundle: error
+label: 'Error Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

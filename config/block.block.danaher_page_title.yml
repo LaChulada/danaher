@@ -1,0 +1,20 @@
+uuid: 758da445-d225-44db-ab61-ec21b360fcf5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - danaher
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: danaher_page_title
+theme: danaher
+region: content_above
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

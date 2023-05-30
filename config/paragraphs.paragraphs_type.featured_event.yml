@@ -1,0 +1,15 @@
+uuid: 6996cdbb-e079-45dc-bc74-8b542c152a53
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: featured_event
+label: 'Featured Event'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

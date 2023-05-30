@@ -1,0 +1,22 @@
+uuid: 8e9bbe2e-ddf8-4981-ba99-a4224493d7f1
+langcode: en
+status: false
+dependencies:
+  config:
+    - blockgroup.block_group_content.blog_hero_left_side
+  module:
+    - blockgroup
+  theme:
+    - danaher
+id: danaher_blogheroleftside
+theme: danaher
+region: blog_hero
+weight: -36
+provider: null
+plugin: 'block_group:blog_hero_left_side'
+settings:
+  id: 'block_group:blog_hero_left_side'
+  label: 'Blog Hero Left Side'
+  label_display: '0'
+  provider: blockgroup
+visibility: {  }

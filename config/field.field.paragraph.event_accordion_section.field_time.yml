@@ -1,0 +1,21 @@
+uuid: b0dbbb0f-bbb8-4522-80c1-ef90567e992c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_time
+    - paragraphs.paragraphs_type.event_accordion_section
+  module:
+    - time_field
+id: paragraph.event_accordion_section.field_time
+field_name: field_time
+entity_type: paragraph
+bundle: event_accordion_section
+label: Time
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: time_range

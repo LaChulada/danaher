@@ -1,0 +1,24 @@
+uuid: 4db0e0ba-0cb1-4ec6-8b97-42237d7ac59d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: case_study_hero
+label: 'Case Study Hero (660x550)'
+effects:
+  3b77edd2-84ee-45a9-9734-cc4df49dcc12:
+    uuid: 3b77edd2-84ee-45a9-9734-cc4df49dcc12
+    id: focal_point_scale_and_crop
+    weight: -9
+    data:
+      width: 660
+      height: 550
+      crop_type: focal_point
+  6d72b1bf-3f36-4feb-a848-8e93daecaa07:
+    uuid: 6d72b1bf-3f36-4feb-a848-8e93daecaa07
+    id: image_convert
+    weight: -10
+    data:
+      extension: webp
+pipeline: ''

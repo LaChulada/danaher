@@ -1,0 +1,26 @@
+uuid: 284e5807-c221-4846-954b-056533ed636f
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.blog_author_section
+  module:
+    - block_class
+    - blockgroup
+  theme:
+    - danaher
+third_party_settings:
+  block_class:
+    classes: blogauthorsection
+id: danaher_blogauthorsection
+theme: danaher
+region: blog_hero_left_side
+weight: -35
+provider: null
+plugin: 'block_group:blog_author_section'
+settings:
+  id: 'block_group:blog_author_section'
+  label: 'Blog Author Section'
+  label_display: '0'
+  provider: blockgroup
+visibility: {  }

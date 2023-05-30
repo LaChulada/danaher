@@ -1,0 +1,15 @@
+uuid: 548709dc-01ab-434f-b307-dd11c37e8a3e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: key_steps
+label: 'Key Steps'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

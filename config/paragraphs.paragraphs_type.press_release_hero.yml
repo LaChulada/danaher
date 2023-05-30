@@ -1,0 +1,15 @@
+uuid: 3ac4a162-1aad-405d-98dd-d89aff4d4113
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: press_release_hero
+label: 'Press Release Hero'
+icon_uuid: null
+icon_default: null
+description: 'Duplicate of Article hero, but with an optional background image'
+behavior_plugins: {  }

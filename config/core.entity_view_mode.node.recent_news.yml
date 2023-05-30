@@ -1,0 +1,10 @@
+uuid: f42294b9-1831-4303-b776-80c09ee2d5e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.recent_news
+label: 'Recent News'
+targetEntityType: node
+cache: true

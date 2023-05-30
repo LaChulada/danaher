@@ -1,0 +1,544 @@
+@use 'sass:math';
+
+$color-modal-backdrop: #595950;
+
+$color-black: #000000;
+$color-blue: #36B8FF;
+$color-dark-blue: #132B80;
+$color-dark-gray: #333333;
+$color-dark-green: #043D27;
+$color-dark-orange: #7C2900;
+$color-dark-pink: #7A197F;
+$color-dark-purple: #4000A5;
+$color-dark-yellow: #9D6801;
+$color-extra-light-gray: #F5F5F5;
+$color-gray: #848484;
+$color-green: #0CE295;
+$color-light-blue: #D7F1FF;
+$color-light-gray: #E6E6E6;
+$color-light-green: #DBFBEF;
+$color-light-orange: #FFE1D5;
+$color-light-pink: #FDE5FE;
+$color-light-purple: #EADEFF;
+$color-light-yellow: #FFF6D6;
+$color-orange: #FF6A2A;
+$color-pink: #F225FA;
+$color-purple: #7523FF;
+$color-white: #FFFFFF;
+$color-yellow: #FDD031;
+$color-deep-blue: #001F5C;
+$color-gray-100: #EEEEEE;
+$color-gray-200: #E2E2E2;
+$color-gray-400: #AFAFAF;
+$color-gray-600: #545454;
+$color-gray-700: #333333;
+$color-gray-75: #757575;
+
+$color-stock-green: #38A944;
+$color-stock-red: #da2113;
+
+$color-body: $color-black;
+$color-input-fields: $color-body;
+
+$color-primary: $color-dark-blue;
+$color-secondary: $color-gray-700;
+
+$color-body: $color-black;
+$color-link: $color-primary;
+
+$font-body: 'TWK Lausanne', Verdana, Geneva, Tahoma, sans-serif;
+
+$font-heading: 'TWK Lausanne', Verdana, Geneva, Tahoma, sans-serif;
+$font-weight-regular: 400;
+
+$module-spacing: 32px;
+$module-med-spacing: 72px;
+$module-larger-spacing: 80px;
+
+$mobile-width: 1200px;
+$mobile-hero-width: 1024px;
+
+$max_container_width: 1248px;
+$max_container_fluid_width: 1440px;
+
+$transition-time: 0.5s;
+$scale-factor: 1.25;
+// --------------------------------------------------
+$transition-base: all 0.25s ease-in-out;
+
+// z-indexing
+// --------------------------------------------------
+$z-index-var: 10;
+$z-index-max: 2147483647;
+
+// Default viewport min/max width
+$min_width: 575px !default;
+$max_width: 1440px !default;
+
+@font-face {
+   font-family: 'TWK Lausanne';
+   src:  url("fonts/TWKLausannePan-200.ttf") format('truetype'),
+         url("fonts/TWKLausannePan-200.woff") format('woff'),
+         url("fonts/TWKLausannePan-200.woff2") format('woff2'),
+         url("fonts/TWKLausannePan-400.ttf") format('truetype'),
+         url("fonts/TWKLausannePan-400.woff.woff") format('woff'),
+         url("fonts/TWKLausannePan-400.woff2") format('woff2'),
+         url("fonts/TWKLausannePan-700.ttf") format('truetype'),
+         url("fonts/TWKLausannePan-700.woff") format('woff'),
+         url("fonts/TWKLausannePan-700.woff2") format('woff2');
+ }
+
+ b, strong {
+   font-weight: 700;
+ }
+
+@mixin link_button_style {
+   background: $color-primary;
+   text-align: center;
+   font-family: $font-body;
+   font-style: normal;
+   font-size: 16px;
+   line-height: 1.375;
+   font-weight: 700;
+   display: inline-block;
+   padding: 12px 40px;
+   border-bottom: none;
+   color: $color-white;
+   border-radius: 48px;
+   margin: 6px; //so you can see the border on focus
+   &:hover {
+      background: $color-deep-blue;
+      color:  inherit;
+   }
+   &:active {
+      border-color: $color-blue;
+      color:  inherit;
+   }
+   &:focus {
+      color:  inherit;
+      border: none;
+
+      outline: 1px solid $color-primary;
+      outline-offset: 1px;
+      &:before {
+         border: none;
+      }
+   }
+
+}
+
+@mixin link_button_stroked_style() {
+    @include link_button_style();
+    
+    background-color: transparent;
+    border: 2px solid $color-purple;
+    justify-self: flex-start;
+    align-self: end;
+    transition: all 0.25s;
+
+   &:hover {
+      border-color: $color-dark-blue;
+      color:  inherit;
+   }
+   &:active {
+      border-color: $color-blue;
+      color:  inherit;
+   }
+   &:focus {
+      border-style: dashed;
+      border-color: $color-dark-blue;
+      color:  inherit;
+   }
+}
+
+// Absolute positioning
+// --------------------------------------------------
+// Example: @include position(translateY);
+
+@mixin position($position) {
+    position: absolute;
+ 
+    // Position -- center / center
+    @if ($position == "translate") {
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    }
+ 
+    // Position -- center X
+    @if ($position == "translateX") {
+       left: 50%;
+       transform: translateX(-50%);
+    }
+ 
+    // Position -- center Y
+    @if ($position == "translateY") {
+       top: 50%;
+       transform: translateY(-50%);
+    }
+ 
+    // Position -- RESET
+    @if ($position == "reset") {
+       position: relative;
+       top: auto;
+       left: auto;
+       transform: translate(0, 0);
+    }
+ }
+ 
+ // Transition mixin with prefers-reduced-motion fallback
+// --------------------------------------------------
+@mixin transition($transition...) {
+    transition: $transition;
+ 
+    .prefers-reduced-motion & {
+       transition: none;
+    }
+ }
+
+ @mixin sr-only() {
+   background: transparent !important;
+   border: none !important;
+   clip: rect(0, 0, 0, 0) !important;
+   height: 1px !important;
+   margin: -1px !important;
+   overflow: hidden !important;
+   padding: 0 !important;
+   position: absolute !important;
+   width: 1px !important;
+}
+
+@function num($input) {
+   $denominator: calc($input * calc(0 + 1));
+   $result: math.div($input, $denominator);
+   // @debug "num denominator: #{$denominator}";
+   // @debug "num result #{$input} is #{$result}\n";
+   @return $result;
+}
+
+@mixin font-size-detailed($xlSize, $largeSize, $mediumSize, $smallSize) {
+   @media(min-width: 1300px) {
+      font-size: $xlSize;
+   }
+   @media(max-width: 1299px) and (min-width: 800px) {
+      font-size: $largeSize;
+   }
+   @media(max-width: 799px) and (min-width: 600px)  {
+      font-size: $mediumSize;
+   }
+   @media(max-width: 599px) {
+      font-size: $smallSize;
+   }
+}
+
+@mixin line-height-detailed($xl, $large, $medium, $small) {
+   @media(min-width: 1300px) {
+      line-height: $xl;
+   }
+   @media(max-width: 1299px) and (min-width: 800px) {
+      line-height: $large;
+   }
+   @media(max-width: 799px) and (min-width: 600px)  {
+      line-height: $medium;
+   }
+   @media(max-width: 599px) {
+      line-height: $small;
+   }
+}
+
+@mixin display1 {
+      @include font-size-detailed(96px, 72px, 60px, 48px);
+      @include line-height-detailed(112px, 88px, 72px, 56px);
+      font-weight: 400;
+}
+
+@mixin display2 {
+   @include font-size-detailed(72px, 60px, 48px, 40px);
+   @include line-height-detailed(88px, 72px, 56px, 48px);
+   font-weight: 400;
+}
+
+@mixin heading1 {
+   @include font-size-detailed(60px, 40px, 40px, 32px);
+   @include line-height-detailed(72px, 48px, 48px, 40px);
+   font-weight: 400;
+   text-transform: none;
+}
+
+@mixin heading2 {
+   @include font-size-detailed(32px, 32px, 32px, 28px);
+   @include line-height-detailed(40px, 40px, 40px, 36px);
+   font-weight: 400;
+   text-transform: none;
+}
+
+@mixin heading3 {
+   @include font-size-detailed(24px, 24px, 24px, 20px);
+   @include line-height-detailed(30px, 30px, 30px, 28px);
+   font-weight: 400;
+   text-transform: none;
+}
+
+@mixin quote {
+   @include font-size-detailed(48px, 40px, 40px, 32px);
+   @include line-height-detailed(1.16667, 1.2, 1.2, 1.25);
+   font-weight: 400;
+}
+
+@mixin paragraph-large {
+   font-size: 20px;
+   line-height: 1.3;
+   font-weight: 200;
+}
+
+@mixin paragraph {
+   font-size: 16px;
+   line-height: 22px;
+   font-weight: 200;
+}
+
+@mixin eyebrow {
+   font-size: 18px;
+   line-height: 1.33333;
+   font-weight: 400;
+   color: $color-dark-purple;
+}
+
+@mixin caption {
+   font-size: 12px;
+   line-height: 1.33333;
+   font-weight: 400;
+}
+
+@mixin cta-text {
+   font-size: 16px;
+   line-height: 1.375;
+   font-weight: 700;
+}
+
+
+@mixin nav-text {
+   font-size: 14px;
+   line-height: 1.2857;
+   font-weight: 400;
+}
+
+@mixin nav-text-important {
+   font-size: 14px !important;
+   line-height: 1.2857 !important;
+   font-weight: 400 !important;
+}
+
+@mixin breadcrumb {
+   font-size: 14px;
+   line-height: 1.2857;
+   font-weight: 700;
+   color: $color-purple;
+}
+
+
+@mixin text-link {
+   font-family: $font-body;
+   font-style: normal;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.375;
+   color: $color-purple;
+   text-decoration: none;
+}
+
+
+
+@mixin font-size($min, $max: null, $lock-min: $min_width, $lock-max: $max_width) {
+   & {
+      font-size: $min;
+   }
+
+   @if $max {
+         @media (min-width: $lock-min) {
+            & {
+               // @debug "Lock min: #{$lock-min}";
+               // @debug "Lock max: #{$lock-max}";
+               // font-size: calc(#{$min} + #{num($max) - num($min)} * (100vw - #{$lock-min}) / #{num($lock-max) - num($lock-min)});
+               font-size: clamp(#{$min}, calc(1rem), #{$max});
+         }
+
+         @media (min-width: $lock-max) {
+            & {
+               font-size: $max;
+            }
+         }
+      }
+   }
+}
+
+@mixin embedded-link {
+   @include text-link();
+   margin-top: 26px;
+   border-bottom: none;
+   display: inline-block;
+   outline: none;
+   font-weight: 700;
+
+   &:after {
+       content: url(/themes/custom/danaher/images/arrow-left.svg);
+       width: 9px;
+       height: 15px;
+       display: inline-block;
+       padding-left: 8px;
+       transition: all 0.25s;
+   }
+   &:focus {
+      color: $color-purple;
+      padding-right: 10px;
+      outline: 1px solid currentColor;
+      outline-offset: 3px;
+   }
+   &:hover {
+       text-decoration: none;
+       outline: none;
+       border-bottom-style: none;
+      color: $color-purple;
+       &:after {
+           transform: translateX(10px);
+       }
+   }
+
+   &:disabled,
+   &[disabled],
+   &.disabled {
+      box-shadow: none;
+      cursor: not-allowed;
+      background: transparent;
+      color: $color-gray !important;
+      pointer-events:none;
+      &:after {
+         content: url(/themes/custom/danaher/images/arrow-gray.svg);
+      }
+   }
+  
+}
+
+@mixin embedded-link-inverse {
+      @include text-link();
+      margin-top: 26px;
+      border-bottom: none;
+      display: inline-block;
+      color: $color-white;
+
+      &:after {
+          content: url(/themes/custom/danaher/images/arrow-white.svg);
+          width: 9px;
+          height: 15px;
+          display: inline-block;
+          padding-left: 8px;
+          transition: all 0.25s;
+      }
+
+      &:focus {
+         color: $color-white;
+         outline: 1px solid currentColor;
+         outline-offset: 3px;
+         padding-right: 10px;
+      }
+
+      &:hover {
+          text-decoration: none;
+          color: $color-white;
+          &:after {
+              transform: translateX(10px);
+          }
+      }
+
+      &:disabled,
+      &[disabled],
+      &.disabled {
+         box-shadow: none;
+         cursor: not-allowed;
+         background: transparent;
+         color: $color-gray !important;
+         pointer-events:none;
+         &:after {
+            content: url(/themes/custom/danaher/images/arrow-gray.svg);
+         }
+      }
+}
+
+a.text-link,
+.text-link, 
+a.text--primary-inverse,
+.text--primary-inverse {
+   @include  embedded-link-inverse();
+}
+
+a.text-link,
+.text-link, 
+a.text--primary,
+.text--primary {
+   @include  embedded-link();
+
+   color: $color-purple;
+
+   &:focus {
+      outline: 1px solid currentColor;
+   }
+
+   &:hover {
+      text-decoration: none;
+      &:after {
+          transform: translateX(10px);
+      }
+  }
+
+}
+
+@mixin standard-cta-link {
+   .cta-link {
+      a {
+         @include embedded-link();
+      }
+  }
+}
+
+
+
+// List style
+// --------------------------------------------------
+@mixin list-style($list-type) {
+
+   // reset -- remove all padding, margins and default bullet styles
+   @if ($list-type == "reset") {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+         padding: 0;
+      }
+   }
+}
+
+@mixin visually-hidden() {
+   position: absolute;
+   position: absolute !important;
+   width: 1px !important;
+   height: 1px !important;
+   padding: 0 !important;
+   margin: -1px !important;
+   overflow: hidden !important;
+   clip: rect(0,0,0,0) !important;
+   white-space: nowrap !important;
+   border: 0 !important;
+}
+
+@mixin undo-visually-hidden() {
+   position: static !important;
+   width: auto !important;
+   height: auto !important;
+   padding: revert !important;
+   margin: revert !important;
+   overflow: visible !important;
+   clip: auto !important;
+   white-space: normal !important;
+   border: 0 !important;
+}

@@ -1,0 +1,19 @@
+uuid: 54b839eb-285f-427c-a4e3-e1b8b897bc6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subhead
+    - paragraphs.paragraphs_type.form_include
+id: paragraph.form_include.field_subhead
+field_name: field_subhead
+entity_type: paragraph
+bundle: form_include
+label: Subhead
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

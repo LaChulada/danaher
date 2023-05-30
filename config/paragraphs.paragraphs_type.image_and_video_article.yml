@@ -1,0 +1,18 @@
+uuid: 586f705c-4011-451d-a60f-646ce67b2c41
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+  paragraph_view_mode:
+    enabled: false
+id: image_and_video_article
+label: 'Image and Video - Article'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

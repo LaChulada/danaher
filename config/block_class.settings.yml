@@ -1,0 +1,23 @@
+_core:
+  default_config_hash: Nh2kBYOQBgZ8cyaqvf8VJKnC1gR_rxFsVy-51w7PJkw
+maxlength_block_class_field: 255
+field_type: multiple_textfields
+default_case: standard
+block_classes_stored: '{"":"","mobile":"mobile","navigation-menu-containermobile":"navigation-menu-containermobile","site-logo":"site-logo","alert":"alert","navigation-menu-container":"navigation-menu-container","event-hero-image":"event-hero-image","event-hero-image-desktop":"event-hero-image-desktop","social-share-buttons":"social-share-buttons","copyright":"copyright","blog-hero-right-side":"blog-hero-right-side","blogauthorsection":"blogauthorsection","blog-title-section":"blog-title-section","blog-title":"blog-title","event-type":"event-type","event-start-date":"event-start-date","event-end-date":"event-end-date","info-menu":"info-menu","author-attribution":"author-attribution"}'
+enable_attributes: true
+enable_auto_complete: true
+qty_classes_per_block: 10
+items_per_page: 50
+enable_special_chars: false
+qty_attributes_per_block: 10
+enable_id_replacement: true
+weight_attributes: null
+weight_class: null
+weight_id: null
+filter_html_clean_css_identifier: ''
+maxlength_attributes: 0
+maxlength_id: 255
+id_replacement_stored: '{"event_form_header":"event_form","bonterra_event_form_header":"event_form","bonterra_author":"block-author","bonterra_publication_date_field":"block-authored-on","headermenugroup":"header-menu-group"}'
+attribute_keys_stored: '[]'
+attribute_value_stored: '[]'
+attributes_inline: '[]'

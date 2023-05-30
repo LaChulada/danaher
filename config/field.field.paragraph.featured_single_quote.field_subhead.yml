@@ -1,0 +1,19 @@
+uuid: 0e65d0cc-e882-4649-b22c-f26c53855d19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subhead
+    - paragraphs.paragraphs_type.featured_single_quote
+id: paragraph.featured_single_quote.field_subhead
+field_name: field_subhead
+entity_type: paragraph
+bundle: featured_single_quote
+label: Subhead
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

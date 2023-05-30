@@ -1,0 +1,6 @@
+uuid: e7b66edb-2c15-46e2-8e02-6b95d7d485be
+langcode: en
+status: true
+dependencies: {  }
+id: pre_header_area
+label: 'Pre-Header Area'

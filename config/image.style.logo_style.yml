@@ -1,0 +1,16 @@
+uuid: eea3edfd-e5ed-46e9-9917-dec89a808c57
+langcode: en
+status: true
+dependencies: {  }
+name: logo_style
+label: 'Logo style (height 160x60)'
+effects:
+  50dab09c-ef84-4f95-9d72-26bf571df061:
+    uuid: 50dab09c-ef84-4f95-9d72-26bf571df061
+    id: image_scale
+    weight: 2
+    data:
+      width: 160
+      height: null
+      upscale: false
+pipeline: sample_1

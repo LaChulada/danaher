@@ -1,0 +1,18 @@
+uuid: 24838c4f-e479-4cae-88fb-538f51c60d30
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: business_logo_208x96_
+label: 'Business Logo (208x96)'
+effects:
+  5add467b-d008-4cd1-aa35-95ebeec077b3:
+    uuid: 5add467b-d008-4cd1-aa35-95ebeec077b3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 208
+      height: 96
+      crop_type: focal_point
+pipeline: ''

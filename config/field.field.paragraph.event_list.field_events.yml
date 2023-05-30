@@ -1,0 +1,29 @@
+uuid: 46368976-6f06-4560-9a92-448a4c90103a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events
+    - node.type.event
+    - paragraphs.paragraphs_type.event_list
+id: paragraph.event_list.field_events
+field_name: field_events
+entity_type: paragraph
+bundle: event_list
+label: Events
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
