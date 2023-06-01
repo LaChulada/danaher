@@ -29,6 +29,7 @@ if (file_exists(dirname(__FILE__) . '/settings.stage.php')) {
 if (file_exists(dirname(__FILE__) . '/settings.prod.php')) {
   include dirname(__FILE__) . '/settings.prod.php';
 }
+
 $databases['default']['default'] = array (
   'database' => 'danaher',
   'username' => 'root',

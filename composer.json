@@ -148,7 +148,7 @@
         "drupal/viewsreference": "^2.0@beta",
         "drupal/webp": "^1.0@beta",
         "drupal/youtube": "^2.0",
-        "drush/drush": "^11 || ^12",
+        "drush/drush": "^11.5",
         "jonom/jquery-focuspoint": "^1.1",
         "npm-asset/accessible360--accessible-slick": "^1.8",
         "npm-asset/bootstrap": "^5.1",

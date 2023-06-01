@@ -5,6 +5,7 @@ global-styling:
       /themes/custom/danaher/js/slick/slick.css: {}
       /themes/custom/danaher/js/slick/slick-theme.css: {}
       /themes/custom/danaher/css/styles.css: { weight: 40 }
+      /themes/custom/danaher/css/custom.css: { weight: 40 }
   js:
     /libraries/choices.js/public/assets/scripts/choices.min.js: {}
     /themes/custom/danaher/js/cookie.js: {}
@@ -14,6 +15,7 @@ global-styling:
     /themes/custom/danaher/js/transition.js: {}
     /themes/custom/danaher/js/navigation.js: {}
     /themes/custom/danaher/js/global.js: {}
+    /themes/custom/danaher/js/custom.js: {}
   dependencies:
     - core/jquery
     - core/drupal.debounce
