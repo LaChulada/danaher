@@ -5,7 +5,8 @@ global-styling:
       /themes/custom/danaher/js/slick/slick.css: {}
       /themes/custom/danaher/js/slick/slick-theme.css: {}
       /themes/custom/danaher/css/styles.css: { weight: 40 }
-      /themes/custom/danaher/css/custom.css: { weight: 40 }
+      /themes/custom/danaher/css/custom.css: {}
+      /themes/custom/danaher/css/hover-animations.css: {}
   js:
     /libraries/choices.js/public/assets/scripts/choices.min.js: {}
     /themes/custom/danaher/js/cookie.js: {}
