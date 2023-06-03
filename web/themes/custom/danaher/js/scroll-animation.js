@@ -16,10 +16,25 @@
           reveals[i].classList.remove("reveal-active");
         }
       }
+
+      var stats = document.querySelectorAll(".stats--item");
+
+      for (var i = 0; i < stats.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = stats[i].getBoundingClientRect().top;
+        var elementVisible = 350;
+
+        if (elementTop < windowHeight - elementVisible) {
+          stats[i].classList.add("active");
+        } else {
+          stats[i].classList.remove("active");
+        }
+      }
+
+
     }
 
-    $(document).ready(function() {
-        console.log("Custom ok test");
+    $(document).ready(function() {        
         window.addEventListener("scroll", reveal);
      });
 

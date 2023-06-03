@@ -1,14 +1,18 @@
-figure {
+figure, .stats--item{
   position: relative;
   opacity: 0;
 }
 
-figure.reveal-active{
+figure.reveal-active, .stats--item.active{
   opacity: 1;
 }
 
 .reveal-active{
   animation: fade-bottom 1.5s ease-in;
+}
+
+.stats--item.active{
+  animation: fade-right 1.5s ease-in;
 }
 
 @keyframes fade-bottom {
