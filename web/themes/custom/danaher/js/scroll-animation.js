@@ -12,8 +12,6 @@
 
         if (elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add("reveal-active");
-        } else {
-          reveals[i].classList.remove("reveal-active");
         }
       }
 
@@ -25,8 +23,6 @@
           var elementVisible = 350;
           if (elementTop < windowHeight - elementVisible) {            
             addClass(stats[i], 'active',i);
-          } else {
-            removeClass(stats[i], 'active',i);            
           }                  
       }
     }
@@ -40,12 +36,6 @@
         elem.classList.add(cls);  
       }, times * 200);
       
-    }
-
-    function removeClass(elem, cls, times){
-      setTimeout(function() {
-        elem.classList.remove(cls);
-      }, times * 200);
     }
 
  })(jQuery);
