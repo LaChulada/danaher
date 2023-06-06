@@ -1,0 +1,13 @@
+.business-carousel a:after,
+.callout .cta-link a:after,
+.collapse-item .cta-link a:after,
+.stats .cta-link a:after,
+.text-and-image .text-content .cta-link a:after,
+.flexible-framer--item a:after,
+.cta-logo-showcase .cta-link a:after {
+  content: url(/danaher/danaher_src/images/arrow-left.svg) !important;
+}
+
+.featured-statement .cta-link a:after {
+  content: url(/danaher/danaher_src/images/arrow-white.svg) !important;
+}/*# sourceMappingURL=hover-animations.css.map */
