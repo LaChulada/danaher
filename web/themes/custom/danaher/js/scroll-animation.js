@@ -19,24 +19,34 @@
 
       var stats = document.querySelectorAll(".stats--item");
 
-      for (var i = 0; i < stats.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = stats[i].getBoundingClientRect().top;
-        var elementVisible = 350;
-
-        if (elementTop < windowHeight - elementVisible) {
-          stats[i].classList.add("active");
-        } else {
-          stats[i].classList.remove("active");
-        }
+      for (var i = 0; i < stats.length; i++) {                
+          var windowHeight = window.innerHeight;
+          var elementTop = stats[i].getBoundingClientRect().top;
+          var elementVisible = 350;
+          if (elementTop < windowHeight - elementVisible) {            
+            addClass(stats[i], 'active',i);
+          } else {
+            removeClass(stats[i], 'active',i);            
+          }                  
       }
-
-
     }
 
     $(document).ready(function() {        
-        window.addEventListener("scroll", reveal);
-     });
+      window.addEventListener("scroll", reveal);
+    });
+
+    function addClass(elem, cls, times){
+      setTimeout(function() {
+        elem.classList.add(cls);  
+      }, times * 200);
+      
+    }
+
+    function removeClass(elem, cls, times){
+      setTimeout(function() {
+        elem.classList.remove(cls);
+      }, times * 200);
+    }
 
  })(jQuery);
  

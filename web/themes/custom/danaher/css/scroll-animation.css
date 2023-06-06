@@ -1,9 +1,9 @@
-figure, .stats--item{
+figure, .stats--item, .card{
   position: relative;
   opacity: 0;
 }
 
-figure.reveal-active, .stats--item.active{
+figure.reveal-active, .stats--item.active, .card.active{
   opacity: 1;
 }
 
@@ -12,7 +12,7 @@ figure.reveal-active, .stats--item.active{
 }
 
 .stats--item.active{
-  animation: fade-right 1.5s ease-in;
+  animation: fade-right .5s ease-in;
 }
 
 @keyframes fade-bottom {
