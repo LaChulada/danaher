@@ -10,4 +10,52 @@
 
 .featured-statement .cta-link a:after {
   content: url(/danaher/danaher_src/images/arrow-white.svg) !important;
+}
+
+.region-header ul.menu li.menu-item a.has-menu:after,
+.region-event-landing-header ul.menu li.menu-item a.has-menu:after,
+.region-primary-menu-mobile ul.menu li.menu-item a.has-menu:after {
+  content: "" !important;
+  display: block;
+  width: 24px;
+  height: 15px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAyNCAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIyIDJMMTIgMTJMMiAyIiBzdHJva2U9IiMzODEzNjAiIHN0cm9rZS13aWR0aD0iNCIvPgo8L3N2Zz4K);
+  transform: scale(0.5) rotateX(0deg) !important;
+  transition: all 0.3s ease-out;
+}
+.region-header ul.menu li.menu-item a.menu-open:after,
+.region-event-landing-header ul.menu li.menu-item a.menu-open:after,
+.region-primary-menu-mobile ul.menu li.menu-item a.menu-open:after {
+  transform: scale(0.5) rotateX(180deg) !important;
+  transition: all 0.3s ease-out;
+}
+.region-header ul.menu li.menu-item a:focus::before,
+.region-event-landing-header ul.menu li.menu-item a:focus::before,
+.region-primary-menu-mobile ul.menu li.menu-item a:focus::before {
+  border-color: #7523ff !important;
+}
+.region-header ul.menu li.menu-item a.menu-open::before,
+.region-event-landing-header ul.menu li.menu-item a.menu-open::before,
+.region-primary-menu-mobile ul.menu li.menu-item a.menu-open::before {
+  width: calc(100% - 24px);
+}
+.region-header ul.menu li.menu-item a:focus::before,
+.region-event-landing-header ul.menu li.menu-item a:focus::before,
+.region-primary-menu-mobile ul.menu li.menu-item a:focus::before {
+  border-color: #7523ff !important;
+}
+.region-header ul.menu li.menu-item a.menu-open::before,
+.region-event-landing-header ul.menu li.menu-item a.menu-open::before,
+.region-primary-menu-mobile ul.menu li.menu-item a.menu-open::before {
+  width: calc(100% - 24px) !important;
+}
+
+.region-header .info-menu ul.menu li.menu-item a:hover,
+.region-event-landing-header .info-menu ul.menu li.menu-item a:hover,
+.region-primary-menu-mobile .info-menu ul.menu li.menu-item a:hover,
+.region-header ul.menu li.menu-item a:hover,
+.region-event-landing-header ul.menu li.menu-item a:hover,
+.region-primary-menu-mobile ul.menu li.menu-item a:hover,
+#header .region-primary-menu .menu-item a:hover {
+  color: #7523ff !important;
 }/*# sourceMappingURL=hover-animations.css.map */
