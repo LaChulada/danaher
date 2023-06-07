@@ -15,6 +15,28 @@ figure.reveal-active, .stats--item.active, .card.active{
   animation: fade-right .5s ease-in;
 }
 
+.hero--subcategory-hero.active{
+  height:calc(100vh);
+  max-height: calc(100vh);
+  display: flex;
+  align-items: center;  
+}
+
+.hero--subcategory-hero figure{
+  height:auto !important;
+}
+
+.hero--subcategory-hero .image-style-bio-portrait-hero{
+  height:500px;
+  object-fit: contain;
+  transition: all 3s ease-out;
+}
+
+.hero--subcategory-hero.active .image-style-bio-portrait-hero{
+  height:calc(100vh) !important;
+  object-fit: cover;
+}
+
 @keyframes fade-bottom {
   0% {
     transform: translateY(50px);

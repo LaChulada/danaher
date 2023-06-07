@@ -25,6 +25,19 @@
             addClass(stats[i], 'active',i);
           }                  
       }
+
+      var hero = document.querySelectorAll(".hero--subcategory-hero");
+      for (var i = 0; i < hero.length; i++) {                
+          var windowHeight = window.innerHeight;
+          var elementTop = hero[i].getBoundingClientRect().top;
+          var elementVisible = 350;
+          if (elementTop < windowHeight - elementVisible) {            
+            addClass(hero[i], 'active',i);
+          }                  
+      }
+        
+
+
     }
 
     $(document).ready(function() {        
