@@ -58,4 +58,19 @@
 .region-primary-menu-mobile ul.menu li.menu-item a:hover,
 #header .region-primary-menu .menu-item a:hover {
   color: #7523ff !important;
+}
+
+.linked-logo img {
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); /* easeOutQuad */
+}
+.linked-logo:hover img {
+  transform: scale(1.2);
+}
+
+.paragraph--type--flexible-framer-icon-item .section-title {
+  font-weight: 600 !important;
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.paragraph--type--flexible-framer-icon-item:hover .section-title {
+  color: #7523ff !important;
 }/*# sourceMappingURL=hover-animations.css.map */
