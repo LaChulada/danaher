@@ -58,4 +58,40 @@
 .region-primary-menu-mobile ul.menu li.menu-item a:hover,
 #header .region-primary-menu .menu-item a:hover {
   color: #7523ff !important;
+}
+
+/* easeOutQuad */
+.linked-logo img {
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.linked-logo:hover img {
+  transform: scale(1.2);
+}
+
+.paragraph--type--flexible-framer-icon-item .section-title {
+  font-weight: 600 !important;
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.paragraph--type--flexible-framer-icon-item:hover .section-title {
+  color: #7523ff !important;
+}
+
+.person.node a.cta-link {
+  font-size: 20px !important;
+  color: #000 !important;
+}
+.person.node a.cta-link::after {
+  content: url(/danaher/danaher_src/images/arrow-left.svg) !important;
+}
+.person.node figure {
+  overflow: hidden;
+}
+.person.node figure img {
+  transition: all 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.person.node:hover a.cta-link::after {
+  transform: translateX(10px);
+}
+.person.node:hover figure img {
+  transform: scale(1.15);
 }/*# sourceMappingURL=hover-animations.css.map */
