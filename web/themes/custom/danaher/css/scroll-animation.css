@@ -20,15 +20,15 @@ figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_pag
 }
 
 .reveal-active{
-  animation: fade-bottom .5s ease-in;
+  animation: fade-bottom .5s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 .stats--item.active{
-  animation: fade-right .5s ease-in;
+  animation: fade-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 .hero--category_hub_page_hero .text-content.active{
-  animation: fade-top .5s ease-in; 
+  animation: fade-top .5s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 .hero--subcategory-hero.active{
@@ -45,7 +45,7 @@ figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_pag
 .hero--subcategory-hero .image-style-bio-portrait-hero{
   height:500px;
   object-fit: contain;
-  transition: all 3s ease-out;
+  transition: all 3s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 .hero--subcategory-hero.active .image-style-bio-portrait-hero{
@@ -55,7 +55,7 @@ figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_pag
 
 .poll .bar .foreground{
   width: 0px;
-  transition: width .9s ease-out;
+  transition: width .9s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 fieldset[data-drupal-selector='edit-choice'] .option:hover{
