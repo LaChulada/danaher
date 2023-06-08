@@ -6,7 +6,7 @@
   max-width: 60%;
 }
 
-figure, .stats--item, .card, .hero--category_hub_page_hero .text-content{
+figure, .stats--item, .card, .hero--category_hub_page_hero .text-content, .hero--person .text-content, .hero--person img{
   position: relative;
   opacity: 0;
 }
@@ -15,8 +15,28 @@ figure, .stats--item, .card, .hero--category_hub_page_hero .text-content{
   transform: translateY(0px);
 }
 
-figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_page_hero .text-content.active{
+figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_page_hero .text-content.active, .hero--person.active .text-content, .hero--person.active img{
   opacity: 1;
+}
+
+.hero--person .blog-hero-right-side{
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--person .blog-hero-right-side img{
+  max-width:120%;
+  width:120%;
+  max-height: 120%;
+  height:120%;
+  transition: all .5s ease-in;
+}
+
+.hero--person.active .blog-hero-right-side img{
+  max-width: 100%;
+  width:100%;
+  max-height: 100%;
+  height:100%;
 }
 
 .reveal-active{
@@ -27,7 +47,7 @@ figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_pag
   animation: fade-right .5s ease-in;
 }
 
-.hero--category_hub_page_hero .text-content.active{
+.hero--category_hub_page_hero .text-content.active, .hero--person.active .text-content{
   animation: fade-top .5s ease-in; 
 }
 
