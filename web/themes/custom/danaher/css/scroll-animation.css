@@ -1,18 +1,34 @@
-figure, .stats--item, .card{
+.hero--category_hub_page_hero{
+  margin-bottom:30px;
+}
+
+.hero--category_hub_page_hero .section-header{
+  max-width: 60%;
+}
+
+figure, .stats--item, .card, .hero--category_hub_page_hero .text-content{
   position: relative;
   opacity: 0;
 }
 
-figure.reveal-active, .stats--item.active, .card.active{
+.hero--category_hub_page_hero .text-content{
+  transform: translateY(0px);
+}
+
+figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_page_hero .text-content.active{
   opacity: 1;
 }
 
 .reveal-active{
-  animation: fade-bottom 1.5s ease-in;
+  animation: fade-bottom .5s ease-in;
 }
 
 .stats--item.active{
   animation: fade-right .5s ease-in;
+}
+
+.hero--category_hub_page_hero .text-content.active{
+  animation: fade-top .5s ease-in; 
 }
 
 .hero--subcategory-hero.active{
@@ -83,6 +99,17 @@ input[data-drupal-selector='edit-vote'], input[data-drupal-selector='edit-result
   }
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-top {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
     opacity: 1;
   }
 }

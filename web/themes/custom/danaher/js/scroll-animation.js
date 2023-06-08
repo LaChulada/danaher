@@ -35,6 +35,16 @@
             addClass(hero[i], 'active',i);
           }                  
       }
+
+      var hero = document.querySelectorAll(".hero--category_hub_page_hero .text-content");      
+      var windowHeight = window.innerHeight;
+      var elementTop = hero[0].getBoundingClientRect().top;
+      var elementVisible = 350;
+      if (elementTop < windowHeight - elementVisible) {            
+        addClass(hero[0], 'active',i);
+      }                        
+
+      
         
 
 
