@@ -42,6 +42,17 @@
 
     $(document).ready(function() {        
       window.addEventListener("scroll", reveal);
+      setTimeout(function() {
+        //$(".option").on("click",function(){console.log('cambia')});
+        $("[data-drupal-selector='edit-choice']").on("change",function(e){          
+          e.preventDefault();
+          $(this).closest("form").trigger("submit");
+          /*var l = $(this).closest('.vote-form').find("#edit-vote").get(0);
+          console.log(l);
+          $(l).trigger("change").trigger('autocompleteclose');
+          console.log("nada");*/
+        })
+      }, 2000);
     });
 
     function addClass(elem, cls, times){

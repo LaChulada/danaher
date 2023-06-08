@@ -37,6 +37,23 @@ figure.reveal-active, .stats--item.active, .card.active{
   object-fit: cover;
 }
 
+.poll .bar .foreground{
+  width: 0px;
+  transition: width .9s ease-out;
+}
+
+fieldset[data-drupal-selector='edit-choice'] .option:hover{
+  background:white !important;
+  color:rgb(117, 35, 255) !important;
+}
+
+input[data-drupal-selector='edit-vote'], input[data-drupal-selector='edit-result'], input[data-drupal-selector='edit-cancel']{
+  opacity: 1;
+}
+
+
+
+
 @keyframes fade-bottom {
   0% {
     transform: translateY(50px);
