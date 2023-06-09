@@ -5,7 +5,7 @@
     function reveal() {
       
       //Animation1 List
-      var animation1 = [".blog-hero-right-side figure",".media--image",".text-and-image",".paragraph--type--flexible-framer-image-item",".stats--item",".hero--subcategory-hero", ".paragraph--type--linked-logo", ".hero--category_hub_page_hero figure"]
+      var animation1 = [".blog-hero-right-side figure",".media--image",".text-and-image",".paragraph--type--flexible-framer-image-item",".stats--item",".hero--subcategory-hero", ".paragraph--type--linked-logo", ".hero--category_hub_page_hero figure", ".paragraph--type--flexible-framer-icon-item"]
 
       animation1.forEach(function(v){
         var elems = document.querySelectorAll(v);

@@ -6,8 +6,9 @@
   max-width: 60%;
 }
 
-.blog-hero-right-side figure, .stats--item, .hero--category_hub_page_hero .text-content, .hero--person .text-content, .hero--person img, .media--image img, .collapse-content img,
-.text-and-image img, .paragraph--type--flexible-framer-image-item img, .paragraph--type--linked-logo, .hero--category_hub_page_hero figure{
+.blog-hero-right-side figure, .stats--item, .hero--category_hub_page_hero .text-content, .hero--person .text-content, .hero--person img, 
+.media--image img, .collapse-content img, .text-and-image img, .paragraph--type--flexible-framer-image-item img, .paragraph--type--linked-logo, 
+.hero--category_hub_page_hero figure, .paragraph--type--flexible-framer-icon-item{
   position: relative;
   opacity: 0;
 }
@@ -17,7 +18,9 @@
 }
 
 .blog-hero-right-side figure.active, .stats--item.active, .hero--category_hub_page_hero .text-content.active, .hero--person.active .text-content, 
-.hero--person.active img, .media--image.active img, .collapse-content.show img, .text-and-image.active img, .paragraph--type--flexible-framer-image-item.active img, .paragraph--type--linked-logo.active, .hero--category_hub_page_hero figure.active{
+.hero--person.active img, .media--image.active img, .collapse-content.show img, .text-and-image.active img, 
+.paragraph--type--flexible-framer-image-item.active img, .paragraph--type--linked-logo.active, .hero--category_hub_page_hero figure.active,
+.paragraph--type--flexible-framer-icon-item.active{
   opacity: 1;
 }
 
@@ -78,7 +81,7 @@
 }
 
 
-.hero--category_hub_page_hero .text-content.active, .hero--person.active .text-content{
+.hero--category_hub_page_hero .text-content.active, .hero--person.active .text-content, .paragraph--type--flexible-framer-icon-item.active{
   animation: fade-top .5s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
