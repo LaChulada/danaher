@@ -29,7 +29,7 @@ figure.reveal-active, .stats--item.active, .card.active, .hero--category_hub_pag
   width:120%;
   max-height: 120%;
   height:120%;
-  transition: all .5s ease-in;
+  transition: all 1.6s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 .hero--person.active .blog-hero-right-side img{
