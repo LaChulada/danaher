@@ -21,6 +21,17 @@
   opacity: 1;
 }
 
+.hero--subcategory-hero .blog-hero-right-side{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-hero-right-side figure{
+  text-align: center;
+}
+
+
 .hero--person .blog-hero-right-side, .paragraph--type--linked-logo{
   display: block;
   position: relative;
@@ -76,6 +87,7 @@
   max-height: calc(100vh);
   display: flex;
   align-items: center;  
+  justify-content: center;
 }
 
 .hero--subcategory-hero figure{
@@ -83,13 +95,15 @@
 }
 
 .hero--subcategory-hero .image-style-bio-portrait-hero{
-  height:500px;
+  height:400px;
+  width:400px;
   object-fit: contain;
   transition: all 3s cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
 }
 
 .hero--subcategory-hero.active .image-style-bio-portrait-hero{
   height:calc(100vh) !important;
+  width:100%;
   object-fit: cover;
 }
 
