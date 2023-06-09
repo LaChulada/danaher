@@ -3,59 +3,37 @@
 (function($) {
 
     function reveal() {
-      var reveals = document.querySelectorAll("figure");
-
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 350;
-
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("reveal-active");
-        }
-      }
-
-      var stats = document.querySelectorAll(".stats--item");
-
-      for (var i = 0; i < stats.length; i++) {                
-          var windowHeight = window.innerHeight;
-          var elementTop = stats[i].getBoundingClientRect().top;
-          var elementVisible = 350;
-          if (elementTop < windowHeight - elementVisible) {            
-            addClass(stats[i], 'active',i);
-          }                  
-      }
-
-      var hero = document.querySelectorAll(".hero--subcategory-hero");
-      for (var i = 0; i < hero.length; i++) {                
-          var windowHeight = window.innerHeight;
-          var elementTop = hero[i].getBoundingClientRect().top;
-          var elementVisible = 350;
-          if (elementTop < windowHeight - elementVisible) {            
-            addClass(hero[i], 'active',i);
-          }                  
-      }
-
-      var hero = document.querySelectorAll(".hero--category_hub_page_hero .text-content");      
-      if(hero.length > 0){
-        var windowHeight = window.innerHeight;      
-        var elementTop = hero[0].getBoundingClientRect().top;
-        var elementVisible = 350;
-        if (elementTop < windowHeight - elementVisible) {            
-          addClass(hero[0], 'active',i);
-        } 
-      }
       
-      var hero = document.querySelectorAll(".hero--person");      
-      if(hero.length > 0){
-        var windowHeight = window.innerHeight;      
-        var elementTop = hero[0].getBoundingClientRect().top;
-        var elementVisible = 350;
-        if (elementTop < windowHeight - elementVisible) {            
-          addClass(hero[0], 'active',i);
-        } 
-      }
+      //Animation1 List
+      var animation1 = [".blog-hero-right-side figure",".media--image",".text-and-image",".paragraph--type--flexible-framer-image-item",".stats--item",".hero--subcategory-hero", ".paragraph--type--linked-logo"]
 
+      animation1.forEach(function(v){
+        var elems = document.querySelectorAll(v);
+        for (var i = 0; i < elems.length; i++) {
+          var windowHeight = window.innerHeight;
+          var elementTop = elems[i].getBoundingClientRect().top;
+          var elementVisible = 350;
+
+          if (elementTop < windowHeight - elementVisible) {
+            addClass(elems[i], 'active',i);          
+          }
+        }     
+      })
+
+      //Animaton2 List
+      var animation2 = [".hero--category_hub_page_hero .text-content",".hero--person"];
+
+      animation2.forEach(function(v,i){
+        var elems = document.querySelectorAll(v);      
+        if(elems.length > 0){
+          var windowHeight = window.innerHeight;      
+          var elementTop = elems[0].getBoundingClientRect().top;
+          var elementVisible = 350;
+          if (elementTop < windowHeight - elementVisible) {            
+            addClass(elems[0], 'active',i);
+          } 
+        }
+      })
     }
 
     $(document).ready(function() {        
