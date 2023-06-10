@@ -2,6 +2,8 @@
 
 (function($) {
 
+    var polls_animates = [];
+
     function reveal() {
       
       //Animation1 List
@@ -34,19 +36,28 @@
           } 
         }
       })
+
+      var polls = document.querySelectorAll(".poll .choice-result");  
+      for (var i = 0; i < polls.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = polls[i].getBoundingClientRect().top;
+        var elementVisible = 350;
+
+        if (polls_animates.indexOf(i) === -1 && elementTop < windowHeight - elementVisible) {
+          animatePoll(polls[i], i);
+        }
+      }  
+
+
+
+
     }
 
     $(document).ready(function() {        
       window.addEventListener("scroll", reveal);
-      setTimeout(function() {
-        //$(".option").on("click",function(){console.log('cambia')});
+      setTimeout(function() {                                
         $("[data-drupal-selector='edit-choice']").on("change",function(e){          
-          e.preventDefault();
-          $(this).closest("form").trigger("submit");
-          /*var l = $(this).closest('.vote-form').find("#edit-vote").get(0);
-          console.log(l);
-          $(l).trigger("change").trigger('autocompleteclose');
-          console.log("nada");*/
+          $(this).closest("form").trigger("submit");          
         })
       }, 2000);
     });
@@ -56,6 +67,25 @@
         elem.classList.add(cls);  
       }, times * 200);
       
+    }
+
+    function animatePoll(poll, index){
+      polls_animates.push(index);      
+      var percent = $(poll).find(".percent");
+      var bar = $(poll).find(".foreground");
+      var percent_value = parseInt($(percent).html());          
+      percent.html('0%');
+      bar.css('width','0%');
+      let cantidad=0
+      let tiempo=setInterval(() => {        
+        //color.style.height=`${cantidad}%`
+        percent.html(cantidad+'%');
+        bar.css('width',cantidad+'%');
+        if(cantidad===percent_value){
+          clearInterval(tiempo);
+        }
+        cantidad+=1
+      }, 20);
     }
 
  })(jQuery);
