@@ -4,7 +4,7 @@
 * Database settings:
 */
 $databases['default']['default'] = array (
-  'database' => 'danaher',
+  'database' => 'danaher_azure3',
   'username' => 'root',
   'password' => '',
   'prefix' => '',

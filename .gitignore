@@ -16,6 +16,8 @@
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
 
+/web/sites/settings.local.php
+
 
 # Ignore custom modules managed by Composer.
 #
