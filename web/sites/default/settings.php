@@ -31,7 +31,7 @@ if (file_exists(dirname(__FILE__) . '/settings.prod.php')) {
 }
 
 $databases['default']['default'] = array (
-  'database' => 'danaher',
+  'database' => 'danaher_azure3',
   'username' => 'root',
   'password' => '',
   'prefix' => '',
