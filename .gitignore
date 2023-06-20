@@ -17,6 +17,7 @@
 /web/sites/simpletest
 
 /web/sites/settings.local.php
+/web/sites/default/settings.php
 
 
 # Ignore custom modules managed by Composer.
